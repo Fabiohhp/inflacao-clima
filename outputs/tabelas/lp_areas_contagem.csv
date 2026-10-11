@@ -1,0 +1,41 @@
+dependente,especificacao,choque,h_teste,areas,acima,abaixo,fora_de_zero,esperado_acaso,p_binomial
+alimentacao_domicilio,com_controles,seca_centro_oeste,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,com_controles,seca_local,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,com_controles,seca_local − seca_centro_oeste,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,com_controles,seca_local − seca_matopiba,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,com_controles,seca_matopiba,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,principal,seca_centro_oeste,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,principal,seca_local,12,11,0,1,1,1.1,0.68618940391
+alimentacao_domicilio,principal,seca_local − seca_centro_oeste,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,principal,seca_local − seca_matopiba,12,11,0,0,0,1.1,1.0
+alimentacao_domicilio,principal,seca_matopiba,12,11,0,0,0,1.1,1.0
+aves_ovos,com_controles,seca_centro_oeste,12,11,0,0,0,1.1,1.0
+aves_ovos,com_controles,seca_local,12,11,1,0,1,1.1,0.68618940391
+aves_ovos,com_controles,seca_local − seca_centro_oeste,12,11,0,0,0,1.1,1.0
+aves_ovos,com_controles,seca_local − seca_matopiba,12,11,0,0,0,1.1,1.0
+aves_ovos,com_controles,seca_matopiba,12,11,0,0,0,1.1,1.0
+aves_ovos,principal,seca_centro_oeste,12,11,0,0,0,1.1,1.0
+aves_ovos,principal,seca_local,12,11,1,1,2,1.1,0.3026431198
+aves_ovos,principal,seca_local − seca_centro_oeste,12,11,0,0,0,1.1,1.0
+aves_ovos,principal,seca_local − seca_matopiba,12,11,0,0,0,1.1,1.0
+aves_ovos,principal,seca_matopiba,12,11,0,0,0,1.1,1.0
+hortalicas_verduras,com_controles,seca_centro_oeste,1,11,0,0,0,1.1,1.0
+hortalicas_verduras,com_controles,seca_local,1,11,0,9,9,1.1,4.555000000000003e-08
+hortalicas_verduras,com_controles,seca_local − seca_centro_oeste,1,11,0,4,4,1.1,0.018534761200000006
+hortalicas_verduras,com_controles,seca_local − seca_matopiba,1,11,0,6,6,1.1,0.00029570608000000013
+hortalicas_verduras,com_controles,seca_matopiba,1,11,0,0,0,1.1,1.0
+hortalicas_verduras,principal,seca_centro_oeste,1,11,0,0,0,1.1,1.0
+hortalicas_verduras,principal,seca_local,1,11,0,9,9,1.1,4.555000000000003e-08
+hortalicas_verduras,principal,seca_local − seca_centro_oeste,1,11,0,5,5,1.1,0.0027509635000000014
+hortalicas_verduras,principal,seca_local − seca_matopiba,1,11,0,5,5,1.1,0.0027509635000000014
+hortalicas_verduras,principal,seca_matopiba,1,11,0,0,0,1.1,1.0
+tuberculos_raizes_legumes,com_controles,seca_centro_oeste,1,11,0,3,3,1.1,0.08956185085000001
+tuberculos_raizes_legumes,com_controles,seca_local,1,11,0,5,5,1.1,0.0027509635000000014
+tuberculos_raizes_legumes,com_controles,seca_local − seca_centro_oeste,1,11,0,0,0,1.1,1.0
+tuberculos_raizes_legumes,com_controles,seca_local − seca_matopiba,1,11,0,5,5,1.1,0.0027509635000000014
+tuberculos_raizes_legumes,com_controles,seca_matopiba,1,11,0,0,0,1.1,1.0
+tuberculos_raizes_legumes,principal,seca_centro_oeste,1,11,0,2,2,1.1,0.3026431198
+tuberculos_raizes_legumes,principal,seca_local,1,11,0,6,6,1.1,0.00029570608000000013
+tuberculos_raizes_legumes,principal,seca_local − seca_centro_oeste,1,11,0,0,0,1.1,1.0
+tuberculos_raizes_legumes,principal,seca_local − seca_matopiba,1,11,0,4,4,1.1,0.018534761200000006
+tuberculos_raizes_legumes,principal,seca_matopiba,1,11,0,0,0,1.1,1.0

@@ -1,0 +1,5 @@
+evento,ufs,janela,n_microrregioes,spi_medio_minimo,mes_do_minimo,pct_meses_spi_negativo,pct_micro_abaixo_de_1_5_no_minimo,passou
+Sudeste 2014/15 (crise hídrica),"SP, MG, RJ",2014-01 a 2015-03,147,-2.36,2014-06,100.0,93.2,True
+Bacia do Paraná 2020/21,"PR, MS, SP, GO",2020-10 a 2021-09,131,-2.14,2021-08,100.0,87.8,True
+Semiárido 2012-2016,"CE, RN, PB, PE",2012-01 a 2016-12,94,-1.98,2013-03,83.3,97.9,True
+Amazônia 2023,AM,2023-07 a 2023-12,13,-1.52,2023-11,100.0,38.5,True

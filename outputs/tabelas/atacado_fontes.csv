@@ -1,0 +1,11 @@
+serie,codigo,fonte,nome_ipeadata,unidade,inicio,fim,faltantes_na_janela
+milho_atacado_pr,DERAL12_ATMC12,Seab-PR,Preço médio - atacado - milho - 60 kg - PR,saca de 60 kg,1990-01,2026-08,0
+farelo_soja_atacado_pr,DERAL12_ATFSO12,Seab-PR,Preço médio - atacado - soja (em farelo) - tonelada - PR,tonelada,1990-01,2026-08,0
+milho_produtor_pr,DERAL12_PRMI12,Seab-PR,Preço médio - recebido pelo agricultor - milho - 60 kg - PR,saca de 60 kg,1990-01,2026-08,0
+soja_produtor_pr,DERAL12_PRSO12,Seab-PR,Preço médio - recebido pelo agricultor - soja - 60 kg - PR,saca de 60 kg,1990-01,2026-08,0
+leite_produtor_pr,DERAL12_PRLECO12,Seab-PR,Preço médio - recebido pelo agricultor - leite - litro - PR,litro,1990-01,2026-08,0
+ovos_produtor_pr,DERAL12_PROVG12,Seab-PR,Preço médio - recebido pelo agricultor - ovo grande - 30 dúzias - PR,30 dúzias (ovo grande),1990-01,2026-08,0
+boi_gordo_produtor_pr,DERAL12_PRBGO12,Seab-PR,Preço médio - recebido pelo agricultor - boi gordo - arroba - PR,arroba,1990-01,2026-08,0
+frango_vivo_produtor_pr,DERAL12_PRFRV12,Seab-PR,Preço médio - recebido pelo agricultor - frango vivo - kg - PR,kg,1990-01,2026-08,0
+suinos_produtor_pr,DERAL12_PRSUC12,Seab-PR,Preço médio - recebido pelo agricultor - suínos - comuns - kg - PR,kg,1990-01,2026-08,0
+milho_atacado_sp,DEPAE12_ATMI12,Conab/IE,Preço médio - atacado - milho (em grão) - 60 kg - SP,saca de 60 kg,1982-01,2026-08,48

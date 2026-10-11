@@ -1,0 +1,13 @@
+grupo,clima,janela_hipotese,defasagens_negativas_signif,defasagem_mais_negativa,r_mais_negativo,signif_pontual,signif_bonferroni,avaliacao
+hortalicas_verduras,cinturao_spi_3,"[0, 1]",,5,-0.097,False,False,sem sinal
+tuberculos_raizes_legumes,cinturao_spi_3,"[0, 1]",,14,-0.075,False,False,sem sinal
+tuberculos_raizes_legumes,cwi_batata_inglesa_spi_3,"[0, 1]",,10,-0.071,False,False,sem sinal
+frutas,cwi_banana_spi_3,"[0, 1]",,15,-0.086,False,False,sem sinal
+frutas,cwi_laranja_spi_6,"[0, 1]",10,10,-0.132,True,False,fora da hipótese
+cereais_leguminosas,cwi_feijao_spi_3,—,,17,-0.105,False,False,exploratório
+cereais_leguminosas,cwi_arroz_spi_3,—,,7,-0.1,False,False,exploratório
+leite_derivados,cwi_milho_spi_6,"[2, 4]",,10,-0.108,False,False,sem sinal
+aves_ovos,cwi_milho_spi_6,"[3, 12]",,0,-0.114,False,False,sem sinal
+carnes,cwi_milho_spi_6,"[6, 12]",15,15,-0.191,True,True,fora da hipótese
+carnes,cwi_soja_spi_6,"[6, 12]",15,15,-0.177,True,False,fora da hipótese
+alimentacao_domicilio,cwi_soja_spi_6,—,,15,-0.089,False,False,exploratório

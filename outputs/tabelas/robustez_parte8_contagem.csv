@@ -1,0 +1,7 @@
+parte,bloco,robusto,frágil,instável,nulo estável,nulo instável,total,com_placebo,placebo_falha
+8a,linear,4,2,0,2,4,12,12,7
+8a,nao_linear,4,2,0,25,14,45,27,7
+8b,painel: efeito_tempo_linear,2,0,0,2,0,4,4,1
+8b,painel: efeito_tempo_nao_linear,10,0,0,9,1,20,20,0
+8b,painel: sem_efeito_tempo,4,0,0,16,0,20,0,0
+8c,previsão,19,7,0,101,33,160,0,0

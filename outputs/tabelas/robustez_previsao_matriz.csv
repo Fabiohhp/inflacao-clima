@@ -1,0 +1,313 @@
+linha,coluna,estado,texto,r2_oos_pct,cw_p
+alimentacao_domicilio|1,oni|principal,referência,"-2,2",-2.1755622214312487,0.7861463972398661
+alimentacao_domicilio|1,mei|principal,referência,"-1,6",-1.6391156410461516,0.8252236932543371
+alimentacao_domicilio|1,local|principal,referência,"-8,9",-8.925411340918753,0.9395672852109199
+alimentacao_domicilio|3,oni|principal,referência,"-4,2",-4.247073755890418,0.7546441631033054
+alimentacao_domicilio|3,mei|principal,referência,"-3,1",-3.0517887458870074,0.7290760398547887
+alimentacao_domicilio|3,local|principal,referência,"-7,5",-7.505218172796879,0.5461091469485325
+alimentacao_domicilio|6,oni|principal,referência,"-2,1",-2.1157937297361373,0.4872592908223359
+alimentacao_domicilio|6,mei|principal,referência,"-4,0",-3.9924249452783833,0.8776707410829543
+alimentacao_domicilio|6,local|principal,referência,"-6,1",-6.141359074623631,0.6314313116291127
+alimentacao_domicilio|12,oni|principal,referência,"0,4",0.44290047516388764,0.2379603052348231
+alimentacao_domicilio|12,mei|principal,referência,"-3,2",-3.202782426087336,0.8483216548936581
+alimentacao_domicilio|12,local|principal,referência,"-10,3",-10.262078384288586,0.962192885648896
+aves_ovos|1,oni|principal,referência,"-1,2",-1.2321445271829878,0.6575459988756684
+aves_ovos|1,mei|principal,referência,"-1,3",-1.326364138483549,0.726694266953571
+aves_ovos|1,local|principal,referência,"-1,8",-1.7617580581996473,0.3545368224637375
+aves_ovos|3,oni|principal,referência,"-4,0",-3.967962562032734,0.7045565261936263
+aves_ovos|3,mei|principal,referência,"-3,2",-3.2271448349801,0.7519968366249978
+aves_ovos|3,local|principal,referência,"-0,6",-0.6150705616590368,0.13086268824111535
+aves_ovos|6,oni|principal,referência,"0,6",0.6063778669668118,0.23784399663965922
+aves_ovos|6,mei|principal,referência,"-2,2",-2.2421211151074205,0.6321348816492489
+aves_ovos|6,local|principal,referência,"-0,7",-0.741224772907878,0.10790639545556474
+aves_ovos|12,oni|principal,referência,"-0,7",-0.6900470995378161,0.3722362613271618
+aves_ovos|12,mei|principal,referência,"-3,8",-3.80885095266954,0.8558315461756447
+aves_ovos|12,local|principal,referência,"-22,6",-22.561832307009656,0.8259263864522688
+carnes|1,oni|principal,referência,"-0,5",-0.4930528412100843,0.4172989755390497
+carnes|1,mei|principal,referência,"-1,4",-1.3767273172979433,0.7771188000348999
+carnes|1,local|principal,referência,"-0,1",-0.09238062777658929,0.22130063735398675
+carnes|3,oni|principal,referência,"-1,2",-1.2234704107449534,0.36915727654250624
+carnes|3,mei|principal,referência,"-3,1",-3.1185975217144835,0.6571222502876707
+carnes|3,local|principal,referência,"-0,5",-0.48174395322979624,0.13968959443326634
+carnes|6,oni|principal,referência,"-0,5",-0.4571775345103113,0.3488236465940123
+carnes|6,mei|principal,referência,"-0,9",-0.9353237683809468,0.37713682479337746
+carnes|6,local|principal,referência,"-4,4",-4.424701140393861,0.37981063299598444
+carnes|12,oni|principal,referência,"-1,2",-1.228539063814993,0.5558503226693475
+carnes|12,mei|principal,referência,"0,8",0.8033429904381384,0.25755005626913013
+carnes|12,local|principal,referência,"-15,5",-15.53207542447177,0.6958866122424949
+cereais_leguminosas|1,oni|principal,referência,"-1,2",-1.167761528015454,0.5711377244441704
+cereais_leguminosas|1,mei|principal,referência,"-1,3",-1.2937362067534819,0.40612504284167183
+cereais_leguminosas|1,local|principal,referência,"-0,1",-0.06568945913680846,0.16271484245368456
+cereais_leguminosas|3,oni|principal,referência,"-1,0",-0.9518410253893883,0.3726045974455305
+cereais_leguminosas|3,mei|principal,referência,"0,6",0.6275575881643292,0.15096496204180004
+cereais_leguminosas|3,local|principal,referência,"0,1",0.1400387811519077,0.10652919766898522
+cereais_leguminosas|6,oni|principal,referência,"1,0",0.957297796324641,0.1319159262656609
+cereais_leguminosas|6,mei|principal,referência,"3,1*",3.0621969348903266,0.06747895690274243
+cereais_leguminosas|6,local|principal,referência,"-4,8",-4.764391369033727,0.666982574441066
+cereais_leguminosas|12,oni|principal,referência,"0,8",0.788442319646987,0.17116914756135004
+cereais_leguminosas|12,mei|principal,referência,"2,1*",2.086052109228076,0.08506232526451474
+cereais_leguminosas|12,local|principal,referência,"-12,2",-12.208632906086425,0.7067403360461267
+frutas|1,oni|principal,referência,"-2,4",-2.389802115265982,0.7570399120329541
+frutas|1,mei|principal,referência,"-2,3",-2.252042597816728,0.9266023307241129
+frutas|1,local|principal,referência,"3,3*",3.2593995449637925,0.01673216623671952
+frutas|3,oni|principal,referência,"-4,1",-4.117959305225649,0.7851533192015774
+frutas|3,mei|principal,referência,"-4,0",-4.027528288573312,0.948805813371271
+frutas|3,local|principal,referência,"0,9",0.9147693566707193,0.13501126640267402
+frutas|6,oni|principal,referência,"-5,0",-4.969106199585882,0.8098570145624744
+frutas|6,mei|principal,referência,"-7,4",-7.4484686091385255,0.981124029411456
+frutas|6,local|principal,referência,"1,8",1.8343418266493217,0.1430588006711393
+frutas|12,oni|principal,referência,"-4,6",-4.585321314420976,0.5854642645475249
+frutas|12,mei|principal,referência,"-5,3",-5.344448911156974,0.9196954730286977
+frutas|12,local|principal,referência,"-0,7",-0.7086330178096567,0.4096713664949648
+hortalicas_verduras|1,oni|principal,referência,"0,2*",0.1548220940021161,0.049760884962325835
+hortalicas_verduras|1,mei|principal,referência,"-2,2",-2.1831665349053564,0.4031331359637239
+hortalicas_verduras|1,local|principal,referência,"-2,1",-2.098727436388992,0.6509803954628051
+hortalicas_verduras|3,oni|principal,referência,"5,6*",5.5655096327619,0.016413787358182542
+hortalicas_verduras|3,mei|principal,referência,"-0,3",-0.27211435306953025,0.16426300236075075
+hortalicas_verduras|3,local|principal,referência,"-8,6",-8.61498260636786,0.8675299969649766
+hortalicas_verduras|6,oni|principal,referência,"12,0*",12.009949767556261,0.018451458543546406
+hortalicas_verduras|6,mei|principal,referência,"4,0*",3.9894603437797382,0.061471671843912196
+hortalicas_verduras|6,local|principal,referência,"-8,2",-8.159723030789445,0.8878883224177692
+hortalicas_verduras|12,oni|principal,referência,"16,6*",16.629227996290297,0.025144588295101643
+hortalicas_verduras|12,mei|principal,referência,"13,6*",13.57416510886582,0.019934325371464407
+hortalicas_verduras|12,local|principal,referência,"1,1",1.1172553168089405,0.3063681432866975
+leite_derivados|1,oni|principal,referência,"-0,0",-0.003318745822533664,0.24881809162494117
+leite_derivados|1,mei|principal,referência,"-1,2",-1.1958149829575992,0.5206459211329605
+leite_derivados|1,local|principal,referência,"0,4",0.36263105881938484,0.11535293228639992
+leite_derivados|3,oni|principal,referência,"-2,6",-2.5986584215268893,0.3304214430687292
+leite_derivados|3,mei|principal,referência,"-0,3",-0.2733879617492496,0.32939640300545847
+leite_derivados|3,local|principal,referência,"-1,0",-0.9997533682404303,0.22213409731730277
+leite_derivados|6,oni|principal,referência,"-0,8",-0.8016497373456222,0.2707290379788543
+leite_derivados|6,mei|principal,referência,"-3,1",-3.0687770194997688,0.40513179123649307
+leite_derivados|6,local|principal,referência,"0,7*",0.6970079851336575,0.07433330222297839
+leite_derivados|12,oni|principal,referência,"-3,7",-3.683557474959742,0.3851611546468604
+leite_derivados|12,mei|principal,referência,"-9,6",-9.55559221618496,0.5911922318357264
+leite_derivados|12,local|principal,referência,"4,4",4.3875587686750155,0.15429941074137682
+tuberculos_raizes_legumes|1,oni|principal,referência,"0,4",0.37185929511128757,0.1408562294334697
+tuberculos_raizes_legumes|1,mei|principal,referência,"-2,4",-2.435673690748974,0.6763730323965819
+tuberculos_raizes_legumes|1,local|principal,referência,"-2,3",-2.299331639041813,0.5738656904983493
+tuberculos_raizes_legumes|3,oni|principal,referência,"4,6*",4.645248509077138,0.018254160096699355
+tuberculos_raizes_legumes|3,mei|principal,referência,"-2,3",-2.2759937958473087,0.4699864698936141
+tuberculos_raizes_legumes|3,local|principal,referência,"-9,7",-9.684130967603078,0.9005957956062709
+tuberculos_raizes_legumes|6,oni|principal,referência,"15,9*",15.873216379759757,0.0026603534774736998
+tuberculos_raizes_legumes|6,mei|principal,referência,"2,3",2.342014552227678,0.10385529294707113
+tuberculos_raizes_legumes|6,local|principal,referência,"-11,5",-11.46388800480478,0.9554850961647776
+tuberculos_raizes_legumes|12,oni|principal,referência,"23,0*",22.99270789285366,0.013162786125742523
+tuberculos_raizes_legumes|12,mei|principal,referência,"17,3*",17.296203975730005,0.007693577923707994
+tuberculos_raizes_legumes|12,local|principal,referência,"4,1",4.115690408904127,0.14474812150923871
+alimentacao_domicilio|1,oni|janela_movel,mantém,"-0,8",-0.7671466166009333,0.3969459555825015
+alimentacao_domicilio|1,mei|janela_movel,mantém,"-2,3",-2.3331602471196478,0.7877382199712963
+alimentacao_domicilio|1,local|janela_movel,mantém,"-7,7",-7.685534356389367,0.8912241408699927
+alimentacao_domicilio|3,oni|janela_movel,mantém,"-6,2",-6.229621528677409,0.6252832817724205
+alimentacao_domicilio|3,mei|janela_movel,mantém,"-4,3",-4.303446482594997,0.5543266275368338
+alimentacao_domicilio|3,local|janela_movel,mantém,"-7,6",-7.553782703825651,0.5810575354006188
+alimentacao_domicilio|6,oni|janela_movel,mantém,"-15,0",-15.026507843255054,0.901816334315875
+alimentacao_domicilio|6,mei|janela_movel,mantém,"-12,3",-12.29194350572298,0.8894874476843317
+alimentacao_domicilio|6,local|janela_movel,mantém,"-4,9",-4.945340930910702,0.3003456752711742
+alimentacao_domicilio|12,oni|janela_movel,mantém,"-11,2",-11.199030084762374,0.8921230089130094
+alimentacao_domicilio|12,mei|janela_movel,mantém,"-13,5",-13.529043010957608,0.9876833559984248
+alimentacao_domicilio|12,local|janela_movel,mantém,"-5,8",-5.795123399935687,0.43974705309425877
+aves_ovos|1,oni|janela_movel,mantém,"-5,1",-5.059696600600638,0.9573915556144629
+aves_ovos|1,mei|janela_movel,mantém,"-5,3",-5.303038019910655,0.9994021043442224
+aves_ovos|1,local|janela_movel,ganha significância,"0,0*",0.03493338474701568,0.05744332142884378
+aves_ovos|3,oni|janela_movel,mantém,"-11,5",-11.498362826825282,0.9984238114267823
+aves_ovos|3,mei|janela_movel,mantém,"-9,0",-8.974303654720629,0.9987236919730118
+aves_ovos|3,local|janela_movel,ganha significância,"0,9*",0.9180197236422716,0.042620984455162984
+aves_ovos|6,oni|janela_movel,mantém,"-15,9",-15.936239209921643,0.9961604947283562
+aves_ovos|6,mei|janela_movel,mantém,"-12,0",-12.007180435448372,0.9858099577328887
+aves_ovos|6,local|janela_movel,ganha significância,"0,3*",0.26787466940247917,0.03339123666710867
+aves_ovos|12,oni|janela_movel,mantém,"-8,0",-7.9720505206124725,0.7854342552160871
+aves_ovos|12,mei|janela_movel,mantém,"-7,4",-7.360847545423033,0.9759817937338668
+aves_ovos|12,local|janela_movel,mantém,"-8,7",-8.744809338844517,0.3736456908756277
+carnes|1,oni|janela_movel,mantém,"-1,0",-1.015282509043569,0.481492007994478
+carnes|1,mei|janela_movel,mantém,"-1,8",-1.8227847833199418,0.6046322495593692
+carnes|1,local|janela_movel,ganha significância,"2,3*",2.2543377070585957,0.0341363913405635
+carnes|3,oni|janela_movel,mantém,"-3,4",-3.3906233011932185,0.47820997246484803
+carnes|3,mei|janela_movel,mantém,"-0,6",-0.5702354472172377,0.23248142306692082
+carnes|3,local|janela_movel,ganha significância,"3,8*",3.843698271085061,0.0142200694620647
+carnes|6,oni|janela_movel,mantém,"-5,7",-5.6920520759923265,0.4930084163700694
+carnes|6,mei|janela_movel,mantém,"-3,8",-3.7952509955419655,0.319786052394618
+carnes|6,local|janela_movel,mantém,"-10,3",-10.31184771845377,0.6013104523594865
+carnes|12,oni|janela_movel,mantém,"-9,7",-9.749674770999306,0.7224868917729593
+carnes|12,mei|janela_movel,mantém,"-7,2",-7.163136731617814,0.6511711121924334
+carnes|12,local|janela_movel,mantém,"-16,7",-16.686688290906737,0.7377530855656128
+cereais_leguminosas|1,oni|janela_movel,mantém,"-3,1",-3.139385432868802,0.53554905175842
+cereais_leguminosas|1,mei|janela_movel,mantém,"-2,1",-2.1156026614087775,0.38335899221176084
+cereais_leguminosas|1,local|janela_movel,mantém,"-3,3",-3.327640376477814,0.17866896457129167
+cereais_leguminosas|3,oni|janela_movel,mantém,"-3,9",-3.9151178864670566,0.29851795119277064
+cereais_leguminosas|3,mei|janela_movel,mantém,"-1,8",-1.8374793222637908,0.1223646763274841
+cereais_leguminosas|3,local|janela_movel,mantém,"-4,7",-4.700358230685753,0.15476286894081842
+cereais_leguminosas|6,oni|janela_movel,mantém,"-7,9",-7.9344152823142,0.3454894219094121
+cereais_leguminosas|6,mei|janela_movel,perde significância,"-5,5",-5.528891743757236,0.1750453185074124
+cereais_leguminosas|6,local|janela_movel,mantém,"-5,4",-5.418007750897291,0.6848019789977589
+cereais_leguminosas|12,oni|janela_movel,mantém,"-22,8",-22.766211032032267,0.7982749641645788
+cereais_leguminosas|12,mei|janela_movel,perde significância,"-14,9",-14.913782077952288,0.7254586251651712
+cereais_leguminosas|12,local|janela_movel,mantém,"-11,9",-11.938313967981017,0.9696034245154737
+frutas|1,oni|janela_movel,mantém,"-3,2",-3.230039186922684,0.7525017864161896
+frutas|1,mei|janela_movel,mantém,"-1,6",-1.6441896505256182,0.5300038259164711
+frutas|1,local|janela_movel,perde significância,"-0,9",-0.894274609194734,0.29900192035344364
+frutas|3,oni|janela_movel,mantém,"-6,0",-6.042465311924294,0.5794545957080388
+frutas|3,mei|janela_movel,mantém,"-2,8",-2.759610568909898,0.4483292823555255
+frutas|3,local|janela_movel,mantém,"-5,3",-5.346490404032633,0.6904102850544463
+frutas|6,oni|janela_movel,mantém,"-4,5",-4.540668582515162,0.43754661605018186
+frutas|6,mei|janela_movel,mantém,"-6,4",-6.401818330928477,0.4885537793815886
+frutas|6,local|janela_movel,mantém,"-3,5",-3.541670813207931,0.6172865094761372
+frutas|12,oni|janela_movel,mantém,"-5,5",-5.453310967745306,0.5396821447524307
+frutas|12,mei|janela_movel,mantém,"-12,4",-12.403816349213837,0.7893110387018167
+frutas|12,local|janela_movel,mantém,"-13,0",-12.99889220218844,0.8848854868895986
+hortalicas_verduras|1,oni|janela_movel,mantém,"-0,6*",-0.6431197098335284,0.06565024112377062
+hortalicas_verduras|1,mei|janela_movel,mantém,"-5,0",-4.969780824568648,0.7741625060387463
+hortalicas_verduras|1,local|janela_movel,mantém,"-7,2",-7.222473259483508,0.6581362213543835
+hortalicas_verduras|3,oni|janela_movel,mantém,"1,5*",1.527568884804531,0.03048424793041374
+hortalicas_verduras|3,mei|janela_movel,mantém,"-4,3",-4.2823390485623225,0.38540255241468563
+hortalicas_verduras|3,local|janela_movel,mantém,"-13,5",-13.513110230387525,0.7252139422239454
+hortalicas_verduras|6,oni|janela_movel,mantém,"4,7*",4.670272776953777,0.06595729198915178
+hortalicas_verduras|6,mei|janela_movel,perde significância,"-0,4",-0.4424433770261249,0.19678729132223716
+hortalicas_verduras|6,local|janela_movel,mantém,"-8,0",-7.951909686778569,0.658043242539006
+hortalicas_verduras|12,oni|janela_movel,mantém,"13,4*",13.418409429783306,0.034341162916852734
+hortalicas_verduras|12,mei|janela_movel,mantém,"6,6*",6.574606838662833,0.042548293565169065
+hortalicas_verduras|12,local|janela_movel,mantém,"-5,2",-5.200468385312407,0.6748124665959252
+leite_derivados|1,oni|janela_movel,mantém,"1,0",0.9720569620227493,0.20008323998694855
+leite_derivados|1,mei|janela_movel,mantém,"-0,3",-0.3348392014554058,0.4120880900666282
+leite_derivados|1,local|janela_movel,mantém,"-0,7",-0.7426472367177972,0.23332116208891873
+leite_derivados|3,oni|janela_movel,mantém,"-0,3",-0.3117745828151941,0.2304324557794148
+leite_derivados|3,mei|janela_movel,mantém,"-1,9",-1.8915100935853468,0.4073909614700649
+leite_derivados|3,local|janela_movel,mantém,"-0,6",-0.5539026417715531,0.11913309824302265
+leite_derivados|6,oni|janela_movel,mantém,"-2,0",-2.0399313689912546,0.27276430444483885
+leite_derivados|6,mei|janela_movel,mantém,"-7,7",-7.7289538739168995,0.5447642759224547
+leite_derivados|6,local|janela_movel,mantém,"2,5*",2.466830870623382,0.04557492799469608
+leite_derivados|12,oni|janela_movel,mantém,"-6,8",-6.788664598489946,0.6608438883550982
+leite_derivados|12,mei|janela_movel,mantém,"-13,0",-13.026954434917748,0.7684363889138346
+leite_derivados|12,local|janela_movel,mantém,"7,5",7.468776117284404,0.13237220725979648
+tuberculos_raizes_legumes|1,oni|janela_movel,ganha significância,"0,6*",0.5844387505148374,0.09620710484354977
+tuberculos_raizes_legumes|1,mei|janela_movel,mantém,"-4,5",-4.528275230973744,0.8219029616337814
+tuberculos_raizes_legumes|1,local|janela_movel,mantém,"-3,5",-3.54902091359357,0.5864749891785135
+tuberculos_raizes_legumes|3,oni|janela_movel,mantém,"3,9*",3.869385568606576,0.015184361180087787
+tuberculos_raizes_legumes|3,mei|janela_movel,mantém,"-3,8",-3.7965411122375503,0.3884377091559932
+tuberculos_raizes_legumes|3,local|janela_movel,mantém,"-14,8",-14.802036516248895,0.8992063485285837
+tuberculos_raizes_legumes|6,oni|janela_movel,mantém,"13,6*",13.563619503066427,0.0013738339508567925
+tuberculos_raizes_legumes|6,mei|janela_movel,ganha significância,"1,2*",1.2315498687406001,0.09661163771260628
+tuberculos_raizes_legumes|6,local|janela_movel,mantém,"-14,8",-14.787904515151396,0.9469500363796485
+tuberculos_raizes_legumes|12,oni|janela_movel,mantém,"20,9*",20.949207178600314,0.007398144822143994
+tuberculos_raizes_legumes|12,mei|janela_movel,mantém,"14,9*",14.945950707597454,0.006814673562267915
+tuberculos_raizes_legumes|12,local|janela_movel,mantém,"-1,7",-1.6674834310591136,0.2639103603256011
+alimentacao_domicilio|1,oni|sem_2020_2022,mantém,"-1,7",-1.6751665702070317,0.564922964928682
+alimentacao_domicilio|1,mei|sem_2020_2022,mantém,"-1,0",-0.9756496199361031,0.575965912021853
+alimentacao_domicilio|1,local|sem_2020_2022,mantém,"-10,8",-10.7957412999089,0.8419824489678844
+alimentacao_domicilio|3,oni|sem_2020_2022,mantém,"-3,8",-3.809508462249611,0.5944821010449483
+alimentacao_domicilio|3,mei|sem_2020_2022,mantém,"-2,0",-2.0023403486353786,0.495075540106764
+alimentacao_domicilio|3,local|sem_2020_2022,mantém,"-8,4",-8.38413532866118,0.41062745970004827
+alimentacao_domicilio|6,oni|sem_2020_2022,mantém,"1,2",1.1929912859491965,0.24173899666466098
+alimentacao_domicilio|6,mei|sem_2020_2022,mantém,"-3,0",-3.0391757478184456,0.8119629938412826
+alimentacao_domicilio|6,local|sem_2020_2022,mantém,"-10,4",-10.405330988419092,0.7716713676707143
+alimentacao_domicilio|12,oni|sem_2020_2022,ganha significância,"4,6*",4.552228262108537,0.09678648276048935
+alimentacao_domicilio|12,mei|sem_2020_2022,mantém,"-0,4",-0.3888574982398918,0.43911209482178837
+alimentacao_domicilio|12,local|sem_2020_2022,mantém,"-14,1",-14.111465377191701,0.9710006551672284
+aves_ovos|1,oni|sem_2020_2022,mantém,"-1,5",-1.540442554018151,0.719812362953294
+aves_ovos|1,mei|sem_2020_2022,mantém,"-0,8",-0.7607138779218703,0.5681358220585535
+aves_ovos|1,local|sem_2020_2022,mantém,"-3,6",-3.5864489647510434,0.7001126420878646
+aves_ovos|3,oni|sem_2020_2022,mantém,"-5,5",-5.493500423937681,0.7607989535864632
+aves_ovos|3,mei|sem_2020_2022,mantém,"-2,3",-2.2957463314259963,0.5797273369190407
+aves_ovos|3,local|sem_2020_2022,mantém,"-9,5",-9.48964148095326,0.5793499475042564
+aves_ovos|6,oni|sem_2020_2022,ganha significância,"3,9*",3.864436940766214,0.060325449223465034
+aves_ovos|6,mei|sem_2020_2022,mantém,"0,6",0.6340093780991096,0.2137135836584173
+aves_ovos|6,local|sem_2020_2022,mantém,"-12,6",-12.58534213366762,0.37552940011816704
+aves_ovos|12,oni|sem_2020_2022,ganha significância,"6,1*",6.126791306612834,0.03215203448428577
+aves_ovos|12,mei|sem_2020_2022,mantém,"-0,7",-0.6726507438744367,0.44678979049889167
+aves_ovos|12,local|sem_2020_2022,mantém,"-10,9",-10.906113962222541,0.2834683217231237
+carnes|1,oni|sem_2020_2022,mantém,"-2,2",-2.1799333685208477,0.8815491314400983
+carnes|1,mei|sem_2020_2022,mantém,"-1,8",-1.800546845523976,0.7815593012898786
+carnes|1,local|sem_2020_2022,ganha significância,"3,1*",3.105523955738043,0.08757503973007674
+carnes|3,oni|sem_2020_2022,mantém,"-8,9",-8.866950789862237,0.8919632983359536
+carnes|3,mei|sem_2020_2022,mantém,"-3,0",-2.9941020680581687,0.4770679330533853
+carnes|3,local|sem_2020_2022,ganha significância,"2,9*",2.9429168295194152,0.06381788569849625
+carnes|6,oni|sem_2020_2022,mantém,"-12,8",-12.78139132167746,0.8780552896829881
+carnes|6,mei|sem_2020_2022,mantém,"-1,7",-1.669050069311151,0.37101975659632525
+carnes|6,local|sem_2020_2022,ganha significância,"3,4*",3.4198861313242124,0.05967825201821358
+carnes|12,oni|sem_2020_2022,mantém,"-8,0",-7.972774833563867,0.8661772483828043
+carnes|12,mei|sem_2020_2022,mantém,"-5,6",-5.632819996841021,0.6800587673275944
+carnes|12,local|sem_2020_2022,ganha significância,"7,9*",7.931500248562495,0.05903908170189753
+cereais_leguminosas|1,oni|sem_2020_2022,mantém,"-1,2",-1.2146773906269281,0.5808396421978113
+cereais_leguminosas|1,mei|sem_2020_2022,mantém,"-0,7",-0.6598778357833845,0.34054687596393274
+cereais_leguminosas|1,local|sem_2020_2022,mantém,"1,8",1.8241652760673577,0.12724669922169418
+cereais_leguminosas|3,oni|sem_2020_2022,mantém,"0,2",0.194057029336292,0.3059841083041469
+cereais_leguminosas|3,mei|sem_2020_2022,mantém,"1,6",1.5764191104274516,0.1605358227813276
+cereais_leguminosas|3,local|sem_2020_2022,ganha significância,"3,8*",3.843127058031226,0.06162631746069586
+cereais_leguminosas|6,oni|sem_2020_2022,ganha significância,"3,9*",3.8997117145096682,0.09175443343929757
+cereais_leguminosas|6,mei|sem_2020_2022,mantém,"5,7*",5.675875856347057,0.05713721751251239
+cereais_leguminosas|6,local|sem_2020_2022,mantém,"-1,6",-1.5820548403203238,0.3198742729564992
+cereais_leguminosas|12,oni|sem_2020_2022,ganha significância,"6,0*",6.025129667566198,0.06808970436358433
+cereais_leguminosas|12,mei|sem_2020_2022,perde significância,"4,0",3.973123681496993,0.11162501628963573
+cereais_leguminosas|12,local|sem_2020_2022,mantém,"-4,6",-4.59452794658195,0.3223863152995859
+frutas|1,oni|sem_2020_2022,mantém,"-1,8",-1.8077191418081506,0.5879697891214559
+frutas|1,mei|sem_2020_2022,mantém,"-2,3",-2.331048674487546,0.8247778683412965
+frutas|1,local|sem_2020_2022,perde significância,"0,8",0.844336824883507,0.12714302098814229
+frutas|3,oni|sem_2020_2022,mantém,"-1,8",-1.8125690297951413,0.545124109363713
+frutas|3,mei|sem_2020_2022,mantém,"-3,7",-3.7488803353733946,0.9107828097123675
+frutas|3,local|sem_2020_2022,mantém,"-0,8",-0.7553153470979401,0.2593593706284978
+frutas|6,oni|sem_2020_2022,mantém,"-4,7",-4.71275802638933,0.783363477618645
+frutas|6,mei|sem_2020_2022,mantém,"-6,9",-6.93077660524406,0.9918072463155735
+frutas|6,local|sem_2020_2022,mantém,"0,8",0.7603300415268577,0.2221748270622912
+frutas|12,oni|sem_2020_2022,mantém,"-7,0",-7.0101850625844175,0.6272925727927443
+frutas|12,mei|sem_2020_2022,mantém,"-4,6",-4.572345610045292,0.8474810097137504
+frutas|12,local|sem_2020_2022,mantém,"-7,1",-7.0832524808778,0.7652911740629278
+hortalicas_verduras|1,oni|sem_2020_2022,mantém,"6,4*",6.38132916759554,0.002526238581285193
+hortalicas_verduras|1,mei|sem_2020_2022,ganha significância,"1,9*",1.9263864686436816,0.07395947261895307
+hortalicas_verduras|1,local|sem_2020_2022,mantém,"-2,7",-2.6947985596756707,0.6896198026489738
+hortalicas_verduras|3,oni|sem_2020_2022,mantém,"24,5*",24.484170974153464,0.00018791086372450192
+hortalicas_verduras|3,mei|sem_2020_2022,ganha significância,"8,9*",8.934143057283494,0.0012031854508576735
+hortalicas_verduras|3,local|sem_2020_2022,mantém,"-10,9",-10.911376030597308,0.8254186818674827
+hortalicas_verduras|6,oni|sem_2020_2022,mantém,"31,3*",31.270604110216293,0.0003090462849099693
+hortalicas_verduras|6,mei|sem_2020_2022,mantém,"9,3*",9.290361935704428,0.016812787177100542
+hortalicas_verduras|6,local|sem_2020_2022,mantém,"-14,2",-14.20073452189483,0.9454015887060602
+hortalicas_verduras|12,oni|sem_2020_2022,mantém,"17,2*",17.203570537145264,0.04630328981717939
+hortalicas_verduras|12,mei|sem_2020_2022,mantém,"12,5*",12.508680077387558,0.03912901716539613
+hortalicas_verduras|12,local|sem_2020_2022,mantém,"-6,5",-6.452955308579567,0.6659077643483665
+leite_derivados|1,oni|sem_2020_2022,mantém,"-1,5",-1.4627000344664465,0.35926562854031396
+leite_derivados|1,mei|sem_2020_2022,mantém,"-2,1",-2.1484153581216914,0.5037107145546644
+leite_derivados|1,local|sem_2020_2022,mantém,"0,4",0.38973847636515346,0.12278456080543532
+leite_derivados|3,oni|sem_2020_2022,mantém,"-1,7",-1.711895651762374,0.2871191397354571
+leite_derivados|3,mei|sem_2020_2022,mantém,"2,9",2.932615284741469,0.14524999193600863
+leite_derivados|3,local|sem_2020_2022,mantém,"0,7",0.7297228441610515,0.1522218987066622
+leite_derivados|6,oni|sem_2020_2022,mantém,"10,3",10.33804725961488,0.14337330094600814
+leite_derivados|6,mei|sem_2020_2022,ganha significância,"11,1*",11.053247688580159,0.08178808696407203
+leite_derivados|6,local|sem_2020_2022,perde significância,"-0,1",-0.09384905553442291,0.1351995490413811
+leite_derivados|12,oni|sem_2020_2022,ganha significância,"14,4*",14.408424987142421,0.0793040620932744
+leite_derivados|12,mei|sem_2020_2022,ganha significância,"17,6*",17.622967478124384,0.055740279468586965
+leite_derivados|12,local|sem_2020_2022,mantém,"-4,7",-4.673506154039897,0.678911024452439
+tuberculos_raizes_legumes|1,oni|sem_2020_2022,ganha significância,"2,5*",2.4792410978728863,0.05485736555736998
+tuberculos_raizes_legumes|1,mei|sem_2020_2022,mantém,"-1,3",-1.293785893852073,0.474111842401545
+tuberculos_raizes_legumes|1,local|sem_2020_2022,mantém,"-2,7",-2.695893655921444,0.616631621007111
+tuberculos_raizes_legumes|3,oni|sem_2020_2022,mantém,"9,2*",9.17077328575936,0.0062372891174017
+tuberculos_raizes_legumes|3,mei|sem_2020_2022,ganha significância,"2,7*",2.6935197086729423,0.05728989644112519
+tuberculos_raizes_legumes|3,local|sem_2020_2022,mantém,"-13,0",-12.994850580070416,0.9148160650778954
+tuberculos_raizes_legumes|6,oni|sem_2020_2022,mantém,"18,8*",18.777561780586694,0.007107049725335718
+tuberculos_raizes_legumes|6,mei|sem_2020_2022,ganha significância,"8,5*",8.523468673022583,0.013130191852881648
+tuberculos_raizes_legumes|6,local|sem_2020_2022,mantém,"-16,6",-16.5795003012305,0.9792496882494643
+tuberculos_raizes_legumes|12,oni|sem_2020_2022,mantém,"24,0*",23.973654659827616,0.035898099615492195
+tuberculos_raizes_legumes|12,mei|sem_2020_2022,mantém,"15,7*",15.713599930641076,0.02727366150407652
+tuberculos_raizes_legumes|12,local|sem_2020_2022,mantém,"0,2",0.17834336647749582,0.28372337290335553
+hortalicas_verduras|1,oni|fracoes_hortifruti,mantém,"0,2*",0.1548220940021161,0.049760884962325835
+hortalicas_verduras|1,mei|fracoes_hortifruti,mantém,"-2,2",-2.1831665349053564,0.4031331359637239
+hortalicas_verduras|1,local|fracoes_hortifruti,ganha significância,"-7,2*",-7.222963875224853,0.08462834328966728
+hortalicas_verduras|3,oni|fracoes_hortifruti,mantém,"5,6*",5.5655096327619,0.016413787358182542
+hortalicas_verduras|3,mei|fracoes_hortifruti,mantém,"-0,3",-0.27211435306953025,0.16426300236075075
+hortalicas_verduras|3,local|fracoes_hortifruti,mantém,"-9,9",-9.906723959975118,0.38458052354469197
+hortalicas_verduras|6,oni|fracoes_hortifruti,mantém,"12,0*",12.009949767556261,0.018451458543546406
+hortalicas_verduras|6,mei|fracoes_hortifruti,mantém,"4,0*",3.9894603437797382,0.061471671843912196
+hortalicas_verduras|6,local|fracoes_hortifruti,mantém,"-18,8",-18.798291839626312,0.937210025526233
+hortalicas_verduras|12,oni|fracoes_hortifruti,mantém,"16,6*",16.629227996290297,0.025144588295101643
+hortalicas_verduras|12,mei|fracoes_hortifruti,mantém,"13,6*",13.57416510886582,0.019934325371464407
+hortalicas_verduras|12,local|fracoes_hortifruti,mantém,"-11,9",-11.898176599216148,0.46343325381376155
+tuberculos_raizes_legumes|1,oni|fracoes_hortifruti,mantém,"0,4",0.37185929511128757,0.1408562294334697
+tuberculos_raizes_legumes|1,mei|fracoes_hortifruti,mantém,"-2,4",-2.435673690748974,0.6763730323965819
+tuberculos_raizes_legumes|1,local|fracoes_hortifruti,ganha significância,"-0,2*",-0.2467186380173514,0.06487214526078032
+tuberculos_raizes_legumes|3,oni|fracoes_hortifruti,mantém,"4,6*",4.645248509077138,0.018254160096699355
+tuberculos_raizes_legumes|3,mei|fracoes_hortifruti,mantém,"-2,3",-2.2759937958473087,0.4699864698936141
+tuberculos_raizes_legumes|3,local|fracoes_hortifruti,mantém,"-12,4",-12.432524395020517,0.5570743301116552
+tuberculos_raizes_legumes|6,oni|fracoes_hortifruti,mantém,"15,9*",15.873216379759757,0.0026603534774736998
+tuberculos_raizes_legumes|6,mei|fracoes_hortifruti,mantém,"2,3",2.342014552227678,0.10385529294707113
+tuberculos_raizes_legumes|6,local|fracoes_hortifruti,mantém,"-16,3",-16.302698410659588,0.8121588277168006
+tuberculos_raizes_legumes|12,oni|fracoes_hortifruti,mantém,"23,0*",22.99270789285366,0.013162786125742523
+tuberculos_raizes_legumes|12,mei|fracoes_hortifruti,mantém,"17,3*",17.296203975730005,0.007693577923707994
+tuberculos_raizes_legumes|12,local|fracoes_hortifruti,mantém,"-12,9",-12.904809259624361,0.2144918508679573

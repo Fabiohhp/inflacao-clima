@@ -1,0 +1,51 @@
+categoria,codigo_ipca,tabela,classificacao,codigo_sidra,nome_sidra
+indice_geral,geral,7060,315,7169,Índice geral
+alimentacao_bebidas,1,7060,315,7170,1.Alimentação e bebidas
+alimentacao_domicilio,11,7060,315,7171,11.Alimentação no domicílio
+cereais_leguminosas,1101,7060,315,7172,"1101.Cereais, leguminosas e oleaginosas"
+tuberculos_raizes_legumes,1103,7060,315,7200,"1103.Tubérculos, raízes e legumes"
+hortalicas_verduras,1105,7060,315,7241,1105.Hortaliças e verduras
+frutas,1106,7060,315,7254,1106.Frutas
+carnes,1107,7060,315,7283,1107.Carnes
+aves_ovos,1110,7060,315,7349,1110.Aves e ovos
+leite_derivados,1111,7060,315,7356,1111.Leites e derivados
+indice_geral,geral,1419,315,7169,Índice geral
+alimentacao_bebidas,1,1419,315,7170,1.Alimentação e bebidas
+alimentacao_domicilio,11,1419,315,7171,11.Alimentação no domicílio
+cereais_leguminosas,1101,1419,315,7172,"1101.Cereais, leguminosas e oleaginosas"
+tuberculos_raizes_legumes,1103,1419,315,7200,"1103.Tubérculos, raízes e legumes"
+hortalicas_verduras,1105,1419,315,7241,1105.Hortaliças e verduras
+frutas,1106,1419,315,7254,1106.Frutas
+carnes,1107,1419,315,7283,1107.Carnes
+aves_ovos,1110,1419,315,7349,1110.Aves e ovos
+leite_derivados,1111,1419,315,7356,1111.Leites e derivados
+indice_geral,geral,2938,315,7169,Índice geral
+alimentacao_bebidas,1,2938,315,7170,1.Alimentação e bebidas
+alimentacao_domicilio,11,2938,315,7171,11.Alimentação no domicílio
+cereais_leguminosas,1101,2938,315,7172,"1101.Cereais, leguminosas e oleaginosas"
+tuberculos_raizes_legumes,1103,2938,315,7200,"1103.Tubérculos, raízes e legumes"
+hortalicas_verduras,1105,2938,315,7241,1105.Hortaliças e verduras
+frutas,1106,2938,315,7254,1106.Frutas
+carnes,1107,2938,315,7283,1107.Carnes
+aves_ovos,1110,2938,315,7349,1110.Aves e ovos
+leite_derivados,1111,2938,315,7356,1111.Leites e derivados
+indice_geral,geral,655,315,7169,Índice geral
+alimentacao_bebidas,1,655,315,7170,1.Alimentação e bebidas
+alimentacao_domicilio,11,655,315,7171,11.Alimentação no domicílio
+cereais_leguminosas,1101,655,315,7172,"1101.Cereais, leguminosas e oleaginosas"
+tuberculos_raizes_legumes,1103,655,315,7200,"1103.Tubérculos, raízes e legumes"
+hortalicas_verduras,1105,655,315,7241,1105.Hortaliças e verduras
+frutas,1106,655,315,7254,1106.Frutas
+carnes,1107,655,315,7283,1107.Carnes
+aves_ovos,1110,655,315,7349,1110.Aves e ovos
+leite_derivados,1111,655,315,7356,1111.Leites e derivados
+indice_geral,geral,58,72,2640,Índice geral
+alimentacao_bebidas,1,58,72,1313,1.Alimentação e bebidas
+alimentacao_domicilio,11,58,72,1327,11.Alimentação no domicílio
+cereais_leguminosas,1101,58,72,1363,"1101.Cereais, leguminosas e oleaginosas"
+tuberculos_raizes_legumes,1103,58,72,1367,"1103.Tubérculos, raízes e legumes"
+hortalicas_verduras,1105,58,72,1371,1105.Hortaliças e verduras
+frutas,1106,58,72,1373,1106.Frutas
+carnes,1107,58,72,1375,1107.Carnes frescas e vísceras
+aves_ovos,1110,58,72,1381,1110.Aves e ovos
+leite_derivados,1111,58,72,1383,1111.Leite e derivados

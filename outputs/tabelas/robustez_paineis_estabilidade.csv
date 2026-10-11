@@ -1,0 +1,113 @@
+painel,dependente,choque,h_teste,teste,coef,li_90,ls_90,n,signif,razao,estado,magnitude_muda
+efeito_tempo_linear,alimentacao_domicilio,seca_local,12,principal,0.0852776693717272,-0.0183985483913124,0.1889538871347669,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local,12,principal,-0.0068219012513949,-0.0448114807050519,0.0311676782022619,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_excesso_local,12,principal,-0.0334715637839562,-0.0793360144969544,0.012392886929042,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local,12,principal,0.0308939217791527,0.007754427282039,0.0540334162762663,2882,True,1.0,referência,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local − fracao_excesso_local,12,principal,0.0266496625325612,-0.0367761481627024,0.0900754732278248,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local − fracao_excesso_local,12,principal,0.0643654855631089,0.0176078179287336,0.1111231531974842,2882,True,1.0,referência,False
+sem_efeito_tempo,alimentacao_domicilio,seca_local,12,principal,-0.0492744527788302,-0.349843270756383,0.2512943651987226,2882,False,1.0,referência,False
+sem_efeito_tempo,alimentacao_domicilio,seca_centro_oeste,12,principal,0.7611479522335974,-1.6784552071577168,3.200751111624912,2882,False,1.0,referência,False
+sem_efeito_tempo,alimentacao_domicilio,seca_matopiba,12,principal,0.5191315378304107,-1.2735611843266192,2.311824259987441,2882,False,1.0,referência,False
+sem_efeito_tempo,alimentacao_domicilio,seca_local − seca_centro_oeste,12,principal,-0.8104224050124277,-3.271309093463757,1.650464283438902,2882,False,1.0,referência,False
+sem_efeito_tempo,alimentacao_domicilio,seca_local − seca_matopiba,12,principal,-0.5684059906092409,-2.4125716617207287,1.275759680502247,2882,False,1.0,referência,False
+efeito_tempo_linear,hortalicas_verduras,seca_local,1,principal,-1.9759133966213445,-2.4177466452506997,-1.5340801479919897,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local,1,principal,-0.2660854686856635,-0.4016291667307807,-0.1305417706405463,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_excesso_local,1,principal,0.6161457687222416,0.4039171558129347,0.8283743816315484,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local,1,principal,0.0524089569207029,-0.0582107816629034,0.1630286955043092,3003,False,1.0,referência,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local − fracao_excesso_local,1,principal,-0.8822312374079051,-1.1217334876400509,-0.6427289871757594,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local − fracao_excesso_local,1,principal,-0.5637368118015387,-0.8026540007020394,-0.3248196229010379,3003,True,1.0,referência,False
+sem_efeito_tempo,hortalicas_verduras,seca_local,1,principal,-1.9968564802529043,-2.402805798616908,-1.5909071618889008,3003,True,1.0,referência,False
+sem_efeito_tempo,hortalicas_verduras,seca_centro_oeste,1,principal,0.0838929554188982,-0.7917776210459232,0.9595635318837198,3003,False,1.0,referência,False
+sem_efeito_tempo,hortalicas_verduras,seca_matopiba,1,principal,0.2236438564676158,-0.5377196693362878,0.9850073822715196,3003,False,1.0,referência,False
+sem_efeito_tempo,hortalicas_verduras,seca_local − seca_centro_oeste,1,principal,-2.0807494356718026,-3.026245538357537,-1.135253332986068,3003,True,1.0,referência,False
+sem_efeito_tempo,hortalicas_verduras,seca_local − seca_matopiba,1,principal,-2.2205003367205203,-3.1394501451801053,-1.301550528260935,3003,True,1.0,referência,False
+efeito_tempo_linear,tuberculos_raizes_legumes,seca_local,1,principal,-0.806571083987356,-1.1650197428963232,-0.4481224250783887,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local,1,principal,-0.1085622681046909,-0.2307974047142104,0.0136728685048286,3003,False,1.0,referência,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_excesso_local,1,principal,0.2992716045141131,0.1308055504496782,0.4677376585785481,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local,1,principal,0.0374208555293772,-0.066197617320687,0.1410393283794414,3003,False,1.0,referência,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local − fracao_excesso_local,1,principal,-0.407833872618804,-0.6311082005047169,-0.184559544732891,3003,True,1.0,referência,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local − fracao_excesso_local,1,principal,-0.2618507489847359,-0.4390624690183491,-0.0846390289511227,3003,True,1.0,referência,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_local,1,principal,-2.140441729112033,-2.907590507276046,-1.3732929509480205,3003,True,1.0,referência,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_centro_oeste,1,principal,-2.2807510226007635,-5.13448151964873,0.5729794744472034,3003,False,1.0,referência,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_matopiba,1,principal,0.3811492860013906,-2.1370105090717155,2.899309081074497,3003,False,1.0,referência,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_local − seca_centro_oeste,1,principal,0.1403092934887304,-2.784928565719224,3.0655471526966847,3003,False,1.0,referência,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_local − seca_matopiba,1,principal,-2.521591015113424,-5.352274973607988,0.3090929433811409,3003,False,1.0,referência,False
+efeito_tempo_linear,aves_ovos,seca_local,12,principal,0.0718627693357662,-0.2142238736864604,0.3579494123579929,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,aves_ovos,fracao_seca_local,12,principal,-0.0545966001979186,-0.1504978939424226,0.0413046935465852,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,aves_ovos,fracao_excesso_local,12,principal,0.0177235966631814,-0.1150707717920261,0.1505179651183889,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,aves_ovos,fracao_calor_local,12,principal,0.0549364760601922,0.007585654017512,0.1022872981028725,2882,True,1.0,referência,False
+efeito_tempo_nao_linear,aves_ovos,fracao_seca_local − fracao_excesso_local,12,principal,-0.0723201968611,-0.2426144634867764,0.0979740697645762,2882,False,1.0,referência,False
+efeito_tempo_nao_linear,aves_ovos,fracao_calor_local − fracao_excesso_local,12,principal,0.0372128793970108,-0.108511406635357,0.1829371654293787,2882,False,1.0,referência,False
+sem_efeito_tempo,aves_ovos,seca_local,12,principal,0.1989946555698008,-0.2587066725718483,0.6566959837114501,2882,False,1.0,referência,False
+sem_efeito_tempo,aves_ovos,seca_centro_oeste,12,principal,1.3798299755553247,-2.023376065860416,4.783036016971065,2882,False,1.0,referência,False
+sem_efeito_tempo,aves_ovos,seca_matopiba,12,principal,0.1974877600640515,-2.1515768263728776,2.5465523465009805,2882,False,1.0,referência,False
+sem_efeito_tempo,aves_ovos,seca_local − seca_centro_oeste,12,principal,-1.180835319985524,-4.6474657974306695,2.285795157459621,2882,False,1.0,referência,False
+sem_efeito_tempo,aves_ovos,seca_local − seca_matopiba,12,principal,0.0015068955057493,-2.3909009058007875,2.393914696812286,2882,False,1.0,referência,False
+efeito_tempo_linear,alimentacao_domicilio,seca_local,12,raio_300,0.1260715053973721,-0.00453108683023648,0.2566740976249807,2882,False,1.478364809054803,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local,12,raio_300,-0.003998922859208758,-0.060406483650958014,0.052408637932540504,2882,False,0.5861889100770967,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_excesso_local,12,raio_300,-0.058711539140121054,-0.11892283291079493,0.001499754630552841,2882,False,1.7540721885322559,mantém,True
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local,12,raio_300,0.03360716298384921,0.005178558274583728,0.062035767693114696,2882,True,1.0878244343367056,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local − fracao_excesso_local,12,raio_300,0.0547126162809123,-0.030696146745128584,0.14012137930695318,2882,False,2.0530322368646545,mantém,True
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local − fracao_excesso_local,12,raio_300,0.09231870212397027,0.0263955458942591,0.15824185835368143,2882,True,1.4342889099073737,mantém,False
+sem_efeito_tempo,alimentacao_domicilio,seca_local,12,raio_300,0.017089850760160872,-0.33880192164215595,0.37298162316247774,2882,False,-0.3468298437908415,mantém,True
+sem_efeito_tempo,alimentacao_domicilio,seca_centro_oeste,12,raio_300,0.7364320990704422,-1.7100669204982095,3.182931118639094,2882,False,0.9675281880603813,mantém,False
+sem_efeito_tempo,alimentacao_domicilio,seca_matopiba,12,raio_300,0.5050685013539868,-1.3016601878233218,2.3117971905312955,2882,False,0.9729104563070913,mantém,False
+sem_efeito_tempo,alimentacao_domicilio,seca_local − seca_centro_oeste,12,raio_300,-0.7193422483102813,-3.1919910798539184,1.7533065832333556,2882,False,0.88761397002499,mantém,False
+sem_efeito_tempo,alimentacao_domicilio,seca_local − seca_matopiba,12,raio_300,-0.48797865059382595,-2.372102004802482,1.39614470361483,2882,False,0.8585037080112234,mantém,False
+efeito_tempo_linear,hortalicas_verduras,seca_local,1,raio_300,-1.9472653514891818,-2.4396310989890915,-1.454899603989272,3003,True,0.9855013660107024,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local,1,raio_300,-0.3703020416346027,-0.564233132204082,-0.17637095106512332,3003,True,1.391665781163172,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_excesso_local,1,raio_300,0.7547062830632547,0.49057758151215225,1.018834984614357,3003,True,1.2248826842199352,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local,1,raio_300,0.13955891544256896,-0.0072020196977331755,0.2863198505828711,3003,False,2.662882904800564,mantém,True
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local − fracao_excesso_local,1,raio_300,-1.1250083246978573,-1.43600711844261,-0.8140095309531047,3003,True,1.2751853221648086,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local − fracao_excesso_local,1,raio_300,-0.6151473676206858,-0.9036241754591606,-0.3266705597822108,3003,True,1.0911960240007281,mantém,False
+sem_efeito_tempo,hortalicas_verduras,seca_local,1,raio_300,-1.8976255177314707,-2.343954044500108,-1.4512969909628333,3003,True,0.9503064123522458,mantém,False
+sem_efeito_tempo,hortalicas_verduras,seca_centro_oeste,1,raio_300,0.16446556051576813,-0.710636719373585,1.0395678404051212,3003,False,1.9604215836067649,mantém,True
+sem_efeito_tempo,hortalicas_verduras,seca_matopiba,1,raio_300,0.25513240336902454,-0.5122697295178356,1.0225345362558846,3003,False,1.1407977281323993,mantém,False
+sem_efeito_tempo,hortalicas_verduras,seca_local − seca_centro_oeste,1,raio_300,-2.062091078247239,-3.019343885930284,-1.1048382705641944,3003,True,0.9910328667619994,mantém,False
+sem_efeito_tempo,hortalicas_verduras,seca_local − seca_matopiba,1,raio_300,-2.1527579211004952,-3.119929208992285,-1.1855866332087053,3003,True,0.9694922741060807,mantém,False
+efeito_tempo_linear,tuberculos_raizes_legumes,seca_local,1,raio_300,-0.9837371985700096,-1.368017727010788,-0.5994566701292312,3003,True,1.219653441711321,mantém,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local,1,raio_300,-0.1809583511817241,-0.33967376910679764,-0.02224293325665061,3003,True,1.6668622933266168,ganha significância,True
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_excesso_local,1,raio_300,0.43492601421651406,0.22918880413489098,0.640663224298137,3003,True,1.4532819273737805,mantém,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local,1,raio_300,0.10223313299250017,-0.030354797905340104,0.23482106389034044,3003,False,2.731982781960775,mantém,True
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local − fracao_excesso_local,1,raio_300,-0.6158843653982382,-0.8933095588002735,-0.3384591719962028,3003,True,1.5101353927359922,mantém,True
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local − fracao_excesso_local,1,raio_300,-0.3326928812240139,-0.5580706187113551,-0.10731514373667275,3003,True,1.270543935864043,mantém,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_local,1,raio_300,-2.3168034190591085,-3.1550101056341155,-1.4785967324841016,3003,True,1.0823949970458853,mantém,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_centro_oeste,1,raio_300,-2.1154427839228527,-4.938876125826243,0.7079905579805379,3003,False,0.9275202610719832,mantém,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_matopiba,1,raio_300,0.45217808771006135,-2.0517964296161026,2.9561526050362255,3003,False,1.1863542824750606,mantém,False
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_local − seca_centro_oeste,1,raio_300,-0.2013606351362558,-3.1152657740164535,2.712544503743942,3003,False,-1.4351197282055235,mantém,True
+sem_efeito_tempo,tuberculos_raizes_legumes,seca_local − seca_matopiba,1,raio_300,-2.76898150676917,-5.6413039442117645,0.10334093067342476,3003,False,1.098108888464856,mantém,False
+efeito_tempo_linear,aves_ovos,seca_local,12,raio_300,0.16097547246540267,-0.1455090038882353,0.4674599488190406,2882,False,2.2400399254483636,mantém,True
+efeito_tempo_nao_linear,aves_ovos,fracao_seca_local,12,raio_300,-0.05428241479260415,-0.1752710371280496,0.06670620754284128,2882,False,0.9942453302188141,mantém,False
+efeito_tempo_nao_linear,aves_ovos,fracao_excesso_local,12,raio_300,-0.011140283257743003,-0.15984592822953536,0.13756536171404932,2882,False,-0.6285565773952404,mantém,True
+efeito_tempo_nao_linear,aves_ovos,fracao_calor_local,12,raio_300,0.08685698761756444,0.02444244306335236,0.1492715321717765,2882,True,1.5810440320634676,mantém,True
+efeito_tempo_nao_linear,aves_ovos,fracao_seca_local − fracao_excesso_local,12,raio_300,-0.043142131534861156,-0.2514860737182993,0.16520181064857697,2882,False,0.5965433365415338,mantém,False
+efeito_tempo_nao_linear,aves_ovos,fracao_calor_local − fracao_excesso_local,12,raio_300,0.09799727087530744,-0.06085705683607532,0.25685159858669016,2882,False,2.63342349378047,mantém,True
+sem_efeito_tempo,aves_ovos,seca_local,12,raio_300,0.3025622315581138,-0.21240334594717514,0.8175278090634027,2882,False,1.5204540578829007,mantém,True
+sem_efeito_tempo,aves_ovos,seca_centro_oeste,12,raio_300,1.33438693353959,-2.0969226905346607,4.765696557613841,2882,False,0.9670662017634123,mantém,False
+sem_efeito_tempo,aves_ovos,seca_matopiba,12,raio_300,0.1693801920560094,-2.1797519109828745,2.518512295094893,2882,False,0.8576743794201427,mantém,False
+sem_efeito_tempo,aves_ovos,seca_local − seca_centro_oeste,12,raio_300,-1.0318247019814761,-4.589485088647153,2.5258356846842016,2882,False,0.8738091455412474,mantém,False
+sem_efeito_tempo,aves_ovos,seca_local − seca_matopiba,12,raio_300,0.1331820395021044,-2.2557515260759304,2.522115605080139,2882,False,88.38173515945284,mantém,True
+efeito_tempo_linear,alimentacao_domicilio,seca_local,12,painel_16_areas,0.07908543826168651,-0.02181369682467356,0.17998457334804657,3171,False,0.9273874256219571,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local,12,painel_16_areas,-0.0032890393107285394,-0.0385518905187005,0.03197381189724341,3171,False,0.48212942250608176,mantém,True
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_excesso_local,12,painel_16_areas,-0.025643255303459185,-0.07045981114190299,0.019173300534984623,3171,False,0.7661206231347538,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local,12,painel_16_areas,0.03304302550327142,0.012507300529359009,0.05357875047718383,3171,True,1.0695639659956977,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local − fracao_excesso_local,12,painel_16_areas,0.022354215992730644,-0.03950675454748487,0.08421518653294616,3171,False,0.838817976228319,mantém,False
+efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local − fracao_excesso_local,12,painel_16_areas,0.0586862808067306,0.009389268511223165,0.10798329310223803,3171,True,0.9117663029076356,mantém,False
+efeito_tempo_linear,hortalicas_verduras,seca_local,1,painel_16_areas,-1.9155459196685711,-2.327963519606015,-1.5031283197311271,3347,True,0.9694483184050491,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local,1,painel_16_areas,-0.26725222961234113,-0.38942568636329294,-0.14507877286138937,3347,True,1.0043849103539584,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_excesso_local,1,painel_16_areas,0.6018042678949829,0.40166467143145096,0.8019438643585147,3347,True,0.9767238508234829,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local,1,painel_16_areas,0.05464157584792874,-0.04813478923389489,0.15741794092975236,3347,False,1.0425999496727991,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local − fracao_excesso_local,1,painel_16_areas,-0.869056497507324,-1.096180611535632,-0.6419323834790159,3347,True,0.9850665683304415,mantém,False
+efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local − fracao_excesso_local,1,painel_16_areas,-0.5471626920470541,-0.7711387445257204,-0.32318663956838795,3347,True,0.9705995432487042,mantém,False
+efeito_tempo_linear,tuberculos_raizes_legumes,seca_local,1,painel_16_areas,-0.8631153399319712,-1.2139277962409998,-0.5123028836229427,3347,True,1.0701044918013718,mantém,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local,1,painel_16_areas,-0.12147218971461499,-0.2294743381338388,-0.013470041295391179,3347,True,1.1189172060911121,ganha significância,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_excesso_local,1,painel_16_areas,0.32939747556877097,0.17185549228770475,0.4869394588498372,3347,True,1.1006639808129113,mantém,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local,1,painel_16_areas,0.04772242385607677,-0.044714973854384124,0.14015982156653767,3347,False,1.2752894924759894,mantém,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local − fracao_excesso_local,1,painel_16_areas,-0.45086966528338596,-0.6535640850955566,-0.24817524547121522,3347,True,1.105522850243503,mantém,False
+efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local − fracao_excesso_local,1,painel_16_areas,-0.2816750517126942,-0.45156219231363653,-0.11178791111175189,3347,True,1.0757084056655262,mantém,False
+efeito_tempo_linear,aves_ovos,seca_local,12,painel_16_areas,0.03572771212030241,-0.24641271350260568,0.3178681377432105,3171,False,0.49716581270853805,mantém,True
+efeito_tempo_nao_linear,aves_ovos,fracao_seca_local,12,painel_16_areas,-0.052697396443241354,-0.14358654377197264,0.03819175088548992,3171,False,0.9652138824067354,mantém,False
+efeito_tempo_nao_linear,aves_ovos,fracao_excesso_local,12,painel_16_areas,0.024109006990195983,-0.10785089823938994,0.15606891221978192,3171,False,1.3602773437221967,mantém,False
+efeito_tempo_nao_linear,aves_ovos,fracao_calor_local,12,painel_16_areas,0.043676566422693824,0.00011436136430795774,0.0872387714810797,3171,True,0.7950376426554692,mantém,False
+efeito_tempo_nao_linear,aves_ovos,fracao_seca_local − fracao_excesso_local,12,painel_16_areas,-0.07680640343343734,-0.24767104749471291,0.09405824062783824,3171,False,1.0620325547641092,mantém,False
+efeito_tempo_nao_linear,aves_ovos,fracao_calor_local − fracao_excesso_local,12,painel_16_areas,0.019567559432497845,-0.1223173710816476,0.1614524899466433,3171,False,0.5258276099448959,mantém,False

@@ -1,0 +1,31 @@
+# Ambiente e caches
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Segredos: só o .env.example é versionado
+.env
+
+# Dados (brutos, processados e lakehouse) nunca são versionados
+data/
+
+# Notebooks: a fonte é o .py (percent); .ipynb gerados pelo jupytext são derivados
+notebooks/*.ipynb
+
+# Outputs pesados (figuras PNG/SVG e tabelas CSV pequenas são versionadas)
+outputs/**/*.parquet
+outputs/**/*.duckdb
+outputs/**/*.pkl
+outputs/**/*.nc
+outputs/**/*.zip
+
+# Logs
+*.log
+
+# Metadados do Windows/WSL
+*:Zone.Identifier
+*.Zone.Identifier

@@ -1,0 +1,38 @@
+# Dependências do projeto. Instalar com:
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+# Versões fixadas na instalação validada da Parte 0 (Python 3.12.13).
+
+# Dados e armazenamento
+pandas==3.0.6
+numpy==2.5.3
+pyarrow==25.0.1
+duckdb==1.5.6
+
+# Acesso a APIs e configuração
+requests==2.34.2
+tenacity==9.1.4
+sidrapy==0.1.4
+python-bcb==0.4.0
+pyyaml==6.0.3
+python-dotenv==1.2.4
+
+# Estatística e econometria
+scipy==1.18.1
+statsmodels==0.15.0
+pycwt==0.5.0b0  # só há versões pré-lançamento no PyPI
+
+# Espacial (malhas, centroides, cinturão verde)
+geopandas==1.2.0
+geobr==2.1.1
+
+# Visualização
+matplotlib==3.11.2
+
+# Ferramentas
+jupytext==1.19.6
+pytest==9.1.1
+ruff==0.16.10
+
+# Pacote do projeto (src/clima_inflacao), em modo editável
+-e .

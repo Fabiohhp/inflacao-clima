@@ -1,0 +1,17 @@
+area_id,celulas_150km,celulas_300km,corr_spi3_150_300
+aracaju,9,27,0.959
+belem,5,11,0.971
+belo_horizonte,11,46,0.969
+brasilia,4,17,0.96
+campo_grande,2,11,0.893
+curitiba,12,44,0.968
+fortaleza,8,24,0.974
+goiania,9,19,0.982
+porto_alegre,10,26,0.963
+recife,9,30,0.965
+rio_branco,3,5,0.964
+rio_de_janeiro,10,35,0.887
+salvador,6,19,0.947
+sao_luis,6,16,0.97
+sao_paulo,12,40,0.954
+vitoria,8,25,0.959

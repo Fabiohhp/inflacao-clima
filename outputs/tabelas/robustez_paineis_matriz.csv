@@ -1,0 +1,89 @@
+linha,coluna,estado,texto
+efeito_tempo_linear|alimentacao_domicilio|seca_local,principal,referência,"0,09"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_seca_local,principal,referência,"-0,01"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_excesso_local,principal,referência,"-0,03"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_calor_local,principal,referência,"0,03"
+sem_efeito_tempo|alimentacao_domicilio|seca_local,principal,referência,"-0,05"
+sem_efeito_tempo|alimentacao_domicilio|seca_centro_oeste,principal,referência,"0,76"
+sem_efeito_tempo|alimentacao_domicilio|seca_matopiba,principal,referência,"0,52"
+efeito_tempo_linear|hortalicas_verduras|seca_local,principal,referência,"-1,98"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_seca_local,principal,referência,"-0,27"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_excesso_local,principal,referência,"0,62"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_calor_local,principal,referência,"0,05"
+sem_efeito_tempo|hortalicas_verduras|seca_local,principal,referência,"-2,00"
+sem_efeito_tempo|hortalicas_verduras|seca_centro_oeste,principal,referência,"0,08"
+sem_efeito_tempo|hortalicas_verduras|seca_matopiba,principal,referência,"0,22"
+efeito_tempo_linear|tuberculos_raizes_legumes|seca_local,principal,referência,"-0,81"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_seca_local,principal,referência,"-0,11"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_excesso_local,principal,referência,"0,30"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_calor_local,principal,referência,"0,04"
+sem_efeito_tempo|tuberculos_raizes_legumes|seca_local,principal,referência,"-2,14"
+sem_efeito_tempo|tuberculos_raizes_legumes|seca_centro_oeste,principal,referência,"-2,28"
+sem_efeito_tempo|tuberculos_raizes_legumes|seca_matopiba,principal,referência,"0,38"
+efeito_tempo_linear|aves_ovos|seca_local,principal,referência,"0,07"
+efeito_tempo_nao_linear|aves_ovos|fracao_seca_local,principal,referência,"-0,05"
+efeito_tempo_nao_linear|aves_ovos|fracao_excesso_local,principal,referência,"0,02"
+efeito_tempo_nao_linear|aves_ovos|fracao_calor_local,principal,referência,"0,05"
+sem_efeito_tempo|aves_ovos|seca_local,principal,referência,"0,20"
+sem_efeito_tempo|aves_ovos|seca_centro_oeste,principal,referência,"1,38"
+sem_efeito_tempo|aves_ovos|seca_matopiba,principal,referência,"0,20"
+efeito_tempo_linear|alimentacao_domicilio|seca_local,raio_300,mantém,"0,13"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_seca_local,raio_300,mantém,"-0,00"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_excesso_local,raio_300,mantém,"-0,06"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_calor_local,raio_300,mantém,"0,03"
+sem_efeito_tempo|alimentacao_domicilio|seca_local,raio_300,mantém,"0,02"
+sem_efeito_tempo|alimentacao_domicilio|seca_centro_oeste,raio_300,mantém,"0,74"
+sem_efeito_tempo|alimentacao_domicilio|seca_matopiba,raio_300,mantém,"0,51"
+efeito_tempo_linear|hortalicas_verduras|seca_local,raio_300,mantém,"-1,95"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_seca_local,raio_300,mantém,"-0,37"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_excesso_local,raio_300,mantém,"0,75"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_calor_local,raio_300,mantém,"0,14"
+sem_efeito_tempo|hortalicas_verduras|seca_local,raio_300,mantém,"-1,90"
+sem_efeito_tempo|hortalicas_verduras|seca_centro_oeste,raio_300,mantém,"0,16"
+sem_efeito_tempo|hortalicas_verduras|seca_matopiba,raio_300,mantém,"0,26"
+efeito_tempo_linear|tuberculos_raizes_legumes|seca_local,raio_300,mantém,"-0,98"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_seca_local,raio_300,ganha significância,"-0,18"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_excesso_local,raio_300,mantém,"0,43"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_calor_local,raio_300,mantém,"0,10"
+sem_efeito_tempo|tuberculos_raizes_legumes|seca_local,raio_300,mantém,"-2,32"
+sem_efeito_tempo|tuberculos_raizes_legumes|seca_centro_oeste,raio_300,mantém,"-2,12"
+sem_efeito_tempo|tuberculos_raizes_legumes|seca_matopiba,raio_300,mantém,"0,45"
+efeito_tempo_linear|aves_ovos|seca_local,raio_300,mantém,"0,16"
+efeito_tempo_nao_linear|aves_ovos|fracao_seca_local,raio_300,mantém,"-0,05"
+efeito_tempo_nao_linear|aves_ovos|fracao_excesso_local,raio_300,mantém,"-0,01"
+efeito_tempo_nao_linear|aves_ovos|fracao_calor_local,raio_300,mantém,"0,09"
+sem_efeito_tempo|aves_ovos|seca_local,raio_300,mantém,"0,30"
+sem_efeito_tempo|aves_ovos|seca_centro_oeste,raio_300,mantém,"1,33"
+sem_efeito_tempo|aves_ovos|seca_matopiba,raio_300,mantém,"0,17"
+efeito_tempo_linear|alimentacao_domicilio|seca_local,painel_16_areas,mantém,"0,08"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_seca_local,painel_16_areas,mantém,"-0,00"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_excesso_local,painel_16_areas,mantém,"-0,03"
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_calor_local,painel_16_areas,mantém,"0,03"
+efeito_tempo_linear|hortalicas_verduras|seca_local,painel_16_areas,mantém,"-1,92"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_seca_local,painel_16_areas,mantém,"-0,27"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_excesso_local,painel_16_areas,mantém,"0,60"
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_calor_local,painel_16_areas,mantém,"0,05"
+efeito_tempo_linear|tuberculos_raizes_legumes|seca_local,painel_16_areas,mantém,"-0,86"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_seca_local,painel_16_areas,ganha significância,"-0,12"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_excesso_local,painel_16_areas,mantém,"0,33"
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_calor_local,painel_16_areas,mantém,"0,05"
+efeito_tempo_linear|aves_ovos|seca_local,painel_16_areas,mantém,"0,04"
+efeito_tempo_nao_linear|aves_ovos|fracao_seca_local,painel_16_areas,mantém,"-0,05"
+efeito_tempo_nao_linear|aves_ovos|fracao_excesso_local,painel_16_areas,mantém,"0,02"
+efeito_tempo_nao_linear|aves_ovos|fracao_calor_local,painel_16_areas,mantém,"0,04"
+efeito_tempo_linear|alimentacao_domicilio|seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_excesso_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|alimentacao_domicilio|fracao_calor_local,placebo,placebo passa,1/12
+efeito_tempo_linear|hortalicas_verduras|seca_local,placebo,placebo falha,3/12
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_excesso_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|hortalicas_verduras|fracao_calor_local,placebo,placebo passa,0/12
+efeito_tempo_linear|tuberculos_raizes_legumes|seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_excesso_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|tuberculos_raizes_legumes|fracao_calor_local,placebo,placebo passa,1/12
+efeito_tempo_linear|aves_ovos|seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|aves_ovos|fracao_seca_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|aves_ovos|fracao_excesso_local,placebo,placebo passa,0/12
+efeito_tempo_nao_linear|aves_ovos|fracao_calor_local,placebo,placebo passa,2/12

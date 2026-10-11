@@ -1,0 +1,13 @@
+grupo,clima,faixa,coerencia_media,pct_significativa
+alimentacao_domicilio,oni,2-6 meses,0.257,2.9
+alimentacao_domicilio,oni,6-18 meses,0.167,2.6
+alimentacao_domicilio,oni,18-64 meses,0.249,0.5
+carnes,cwi_milho_spi_6,2-6 meses,0.294,7.2
+carnes,cwi_milho_spi_6,6-18 meses,0.221,2.4
+carnes,cwi_milho_spi_6,18-64 meses,0.358,11.3
+hortalicas_verduras,cinturao_spi_3,2-6 meses,0.29,6.4
+hortalicas_verduras,cinturao_spi_3,6-18 meses,0.304,7.7
+hortalicas_verduras,cinturao_spi_3,18-64 meses,0.35,6.8
+leite_derivados,cwi_milho_spi_6,2-6 meses,0.268,2.4
+leite_derivados,cwi_milho_spi_6,6-18 meses,0.242,6.3
+leite_derivados,cwi_milho_spi_6,18-64 meses,0.181,0.0

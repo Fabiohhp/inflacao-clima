@@ -1,0 +1,41 @@
+mes_transicao,tabela_anterior,tabela_posterior,categoria,nome_anterior,nome_posterior,nome_mudou,peso_anterior,peso_posterior,variacao_peso_pp
+1999-08-01,58,655,indice_geral,Índice geral,Índice geral,False,,,
+1999-08-01,58,655,alimentacao_bebidas,1.Alimentação e bebidas,1.Alimentação e bebidas,False,,,
+1999-08-01,58,655,alimentacao_domicilio,11.Alimentação no domicílio,11.Alimentação no domicílio,False,,,
+1999-08-01,58,655,cereais_leguminosas,"1101.Cereais, leguminosas e oleaginosas","1101.Cereais, leguminosas e oleaginosas",False,,,
+1999-08-01,58,655,tuberculos_raizes_legumes,"1103.Tubérculos, raízes e legumes","1103.Tubérculos, raízes e legumes",False,,,
+1999-08-01,58,655,hortalicas_verduras,1105.Hortaliças e verduras,1105.Hortaliças e verduras,False,,,
+1999-08-01,58,655,frutas,1106.Frutas,1106.Frutas,False,,,
+1999-08-01,58,655,carnes,1107.Carnes frescas e vísceras,1107.Carnes,True,,,
+1999-08-01,58,655,aves_ovos,1110.Aves e ovos,1110.Aves e ovos,False,,,
+1999-08-01,58,655,leite_derivados,1111.Leite e derivados,1111.Leites e derivados,True,,,
+2006-07-01,655,2938,indice_geral,Índice geral,Índice geral,False,,100.0,
+2006-07-01,655,2938,alimentacao_bebidas,1.Alimentação e bebidas,1.Alimentação e bebidas,False,,20.2879,
+2006-07-01,655,2938,alimentacao_domicilio,11.Alimentação no domicílio,11.Alimentação no domicílio,False,,13.3642,
+2006-07-01,655,2938,cereais_leguminosas,"1101.Cereais, leguminosas e oleaginosas","1101.Cereais, leguminosas e oleaginosas",False,,0.796,
+2006-07-01,655,2938,tuberculos_raizes_legumes,"1103.Tubérculos, raízes e legumes","1103.Tubérculos, raízes e legumes",False,,0.5301,
+2006-07-01,655,2938,hortalicas_verduras,1105.Hortaliças e verduras,1105.Hortaliças e verduras,False,,0.1516,
+2006-07-01,655,2938,frutas,1106.Frutas,1106.Frutas,False,,0.7059,
+2006-07-01,655,2938,carnes,1107.Carnes,1107.Carnes,False,,1.6159,
+2006-07-01,655,2938,aves_ovos,1110.Aves e ovos,1110.Aves e ovos,False,,0.92,
+2006-07-01,655,2938,leite_derivados,1111.Leites e derivados,1111.Leites e derivados,False,,1.8996,
+2012-01-01,2938,1419,indice_geral,Índice geral,Índice geral,False,100.0,100.0,0.0
+2012-01-01,2938,1419,alimentacao_bebidas,1.Alimentação e bebidas,1.Alimentação e bebidas,False,23.4584,23.1237,-0.33470000000000155
+2012-01-01,2938,1419,alimentacao_domicilio,11.Alimentação no domicílio,11.Alimentação no domicílio,False,15.0807,15.1526,0.07189999999999941
+2012-01-01,2938,1419,cereais_leguminosas,"1101.Cereais, leguminosas e oleaginosas","1101.Cereais, leguminosas e oleaginosas",False,0.7992,0.8218,0.022599999999999953
+2012-01-01,2938,1419,tuberculos_raizes_legumes,"1103.Tubérculos, raízes e legumes","1103.Tubérculos, raízes e legumes",False,0.5746,0.5333,-0.0413
+2012-01-01,2938,1419,hortalicas_verduras,1105.Hortaliças e verduras,1105.Hortaliças e verduras,False,0.1827,0.1885,0.0058
+2012-01-01,2938,1419,frutas,1106.Frutas,1106.Frutas,False,0.8364,0.8085,-0.027900000000000036
+2012-01-01,2938,1419,carnes,1107.Carnes,1107.Carnes,False,2.4939,2.6692,0.1753
+2012-01-01,2938,1419,aves_ovos,1110.Aves e ovos,1110.Aves e ovos,False,1.1126,1.0637,-0.048899999999999944
+2012-01-01,2938,1419,leite_derivados,1111.Leites e derivados,1111.Leites e derivados,False,2.0557,1.8964,-0.15929999999999978
+2020-01-01,1419,7060,indice_geral,Índice geral,Índice geral,False,100.0,100.0,0.0
+2020-01-01,1419,7060,alimentacao_bebidas,1.Alimentação e bebidas,1.Alimentação e bebidas,False,24.5671,19.3483,-5.218800000000002
+2020-01-01,1419,7060,alimentacao_domicilio,11.Alimentação no domicílio,11.Alimentação no domicílio,False,15.7639,13.4813,-2.2826000000000004
+2020-01-01,1419,7060,cereais_leguminosas,"1101.Cereais, leguminosas e oleaginosas","1101.Cereais, leguminosas e oleaginosas",False,0.8889,0.6927,-0.19620000000000004
+2020-01-01,1419,7060,tuberculos_raizes_legumes,"1103.Tubérculos, raízes e legumes","1103.Tubérculos, raízes e legumes",False,0.5785,0.528,-0.05049999999999999
+2020-01-01,1419,7060,hortalicas_verduras,1105.Hortaliças e verduras,1105.Hortaliças e verduras,False,0.2144,0.181,-0.03340000000000001
+2020-01-01,1419,7060,frutas,1106.Frutas,1106.Frutas,False,1.0309,0.8482,-0.18269999999999997
+2020-01-01,1419,7060,carnes,1107.Carnes,1107.Carnes,False,2.8818,2.6658,-0.2160000000000002
+2020-01-01,1419,7060,aves_ovos,1110.Aves e ovos,1110.Aves e ovos,False,1.0791,1.1254,0.04630000000000001
+2020-01-01,1419,7060,leite_derivados,1111.Leites e derivados,1111.Leites e derivados,False,1.8955,1.5717,-0.32379999999999987

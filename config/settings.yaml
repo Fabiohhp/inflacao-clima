@@ -1,0 +1,866 @@
+# Configuração central do projeto.
+# Códigos de tabelas e séries, períodos, coordenadas, raios e limiares ficam aqui, nunca no código.
+#
+# Convenção do campo `status`:
+#   confirmado  -> conferido nos metadados oficiais
+#   a_confirmar -> veio de referência secundária ou de conhecimento prévio; conferir antes do uso
+#   a_definir   -> ainda sem fonte ou código; definir antes de usar
+
+projeto:
+  nome: Choques climáticos e inflação de alimentos no Brasil
+  semente_aleatoria: 42
+
+caminhos: # relativos à raiz do repositório
+  dados_brutos: data/raw
+  dados_processados: data/processed
+  lakehouse: data/lakehouse.duckdb
+  logs: data/logs
+  figuras: outputs/figuras
+  tabelas: outputs/tabelas
+
+http:
+  timeout_segundos: 60
+  tentativas_max: 5
+  backoff_inicial_segundos: 2
+  backoff_max_segundos: 60
+
+periodos:
+  # Datas mensais escritas como "AAAA-MM"; nas tabelas, coluna `mes` com o 1º dia do mês.
+  # Janela de estimação:
+  # - início 1999-08: 1ª tabela do IPCA (655) com os códigos de categoria usados até hoje e com o
+  #   subitem diesel; depois do câmbio flutuante (1999-01) e das metas de inflação (1999-06);
+  #   exclui a hiperinflação (até 1994-06) e a lacuna de 1991-08 da tabela 58;
+  # - fim 2023-06: último mês antes da quebra de
+  #   homogeneidade do NASA POWER (temperatura em 2023-07, chuva em 2024-01; Parte 2). Antes,
+  #   o fim era 2026-08, o último IPCA publicado.
+  # Áreas que entram depois (Vitória e Campo Grande em 2014-01; Rio Branco, São Luís e Aracaju
+  # em 2018-05) formam um painel desbalanceado. O LSPA só existe a partir de 2006-09.
+  amostra_estimacao:
+    inicio: "1999-08"
+    fim: "2023-06"
+    status: confirmado
+  # Janelas alternativas para a robustez (Parte 8).
+  janelas_alternativas:
+    - { inicio: "2006-07", fim: "2023-06", motivo: "início dos pesos do IPCA (tabela 2938)" }
+    - { inicio: "2012-01", fim: "2023-06", motivo: "estrutura da POF 2008-09 em diante (tabela 1419)" }
+  clima_inicio: "1981-01"
+
+# ---------------------------------------------------------------------------------------------
+# Preços: IPCA (IBGE/SIDRA)
+# ---------------------------------------------------------------------------------------------
+ipca:
+  # Tabelas por período, conferidas nos metadados do SIDRA em 2026-10-04 (Parte 1a).
+  # A 655 e a 58 não têm a variável de peso. A 58 usa outra classificação (72).
+  tabelas:
+    - { tabela: 7060, inicio: "2020-01", fim: null, classificacao: 315, variaveis: [63, 66], status: confirmado }
+    - { tabela: 1419, inicio: "2012-01", fim: "2019-12", classificacao: 315, variaveis: [63, 66], status: confirmado }
+    - { tabela: 2938, inicio: "2006-07", fim: "2011-12", classificacao: 315, variaveis: [63, 66], status: confirmado }
+    - { tabela: 655, inicio: "1999-08", fim: "2006-06", classificacao: 315, variaveis: [63], status: confirmado }
+    - { tabela: 58, inicio: "1991-01", fim: "1999-07", classificacao: 72, variaveis: [63], status: confirmado }
+  variaveis:
+    variacao_mensal: { codigo: 63, status: confirmado }
+    peso_mensal: { codigo: 66, status: confirmado }
+  niveis_territoriais: [n1, n7, n6]
+  # Categorias pelo código estrutural do IPCA, o prefixo do nome no SIDRA ("1101.Cereais...").
+  # O nome muda entre tabelas ("Leite e derivados" na 58, "Leites e derivados" a partir da 655),
+  # o código estrutural não. O código SIDRA de cada tabela sai dos metadados e fica registrado em
+  # outputs/tabelas/ipca_mapeamento_codigos.csv. O 7169, às vezes citado como Alimentação
+  # no domicílio, é o Índice geral; a Alimentação no domicílio é o 7171.
+  categorias:
+    indice_geral: geral
+    alimentacao_bebidas: "1"
+    alimentacao_domicilio: "11"
+    cereais_leguminosas: "1101"
+    tuberculos_raizes_legumes: "1103"
+    hortalicas_verduras: "1105"
+    frutas: "1106"
+    carnes: "1107"
+    aves_ovos: "1110"
+    leite_derivados: "1111"
+  # O IPCA não é divulgado por UF. Níveis SIDRA: n1 = Brasil, n7 = região metropolitana,
+  # n6 = município. Os códigos SIDRA foram conferidos na API de valores (Parte 1a); a data de
+  # entrada de cada área sai dos dados. O código usa a sede oficial (geobr, pelo municipio_sede,
+  # conferido na Parte 1c); lat e lon abaixo são só aproximações (até 7,0 km da sede oficial).
+  areas:
+    status: confirmado
+    coordenadas: { fonte: geobr_sedes_municipais, status: confirmado }
+    lista:
+      - { id: brasil, nome: Brasil, nivel: n1, codigo_sidra: 1 }
+      - { id: belem, nome: Belém, nivel: n7, codigo_sidra: 1501, municipio_sede: 1501402, uf: PA, lat: -1.456, lon: -48.502 }
+      - { id: fortaleza, nome: Fortaleza, nivel: n7, codigo_sidra: 2301, municipio_sede: 2304400, uf: CE, lat: -3.717, lon: -38.543 }
+      - { id: recife, nome: Recife, nivel: n7, codigo_sidra: 2601, municipio_sede: 2611606, uf: PE, lat: -8.054, lon: -34.881 }
+      - { id: salvador, nome: Salvador, nivel: n7, codigo_sidra: 2901, municipio_sede: 2927408, uf: BA, lat: -12.971, lon: -38.511 }
+      - { id: belo_horizonte, nome: Belo Horizonte, nivel: n7, codigo_sidra: 3101, municipio_sede: 3106200, uf: MG, lat: -19.921, lon: -43.938 }
+      - { id: vitoria, nome: Vitória, nivel: n7, codigo_sidra: 3201, municipio_sede: 3205309, uf: ES, lat: -20.319, lon: -40.338 }
+      - { id: rio_de_janeiro, nome: Rio de Janeiro, nivel: n7, codigo_sidra: 3301, municipio_sede: 3304557, uf: RJ, lat: -22.907, lon: -43.173 }
+      - { id: sao_paulo, nome: São Paulo, nivel: n7, codigo_sidra: 3501, municipio_sede: 3550308, uf: SP, lat: -23.548, lon: -46.636 }
+      - { id: curitiba, nome: Curitiba, nivel: n7, codigo_sidra: 4101, municipio_sede: 4106902, uf: PR, lat: -25.428, lon: -49.273 }
+      - { id: porto_alegre, nome: Porto Alegre, nivel: n7, codigo_sidra: 4301, municipio_sede: 4314902, uf: RS, lat: -30.033, lon: -51.230 }
+      - { id: goiania, nome: Goiânia, nivel: n6, codigo_sidra: 5208707, municipio_sede: 5208707, uf: GO, lat: -16.679, lon: -49.254 }
+      - { id: campo_grande, nome: Campo Grande, nivel: n6, codigo_sidra: 5002704, municipio_sede: 5002704, uf: MS, lat: -20.443, lon: -54.646 }
+      - { id: rio_branco, nome: Rio Branco, nivel: n6, codigo_sidra: 1200401, municipio_sede: 1200401, uf: AC, lat: -9.975, lon: -67.810 }
+      - { id: sao_luis, nome: São Luís, nivel: n6, codigo_sidra: 2111300, municipio_sede: 2111300, uf: MA, lat: -2.530, lon: -44.303 }
+      - { id: aracaju, nome: Aracaju, nivel: n6, codigo_sidra: 2800308, municipio_sede: 2800308, uf: SE, lat: -10.911, lon: -37.072 }
+      - { id: brasilia, nome: Brasília, nivel: n6, codigo_sidra: 5300108, municipio_sede: 5300108, uf: DF, lat: -15.780, lon: -47.930 }
+
+# ---------------------------------------------------------------------------------------------
+# SIDRA (regras da API)
+# ---------------------------------------------------------------------------------------------
+sidra:
+  limite_valores: 50000 # por consulta; acima disso a API devolve HTTP 400 (testado em 2026-10-04)
+
+# ---------------------------------------------------------------------------------------------
+# Produção agrícola (IBGE/SIDRA), conferida nos metadados em 2026-10-04 (Parte 1b)
+# ---------------------------------------------------------------------------------------------
+producao:
+  pam: # Produção Agrícola Municipal: anual; base dos pesos espaciais
+    inicio: 1990
+    niveis_territoriais: [n1, n3, n9] # n9 = microrregião geográfica (558)
+    nivel_pesos: microrregiao
+    # Pesos: defasados (t-1 a t-3) como principal e fixos (2003-2007) como robustez; nunca
+    # contemporâneos (o choque afeta a safra). Detalhes em espacial.pesos (Parte 3).
+    periodo_base_pesos: { inicio: 2003, fim: 2007, status: confirmado }
+    # Até 2000 a PAM publicava banana em mil cachos e laranja em mil frutos, embora a API rotule
+    # a variável como "Toneladas": em 2001 a banana salta 10,8x e a laranja cai 6,3x. Essas
+    # quantidades (e o rendimento) ficam ausentes no processado; o bruto continua no cache.
+    quantidade_fora_de_toneladas: { produtos: [banana, laranja], ate_ano: 2000 }
+    tabelas:
+      - tabela: 1612 # lavouras temporárias, 1974-2025
+        classificacao: 81
+        variaveis: { quantidade_t: 214, area_colhida_ha: 216, area_plantada_ha: 109 }
+        produtos:
+          { soja: 2713, milho: 2711, arroz: 2692, feijao: 2702, mandioca: 2708,
+            batata_inglesa: 2695, tomate: 2715, cebola: 2697 }
+        status: confirmado
+      - tabela: 1613 # lavouras permanentes, 1974-2025 (não tem área plantada)
+        classificacao: 82
+        variaveis: { quantidade_t: 214, area_colhida_ha: 216 }
+        produtos: { banana: 2720, laranja: 2733 }
+        status: confirmado
+      - tabela: 839 # milho 1ª e 2ª safras, 2003-2025
+        classificacao: 81
+        variaveis: { quantidade_t: 214, area_colhida_ha: 216, area_plantada_ha: 109 }
+        produtos: { milho_1a_safra: 114253, milho_2a_safra: 114254 }
+        status: confirmado
+  lspa: # Levantamento Sistemático: em cada mês, a estimativa da safra do ano corrente; até UF
+    tabela: 6588 # 2006-09 em diante
+    classificacao: 48
+    niveis_territoriais: [n1, n3]
+    variaveis: { producao_t: 35, area_plantada_ha: 109, area_colhida_ha: 216 }
+    produtos:
+      { soja: 39443, milho_1a_safra: 39441, milho_2a_safra: 39442, arroz: 39432,
+        feijao_1a_safra: 39436, feijao_2a_safra: 39437, feijao_3a_safra: 39438,
+        mandioca: 39467, batata_inglesa_1a_safra: 39450, batata_inglesa_2a_safra: 39451,
+        batata_inglesa_3a_safra: 39452, tomate: 39470, cebola: 39458, banana: 39449,
+        laranja: 39463 }
+    status: confirmado
+  culturas:
+    # Meses críticos (floração e enchimento de grãos), revisados na Parte 2 a partir do
+    # calendário agrícola típico (hipótese de trabalho, não achado): soja de dez a fev no
+    # Centro-Oeste (no RS, jan a mar); milho 1ª safra em dez-jan; milho 2ª safra, semeado após
+    # a soja (jan a mar), de mar a mai, com risco de geada em jun-jul no PR e no MS.
+    # A safra de uma janela que cruza o ano leva o ano em que termina. `produto` aponta para as
+    # chaves de producao.pam.tabelas.
+    soja: { produto: soja, meses_criticos: [12, 1, 2], meses_geada: [] }
+    milho_1a_safra: { produto: milho_1a_safra, meses_criticos: [12, 1], meses_geada: [] }
+    milho_2a_safra: { produto: milho_2a_safra, meses_criticos: [3, 4, 5], meses_geada: [6, 7] }
+
+# ---------------------------------------------------------------------------------------------
+# Macro
+# ---------------------------------------------------------------------------------------------
+macro:
+  inicio: "1994-07" # Plano Real; antes disso a taxa de câmbio está em outras moedas
+  bcb_sgs:
+    janela_max_anos_diaria: 10 # a API recusa (HTTP 406) consultas maiores a séries diárias
+    series:
+      ptax_venda: { codigo: 1, frequencia: diaria, agregacao_mensal: media, status: confirmado }
+      # 27574 é o IC-Br total; 27575 = "Índice de Commodities - Brasil -
+      # Agropecuária". A página de metadados do SGS estava fora do ar em 2026-10-04 (erro
+      # SGSFW2203); conferido em espelho dos metadados (Quantilica Hedgehog) e por decomposição
+      # numérica das séries 27574 a 27577.
+      icbr_agropecuaria: { codigo: 27575, frequencia: mensal, status: confirmado }
+      icbr_total: { codigo: 27574, frequencia: mensal, status: confirmado }
+      # Média mensal oficial da PTAX, usada só para validar a média calculada a partir da série 1
+      # (diferença máxima de 0,00005 R$/US$ em 387 meses, Parte 1b).
+      ptax_venda_media_mensal: { codigo: 3698, frequencia: mensal, status: confirmado }
+  # Diesel: subitem "Óleo diesel" do IPCA, preferido à série da ANP. Índice de preço ao
+  # consumidor, não preço em R$/litro. Existe a partir da tabela 655 (1999-08).
+  diesel:
+    fonte: ipca_subitem
+    codigo_ipca: "5104003"
+    tabelas: [7060, 1419, 2938, 655]
+    status: confirmado
+
+# ---------------------------------------------------------------------------------------------
+# Preços no atacado e ao produtor (Parte 7)
+# ---------------------------------------------------------------------------------------------
+# Não há série nacional mensal aberta, por produto, que cubra a janela (sondagem de 2026-10-08):
+# - os arquivos abertos da Conab (PrecosMensalUF.txt) só cobrem os últimos 12 meses;
+# - o CEPEA/ESALQ bloqueia downloads automáticos (HTTP 403);
+# - o SGS/BCB não tem preços por produto, e o IPA da FGV por produto é pago;
+# - o milho no atacado de SP (Conab, via IPEADATA) tem 48 meses faltando a partir de 2016-03.
+# A candidata é a Seab-PR/Deral via IPEADATA: mensal desde 1990-01, completa na janela, mas só
+# do Paraná. Antes de usar, o teste de representatividade compara o Paraná com o resto do Brasil.
+precos_atacado:
+  fonte: seab_pr_ipeadata
+  # Escolha feita depois do teste de representatividade da Parte 7a: usar
+  # o milho no atacado da Seab-PR como preço do grão, documentado como substituto regional
+  # (R32), ligado direto às carnes no IPCA nacional; os preços da Seab ao produtor (soja, leite,
+  # ovos, boi, frango, suínos) ficam de fora (R33). Robustez: milho no atacado de SP (Conab,
+  # maior trecho sem falha na janela) e IC-Br Agropecuária.
+  status: confirmado
+  uso: { grao: milho_atacado_pr, robustez: [milho_atacado_sp, icbr_agropecuaria] }
+  ipeadata:
+    url_valores: "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{codigo}')"
+    url_metadados: "http://www.ipeadata.gov.br/api/odata4/Metadados('{codigo}')"
+    timeout_segundos: 300 # a API levou até cerca de 2 min por série em 2026-10-08
+  # Códigos do IPEADATA (Seab-PR, salvo indicação); preços em R$ correntes por `unidade`.
+  series:
+    milho_atacado_pr: { codigo: DERAL12_ATMC12, unidade: "saca de 60 kg" }
+    farelo_soja_atacado_pr: { codigo: DERAL12_ATFSO12, unidade: tonelada }
+    milho_produtor_pr: { codigo: DERAL12_PRMI12, unidade: "saca de 60 kg" }
+    soja_produtor_pr: { codigo: DERAL12_PRSO12, unidade: "saca de 60 kg" }
+    leite_produtor_pr: { codigo: DERAL12_PRLECO12, unidade: litro }
+    ovos_produtor_pr: { codigo: DERAL12_PROVG12, unidade: "30 dúzias (ovo grande)" }
+    boi_gordo_produtor_pr: { codigo: DERAL12_PRBGO12, unidade: arroba }
+    frango_vivo_produtor_pr: { codigo: DERAL12_PRFRV12, unidade: kg }
+    suinos_produtor_pr: { codigo: DERAL12_PRSUC12, unidade: kg }
+    milho_atacado_sp: { codigo: DEPAE12_ATMI12, unidade: "saca de 60 kg", fonte: Conab/IE }
+  # Teste de representatividade (Parte 7a), registrado em 2026-10-08 antes de calcular as
+  # comparações. Antes do registro só foram vistos a cobertura das séries e os níveis de 12
+  # séries do PR e do milho em SP em 6 meses soltos, na sondagem das fontes.
+  representatividade:
+    # Preço real = preço / IPCA geral do Brasil (no anual, média dos 12 meses de cada um).
+    deflator: { area: brasil, categoria: indice_geral }
+    anual:
+      anos: [2000, 2023]
+      # Preço implícito do IBGE = valor da produção / quantidade, para o Brasil, o PR e o
+      # "Brasil sem PR" = (valor BR − valor PR) / (quantidade BR − quantidade PR). A PAM valoriza
+      # a safra a preços da colheita; a Seab entra como média simples dos 12 meses do ano.
+      ibge:
+        niveis: [n1, n3]
+        tabelas:
+          - { tabela: 1612, classificacao: 81, variaveis: { quantidade: 214, valor_mil_reais: 215 },
+              produtos: { milho: 2711, soja: 2713 }, status: confirmado }
+          - { tabela: 74, classificacao: 80, variaveis: { quantidade: 106, valor_mil_reais: 215 },
+              produtos: { leite: 2682, ovos: 2685 }, status: confirmado }
+      seab: { milho: milho_produtor_pr, soja: soja_produtor_pr, leite: leite_produtor_pr,
+              ovos: ovos_produtor_pr }
+      # O estudo usaria o milho no atacado: também comparado ao IBGE Brasil sem PR (registrado
+      # em 2026-10-08, antes de calcular).
+      seab_atacado: { milho: milho_atacado_pr }
+      # Três comparações por produto: geografia (IBGE PR × IBGE Brasil sem PR), fonte (Seab PR ×
+      # IBGE PR) e a que decide o uso no estudo (Seab PR × IBGE Brasil sem PR).
+      comparacao_decisiva: seab_pr_x_ibge_brasil_sem_pr
+      # Diagnóstico pós-teste, registrado em 2026-10-08 depois de ver o resultado (não muda o
+      # veredito): o "Brasil sem PR" do IBGE é ponderado pela produção de cada ano, e a produção
+      # de milho migrou para o Centro-Oeste, onde o preço é mais baixo. Para separar essa mudança
+      # de composição de uma diferença de preço, a comparação é repetida com o resto do Brasil a
+      # pesos fixos: variação média dos preços das UFs, com o peso de cada UF na produção sem o
+      # PR no período-base da Parte 3; só UFs com preço em todos os anos (pesos renormalizados).
+      composicao_fixa: { periodo_base: [2003, 2007] }
+    mensal:
+      janela: { inicio: "2000-09", fim: "2023-06" }
+      defasagem_variacao_meses: 12 # variação em 12 meses, comparável à anual
+      pares:
+        - { nome: milho_atacado_pr_x_sp, pr: milho_atacado_pr, referencia: milho_atacado_sp }
+      # Indireto (varejo): IPCA de Curitiba × Brasil nas carnes, que não têm preço nacional ao
+      # produtor ou no atacado na janela. Curitiba faz parte do IPCA Brasil (correlação mecânica).
+      ipca_curitiba: [aves_ovos, carnes, leite_derivados]
+    # O Paraná "chega perto" do resto do Brasil num produto se passar nos três critérios
+    # (anual: comparação decisiva; mensal: variações em 12 meses):
+    criterios:
+      correlacao_real_min: 0.90 # correlação das variações reais (descontado o IPCA geral)
+      # média de |variação PR − variação referência| ≤ fração × média da inflação geral (IPCA)
+      # nas mesmas variações
+      diferenca_media_max_fracao_inflacao: 1.0
+      # |log(PR/ref) no fim − log(PR/ref) no início| ≤ fração × inflação geral acumulada (log)
+      divergencia_acumulada_max_fracao_inflacao: 0.10
+    # Descritivos, sem corte: inclinação da variação real da referência sobre a do PR (1 = sem
+    # atenuação), tendência anual do log da razão PR/referência (erro HAC) e ADF do log da razão
+    # (mensal). Recorte recente, só descritivo: Conab por UF (12 meses, fora da janela), com a
+    # razão de nível PR / mediana das outras UFs, a correlação das variações mensais e a
+    # concordância Seab × Conab no PR nos meses comuns.
+    conab_uf:
+      url: "https://portaldeinformacoes.conab.gov.br/downloads/arquivos/PrecosMensalUF.txt"
+      produtos:
+        - { nome: milho_atacado, produto: MILHO, nivel: ATACADO, classificacao: "EM GRÃOS", seab: milho_atacado_pr }
+        - { nome: milho_produtor, produto: MILHO, nivel: "PREÇO RECEBIDO P/ PRODUTOR", classificacao: "EM GRÃOS", seab: milho_produtor_pr }
+        - { nome: soja_produtor, produto: SOJA, nivel: "PREÇO RECEBIDO P/ PRODUTOR", classificacao: "EM GRÃOS", seab: soja_produtor_pr }
+        - { nome: leite_produtor, produto: LEITE DE VACA, nivel: "PREÇO RECEBIDO P/ PRODUTOR", classificacao: IN NATURA, seab: leite_produtor_pr }
+        - { nome: ovos_produtor, produto: OVOS DE GALINHA, nivel: "PREÇO RECEBIDO P/ PRODUTOR", classificacao: GRANDE BRANCO, seab: ovos_produtor_pr }
+        - { nome: boi_gordo_produtor, produto: BOI, nivel: "PREÇO RECEBIDO P/ PRODUTOR", classificacao: GORDO, seab: boi_gordo_produtor_pr }
+        - { nome: suinos_produtor, produto: SUINO, nivel: "PREÇO RECEBIDO P/ PRODUTOR", classificacao: VIVO, seab: suinos_produtor_pr }
+
+# ---------------------------------------------------------------------------------------------
+# Clima
+# ---------------------------------------------------------------------------------------------
+clima:
+  nasa_power: # fonte base
+    url: https://power.larc.nasa.gov/api/temporal/daily/point
+    comunidade: AG
+    padrao_tempo: LST # dia em hora solar local
+    # Radiação, vento e umidade entram para deixar aberta a escolha do ET0 na Parte 2.
+    parametros:
+      precipitacao_mm: PRECTOTCORR # mm/dia
+      temp_media_c: T2M
+      temp_max_c: T2M_MAX
+      temp_min_c: T2M_MIN
+      radiacao_mj_m2: ALLSKY_SFC_SW_DWN # MJ/m²/dia
+      vento_2m_ms: WS2M
+      umidade_rel_pct: RH2M
+    valor_ausente: -999
+    # Conferido em 2026-10-05 (Parte 1c): a meteorologia (MERRA-2) vem em células de 0,5° x 0,625°
+    # alinhadas em múltiplos de 0,5° e 0,625° (pontos da mesma célula têm séries idênticas); a
+    # radiação vem em 1°. Meteorologia desde 1981-01-01, radiação desde 1984-01-01; os últimos
+    # ~2 dias vêm como -999 (defasagem de publicação). Cada célula é baixada uma vez, pelo centro.
+    grade_graus: { lat: 0.5, lon: 0.625 }
+    status: confirmado
+    # Parte 2: contra 16 estações do INMET, o viés do NASA POWER muda de patamar em 2023-S2
+    # (temperatura, cerca de +0,5 °C) e em 2024-S1 (chuva, cerca de -15%), provável troca de
+    # fonte (MERRA-2 corrigido por pluviômetros -> GEOS de tempo quase real); evidência em
+    # outputs/tabelas/homogeneidade_nasa_inmet.csv.
+    quebra_homogeneidade:
+      temperatura: "2023-07"
+      chuva: "2024-01"
+      tratamento: "janela de estimação encerrada em 2023-06"
+      status: confirmado
+  inmet: # fonte complementar: validação do NASA POWER perto das áreas do IPCA
+    url_estacoes: https://apitempo.inmet.gov.br/estacoes/T
+    # A rota de dados da API exige token (sem token: "E_ROUTE_NOT_FOUND"); o .env não existe.
+    # Usam-se os arquivos anuais do portal (estações automáticas, dados horários).
+    url_historico: https://portal.inmet.gov.br/uploads/dadoshistoricos/{ano}.zip
+    anos: [2001, 2025]
+    distancia_max_km: 50 # raio de download: estações guardadas no cache
+    distancia_escolha_km: 25 # raio de escolha: estação com mais meses válidos de chuva
+    fuso_horas: -3 # agregação mensal na hora de Brasília
+    min_pct_horas_validas: 90 # mês válido se >= 90% das horas tiverem dado
+    variavel_token: INMET_TOKEN
+    status: confirmado
+  enso:
+    # Formato NOAA PSL: 1ª linha com anos inicial e final; linhas "ano + 12 valores"; uma linha só
+    # com o código de ausente; rodapé livre (muda). Os valores são revisados com a versão do ERSST.
+    # ONI: média móvel de 3 meses CENTRADA (jan = DJF, usa fevereiro): em previsão, defasar >= 1 mês.
+    # MEI v2: estação de 2 meses que termina no mês da coluna (jan = DJ).
+    oni: { url: "https://psl.noaa.gov/data/correlation/oni.data", valor_ausente: -99.9, alinhamento: centrado, status: confirmado }
+    mei_v2: { url: "https://psl.noaa.gov/enso/mei/data/meiv2.data", valor_ausente: -999.0, alinhamento: fim_da_estacao, status: confirmado }
+  # Agregação diária -> mensal.
+  agregacao_mensal:
+    precipitacao: soma
+    temperatura: media
+    extremos: contagem_dias
+
+# ---------------------------------------------------------------------------------------------
+# Features climáticas (Parte 2), por célula do NASA POWER
+# ---------------------------------------------------------------------------------------------
+features:
+  # Diário -> mensal: chuva = soma; temperatura = médias de Tmax e Tmin (e a média das duas);
+  # extremos = contagem de dias. O mês só recebe valor se todos os dias tiverem dado.
+  agregacao: { exigir_mes_completo: true }
+  spi:
+    escalas_meses: [3, 6]
+    # Gama mista: probabilidade de zero (q) + gama nos valores positivos. Parâmetros pela
+    # aproximação de Thom (1958) da máxima verossimilhança, um ajuste por célula e mês do ano.
+    # Valores iguais a zero recebem H = q/2 (centro da massa de zeros; Stagge et al., 2015).
+    distribuicao: gama
+    min_valores_positivos: 10 # menos que isso na referência: SPI ausente naquela célula e mês
+    limite_abs: 3.09 # SPI truncado em +-3,09 (probabilidades de 0,1% e 99,9%)
+    # Período de referência fixo de 30 anos: normal climatológica padrão da OMM.
+    periodo_referencia: { inicio: "1991-01", fim: "2020-12" }
+  gdd: # graus-dia diários com base e teto (método com corte nos dois limites)
+    soja: { t_base_c: 10.0, t_teto_c: 30.0 }
+    milho: { t_base_c: 10.0, t_teto_c: 30.0 }
+  # Graus-dia acima de 30 °C (estresse térmico); complemento do GDD, calculado com Tmax.
+  graus_dia_calor: { limiar_c: 30.0 }
+  geada:
+    tmin_limite_c: 2.0 # dia de geada: Tmin <= 2 °C (ar a 2 m; geada na relva ocorre antes)
+  calor_extremo:
+    tmax_limite_c: 35.0 # dia de calor extremo: Tmax > 35 °C
+  balanco_hidrico:
+    # P - ET0. ET0 principal: Penman-Monteith FAO-56 (Allen et al., 1998), com radiação, vento e
+    # umidade do NASA POWER e a altitude da célula; alternativa de robustez: Hargreaves-Samani.
+    # A radiação só existe a partir de 1984-01, então o ET0 de Penman-Monteith começa aí.
+    metodo_et0: penman_monteith_fao56
+    metodo_alternativo: hargreaves_samani
+    albedo: 0.23
+    status: confirmado
+  # Secas documentadas usadas como critério de aceite do SPI (definidas antes de calcular).
+  # Critério: o SPI-6 médio das microrregiões das UFs do evento chega a <= -1 em algum mês da
+  # janela. Também são reportados o mínimo, o mês do mínimo e a fração de meses com SPI-6 < 0.
+  validacao_secas:
+    - { evento: "Sudeste 2014/15 (crise hídrica)", ufs: ["SP", "MG", "RJ"], inicio: "2014-01", fim: "2015-03" }
+    - { evento: "Bacia do Paraná 2020/21", ufs: ["PR", "MS", "SP", "GO"], inicio: "2020-10", fim: "2021-09" }
+    - { evento: "Semiárido 2012-2016", ufs: ["CE", "RN", "PB", "PE"], inicio: "2012-01", fim: "2016-12" }
+    - { evento: "Amazônia 2023", ufs: ["AM"], inicio: "2023-07", fim: "2023-12" }
+
+# ---------------------------------------------------------------------------------------------
+# Choques, espaço e modelos
+# ---------------------------------------------------------------------------------------------
+choques:
+  spi_seca: -1.5 # seca: SPI < -1,5
+  spi_excesso: 1.5 # excesso de chuva: SPI > 1,5
+  limiares_alternativos_abs: [1.0, 2.0] # robustez (Parte 8): |SPI| > 1 e |SPI| > 2
+
+espacial:
+  # Malhas do geobr (IBGE). Microrregiões: o geobr não tem 2010; a divisão em 558 microrregiões é
+  # a mesma do SIDRA (N9). Sedes municipais: coordenadas oficiais das sedes das áreas do IPCA.
+  malhas: { ano_microrregioes: 2020, ano_sedes: 2010 }
+  # Pesos de produção w(i,k) = Produção(i,k) / soma_j Produção(j,k), por microrregião (PAM).
+  # Principal: defasados = média da produção dos anos t-1 a t-3 (os disponíveis), aplicada aos
+  # meses do ano t; nunca contemporâneos (o choque afeta a própria safra). Nos primeiros anos
+  # de cada série, sem 1 ano anterior, usa-se a média dos 3 primeiros anos (origem marcada).
+  # Robustez: fixos, média de 2003-2007 (1º quinquênio com milho por safra, tabela 839).
+  pesos:
+    anos_defasagem: [1, 3]
+    base_fixa: { inicio: 2003, fim: 2007 }
+    culturas: [soja, milho, milho_1a_safra, milho_2a_safra, arroz, feijao, mandioca,
+               batata_inglesa, tomate, cebola, banana, laranja]
+  # CWI(t) = soma_i w(i,k) x indicador(i,t), renormalizado sobre as microrregiões com dado.
+  cwi:
+    indicadores: [spi_3, spi_6]
+  raios_cinturao_verde_km: [150, 300]
+  # Cinturão verde: média simples das células do NASA POWER cujo centro fica a até o raio da
+  # sede da área (cada célula conta uma vez).
+  cinturao_verde:
+    variaveis: [spi_3, spi_6, precipitacao_mm, tmax_media_c, dias_calor, dias_geada]
+  regioes_monocultura:
+    centro_oeste: { ufs: ["MT", "MS", "GO", "DF"] }
+    # Delimitação da Embrapa/GITE (2015): 31 microrregiões inteiras, 337 municípios. Lista da
+    # Wikipédia (citada pela Embrapa como fonte da delimitação), conferida na API de localidades
+    # do IBGE em 2026-10-06: MA 15 (135 municípios), TO 8 (139), PI 4 (33), BA 4 (30).
+    matopiba:
+      microrregioes: [21004, 21006, 21009, 21010, 21011, 21012, 21013, 21014, 21015, 21016,
+                      21017, 21018, 21019, 21020, 21021, 17001, 17002, 17003, 17004, 17005,
+                      17006, 17007, 17008, 22007, 22008, 22010, 22012, 29001, 29002, 29003,
+                      29007]
+      status: confirmado
+  # Critério de aceite do CWI (definido antes do cálculo): em cada ano de quebra de safra
+  # conhecida, o CWI nacional (SPI-3 do último mês crítico) é negativo, e a correlação entre o
+  # CWI e a anomalia do rendimento nacional (desvio da tendência linear do log, safras
+  # 1999-2023) é positiva com p < 0,05.
+  validacao_cwi:
+    - { cultura: soja, mes_final: 2, anos_quebra: [2005, 2012, 2022] }
+    - { cultura: milho_2a_safra, mes_final: 5, anos_quebra: [2016, 2021] }
+
+modelos:
+  # Local Projections (Jordà, 2005). Especificação registrada antes de estimar (Parte 5).
+  # Dependente: 100 x [log p(t+h) - log p(t-1)]. Regressores: choque em t (choque = -SPI, ou
+  # seja, positivo = mais seco, em desvios-padrão), 12 defasagens do choque e da inflação
+  # mensal, dummies de mês, tendência linear (ressalva R16) e constante. Erros HAC de
+  # Newey-West (Bartlett) com h + hac_lags_extra defasagens.
+  local_projections:
+    horizonte_min: 0
+    horizonte_max: 18
+    hac_lags_extra: 1 # lags de Newey-West = h + hac_lags_extra (>= h + 1)
+    niveis_confianca: [0.68, 0.90]
+    # 12 defasagens da inflação dentro da janela: a 1ª inflação dessazonalizada (Parte 4) é a de
+    # 1999-09, então a amostra efetiva começa em 2000-09 (ajuste antes de estimar; era 2000-08).
+    inicio_efetivo: "2000-09"
+    lags_dependente: 12
+    lags_choque: 12
+    lags_controles: 6
+    sinal_choque: -1
+    # Controles macro (só defasagens da variação do log): podem reagir ao próprio choque,
+    # então os resultados saem com e sem eles.
+    controles_macro: [log_ptax, log_icbr_agro, log_oleo_diesel]
+    agregada:
+      dependente: alimentacao_domicilio
+      choques: [cinturao_spi_3, cwi_milho_spi_6, cwi_soja_spi_6]
+      conjunto: [cinturao_spi_3, cwi_milho_spi_6]
+      # principal: log do índice com dummies de mês e tendência; com_controles: + controles
+      # macro; dessazonalizada: log do índice STL (Parte 4) sem dummies de mês;
+      # sem_tendencia: principal sem a tendência linear.
+      especificacoes: [principal, com_controles, dessazonalizada, sem_tendencia]
+    # Parte 6a, registrada antes de estimar: por grupo do IPCA (Brasil), com a especificação da
+    # agregada. O 1º choque de cada grupo é o motor principal (pares da Parte 4); os demais são
+    # secundários. Proteína animal: também o milho 2ª safra (pergunta 3) e a soja.
+    setorial:
+      especificacoes: [principal, com_controles]
+      pares:
+        hortalicas_verduras: [cinturao_spi_3]
+        tuberculos_raizes_legumes: [cinturao_spi_3, cwi_batata_inglesa_spi_3]
+        frutas: [cwi_banana_spi_3, cwi_laranja_spi_6]
+        cereais_leguminosas: [cwi_feijao_spi_3, cwi_arroz_spi_3]
+        leite_derivados: [cwi_milho_spi_6, cwi_milho_2a_safra_spi_6, cwi_soja_spi_6]
+        aves_ovos: [cwi_milho_spi_6, cwi_milho_2a_safra_spi_6, cwi_soja_spi_6]
+        carnes: [cwi_milho_spi_6, cwi_milho_2a_safra_spi_6, cwi_soja_spi_6]
+      # Regra de avaliação das defasagens (especificação principal, banda de 90%), comparada com
+      # a janela [a, b] de hipoteses_defasagens_meses:
+      #   h_inicio  = 1º horizonte em que a banda da resposta acumulada fica acima de zero;
+      #   lag_otimo = horizonte do maior coeficiente da resposta marginal (inflação do mês t+h,
+      #               LP não acumulada), ou seja, o mês de maior aceleração do preço;
+      #   compatível: a <= h_inicio <= b; antecipada: h_inicio < a; mais lenta: h_inicio > b;
+      #   contrária: só há horizontes com a banda abaixo de zero; inconclusiva: nenhum horizonte.
+      # Dissipação (pergunta 1): 1º horizonte depois do pico da resposta acumulada em que ela cai
+      # abaixo de fracao_dissipacao x pico ("persistente" se não cair até h = 18); só é lida se
+      # o pico for significativo.
+      fracao_dissipacao: 0.5
+    # Parte 6a, registrada antes de estimar: versão não linear. Os índices agregados quase nunca
+    # passam de |1,5| na amostra (cinturão médio: 0 meses abaixo de -1,5; CWI do milho SPI-6: 7
+    # abaixo e 1 acima), então o limiar vale em cada microrregião (CWI) ou célula (cinturão) e o
+    # choque é a FRAÇÃO da produção (ou das células do cinturão) em cada condição:
+    #   seca    = SPI < choques.spi_seca (-1,5);  excesso = SPI > choques.spi_excesso (1,5);
+    #   calor   = anomalia padronizada da Tmax média do mês > limiar_calor_z (média e desvio da
+    #             própria célula no mesmo mês do ano, 1991-2020).
+    # Os três entram juntos (seca e calor são correlacionados), cada um com 12 defasagens; o
+    # resto da especificação é o da agregada. Resposta por 10 p.p. de fração (escala_fracao).
+    # Testes de assimetria (pergunta 1), um horizonte por modelo, fixado aqui: seca = excesso e
+    # calor = excesso no horizonte h_teste (fim da janela da hipótese do grupo; 12 nos demais).
+    nao_linear:
+      limiar_calor_z: 1.5
+      escala_fracao: 0.10
+      especificacoes: [principal, com_controles]
+      contrastes: [[seca, excesso], [calor, excesso]]
+      modelos:
+        - { dependente: hortalicas_verduras, motor: cinturao, spi: spi_3, h_teste: 1 }
+        - { dependente: tuberculos_raizes_legumes, motor: cinturao, spi: spi_3, h_teste: 1 }
+        - { dependente: frutas, motor: banana, spi: spi_3, h_teste: 1 }
+        - { dependente: cereais_leguminosas, motor: feijao, spi: spi_3, h_teste: 12 }
+        - { dependente: leite_derivados, motor: milho, spi: spi_6, h_teste: 4 }
+        - { dependente: aves_ovos, motor: milho, spi: spi_6, h_teste: 12 }
+        - { dependente: carnes, motor: milho, spi: spi_6, h_teste: 12 }
+        - { dependente: alimentacao_domicilio, motor: cinturao, spi: spi_3, h_teste: 12 }
+        - { dependente: alimentacao_domicilio, motor: milho, spi: spi_6, h_teste: 12 }
+    # Parte 6b, registrada antes de estimar: por área do IPCA (pergunta 2). Só o lado do clima
+    # foi olhado antes (2000-09 a 2023-06): o SPI-3 do cinturão de cada área tem correlação de
+    # 0,06 a 0,50 com o CWI do milho no Centro-Oeste (0,49-0,50 em Goiânia e Brasília, cujo
+    # cinturão fica dentro do CO); CO e Matopiba têm correlação de 0,63; milho e soja, 0,99 em
+    # cada região (por isso um índice por região, o do milho, como no canal da ração da Parte
+    # 6a). 70% da variância do SPI local não é comum às 11 áreas.
+    # Hipóteses do projeto (perguntas do README; não são achados): hortaliças e tubérculos de cada área
+    # respondem ao clima do próprio cinturão verde; alimentação no domicílio e aves e ovos
+    # respondem às regiões de monocultura, e aves e ovos NÃO respondem ao cinturão local
+    # (falsificação: efeito esperado ~0).
+    areas:
+      # Só as 11 áreas com IPCA desde a janela; as 5 que entram em 2014-01 e 2018-05 têm de 62
+      # a 114 meses para ~64 regressores (R8) e ficam fora, inclusive dos painéis.
+      areas: [belem, fortaleza, recife, salvador, belo_horizonte, rio_de_janeiro, sao_paulo,
+              curitiba, porto_alegre, goiania, brasilia]
+      dependentes: [alimentacao_domicilio, hortalicas_verduras, tuberculos_raizes_legumes,
+                    aves_ovos]
+      # Choques (−SPI, positivo = mais seco), padronizados pelo desvio-padrão amostral de cada
+      # série na janela de estimação: coeficientes e contrastes saem por 1 desvio-padrão (R22).
+      choques:
+        local: { fonte: cinturao, raio_km: 150, spi: spi_3 }
+        centro_oeste: { fonte: cwi, regiao: centro_oeste, cultura: milho, spi: spi_6 }
+        matopiba: { fonte: cwi, regiao: matopiba, cultura: milho, spi: spi_6 }
+      especificacoes: [principal, com_controles]
+      # Teste por área no horizonte h_teste (mesma regra da 6a: fim da janela da hipótese do
+      # grupo; 12 para a alimentação no domicílio). Contrastes local − centro_oeste e
+      # local − matopiba. Classificação de cada área × grupo (especificação principal, banda
+      # de 90% em h_teste, qualquer sinal, porque o excesso de chuva também eleva preços, R17):
+      #   cinturão verde: só o local exclui zero; monocultura: só CO e/ou Matopiba excluem zero;
+      #   ambos; nenhum (inconclusivo). Por choque e grupo, o nº de áreas com banda fora de zero
+      #   é comparado com o esperado por acaso (11 x 10% = 1,1; áreas não são independentes).
+      h_teste:
+        alimentacao_domicilio: 12
+        hortalicas_verduras: 1
+        tuberculos_raizes_legumes: 1
+        aves_ovos: 12
+      # Painéis (11 áreas empilhadas; coeficientes das defasagens comuns; efeito fixo de área
+      # por mês do ano e tendência por área; erros de Driscoll-Kraay com h + 1 defasagens):
+      #   efeito_tempo: + efeito fixo de cada mês t. Absorve todo choque comum às áreas (CWI,
+      #     ENSO, câmbio, commodities; R16, R21, R23): o efeito local é identificado só pela
+      #     diferença de clima entre áreas no mesmo mês. Versões linear (−SPI-3 local) e não
+      #     linear (fração das células do cinturão em seca, excesso e calor, como na 6a).
+      #   sem_efeito_tempo: choques local, centro_oeste e matopiba juntos (média das áreas da
+      #     comparação por área), principal e com controles.
+      paineis: [efeito_tempo_linear, efeito_tempo_nao_linear, sem_efeito_tempo]
+    # Parte 6c, registrada antes de estimar (pergunta 4). Só o lado do clima foi olhado antes
+    # (2000-09 a 2023-06): ONI(t−1) e MEI(t) têm correlação de 0,90, desvio-padrão de 0,78 e
+    # 0,86 e AR(1) de 0,97 e 0,94; com o valor em t e 12 defasagens, o ENSO explica de 1% a 7%
+    # (R² ajustado) da variância do CWI do milho e da soja (Brasil, CO, Matopiba) e do cinturão
+    # verde médio.
+    # Sinal: positivo = El Niño (sem inversão). Disponibilidade (R12): no fim do mês t já se
+    # conhecem o MEI v2 de t (estação t−1 a t) e o ONI de t−1 (média centrada que usa t); os
+    # dois entram com essa defasagem em todas as estimações, dentro e fora da amostra.
+    # Hipótese (não achado): sem sinal esperado para o Brasil como um todo (El Niño tende a secar
+    # o Norte e o Nordeste e a molhar o Sul; La Niña, o contrário). Respostas por 1 desvio-padrão.
+    enso:
+      indices:
+        mei: { coluna: mei_v2, defasagem: 0 }
+        oni: { coluna: oni, defasagem: 1 }
+      principal: mei # sem média centrada (R12); o ONI defasado é a comparação
+      dependentes: [alimentacao_domicilio, hortalicas_verduras, tuberculos_raizes_legumes, frutas,
+                    cereais_leguminosas, leite_derivados, aves_ovos, carnes]
+      especificacoes: [principal, com_controles]
+      # R21: o efeito da seca no milho sobrevive ao controle por ENSO? Mesmo modelo da 6a
+      # (principal), com o índice ENSO (valor em t e 12 defasagens) no mesmo modelo. Leitura
+      # fixada antes: "sobrevive" se a banda de 90% do milho em h_teste continuar acima de zero.
+      controle_milho:
+        indices: [mei, oni]
+        h_teste: 12
+        pares:
+          - [alimentacao_domicilio, cwi_milho_spi_6]
+          - [aves_ovos, cwi_milho_spi_6]
+          - [aves_ovos, cwi_milho_2a_safra_spi_6]
+          - [carnes, cwi_milho_spi_6]
+          - [carnes, cwi_milho_2a_safra_spi_6]
+  # Parte 6c: previsão pseudo fora da amostra (pergunta 4), registrada antes de rodar. Dados da
+  # versão final (não em tempo real): ver a ressalva da Parte 6c.
+  # Regressão direta por horizonte: alvo = 100 x [log p(t+h) − log p(t)], a inflação acumulada
+  # dos h meses seguintes à origem t, com a informação do fim de t. Janela expansiva: estimação
+  # de inicio_efetivo até t − h (alvo já observado em t); 1ª origem 2011-12 (alvos de 2012-01 a
+  # 2023-06). Benchmark: constante, dummies de mês e a inflação mensal de t a t−11. Cada modelo
+  # = benchmark + preditores com os valores em t, t−1 e t−2 (após a defasagem de
+  # disponibilidade). Sem tendência (extrapolação fora da amostra).
+  # Clima local = motor principal do grupo na 6a; na alimentação no domicílio, cinturão + milho
+  # (modelo conjunto da Parte 5). Anomalias locais = NASA POWER: as estações do INMET (1 por
+  # área, no centro urbano, desde 2001, com lacunas) não cobrem a janela nem o cinturão.
+  # Testes (nível 10%; variância de longo prazo de Newey-West com h − 1 defasagens):
+  #   Clark-West, unilateral, para modelos aninhados: oni, mei e local × benchmark;
+  #     local_oni e local_mei × local (o ENSO acrescenta ao clima local?);
+  #   Diebold-Mariano com a correção de Harvey-Leybourne-Newbold, bilateral, t(n − 1): oni × local
+  #     e mei × local.
+  # Classificação de cada grupo × h × índice (pergunta 4): "ENSO superior" se o erro quadrático
+  # médio (EQM) do ENSO for menor que o do local com DM p < 0,10; "local superior" no caso
+  # oposto; "sem diferença" nos demais. Também: R² fora da amostra = 1 − EQM / EQM do benchmark.
+  previsao:
+    horizontes: [1, 3, 6, 12]
+    primeira_origem: "2011-12"
+    janela: expansiva
+    lags_inflacao: 12
+    lags_preditor: 3
+    dummies_mes: true
+    nivel_teste: 0.10
+    modelos: [benchmark, oni, mei, local, local_oni, local_mei]
+    local:
+      alimentacao_domicilio: [cinturao_spi_3, cwi_milho_spi_6]
+      hortalicas_verduras: [cinturao_spi_3]
+      tuberculos_raizes_legumes: [cinturao_spi_3]
+      frutas: [cwi_banana_spi_3]
+      cereais_leguminosas: [cwi_feijao_spi_3]
+      leite_derivados: [cwi_milho_spi_6]
+      aves_ovos: [cwi_milho_spi_6]
+      carnes: [cwi_milho_spi_6]
+    # Casos da figura de erro quadrático acumulado ao longo do tempo (fixados antes de rodar).
+    erro_acumulado: [[alimentacao_domicilio, 12], [hortalicas_verduras, 1], [aves_ovos, 12]]
+  # Testes de robustez e falsificação da Parte 8, registrados na Parte 5 antes de rodá-los
+  # (os efeitos agregados do canal da ração saíram grandes; ver ressalvas R16 e R21).
+  robustez:
+    placebo_choque_futuro_meses: 12 # choque em t+12 no lugar do choque em t: efeito esperado ~0
+    excluir_periodo: { inicio: "2020-01", fim: "2022-12", motivo: "pandemia e boom de commodities" }
+    spi_alternativo: { cwi_milho_spi_6: cwi_milho_spi_3, cwi_soja_spi_6: cwi_soja_spi_3 }
+    pesos_alternativos: fixo # CWI com pesos fixos 2003-2007
+    limiares_choque: [1.0, 1.5, 2.0] # choques discretos |SPI| acima do limiar
+    # Registrado na Parte 6b, antes de rodar: cinturão de 300 km no lugar de 150 km e painel
+    # com efeito fixo de mês com as 16 áreas (as 5 que entram em 2014-01/2018-05 incluídas, R8).
+    areas: { raio_cinturao_km: 300, painel_todas_as_areas: true }
+    # Registrado na Parte 6c, antes de rodar: previsão com janela móvel de 120 meses no lugar
+    # da expansiva e avaliação sem os alvos de 2020-2022 (excluir_periodo). Registrado depois
+    # de ver o resultado linear da 6c (o SPI linear do cinturão não prevê o hortifrúti) e antes
+    # de rodar: no hortifrúti, o clima local como frações do cinturão em seca, excesso e calor
+    # (6a; R17), no lugar do SPI-3 linear.
+    previsao: { janela_movel_meses: 120, avaliar_sem_periodo_excluido: true,
+                local_fracoes_hortifruti: true }
+    # Parte 8c, detalhado em 2026-10-08 antes de rodar (o registro acima é da 6c). Três
+    # variações da previsão da 6c, uma de cada vez (mesmos grupos, horizontes, modelos, testes
+    # e nível de 10%); antes, o caminho novo reproduz as previsões e a avaliação da 6c.
+    #   janela_movel: todos os modelos estimados só com as últimas 120 origens de alvo já
+    #     observado (na 1ª origem, a janela expansiva tem de 124 a 135).
+    #   sem_2020_2022: as previsões da 6c avaliadas sem as origens cuja janela do alvo (t + 1 a
+    #     t + h) cruza excluir_periodo, como na exclusão da 8a; a estimação não muda.
+    #   fracoes_hortifruti: nos grupos cujo clima local é o SPI-3 do cinturão (hortaliças e
+    #     tubérculos), o local passa a ser as frações do cinturão em seca, excesso e calor
+    #     (6a: limiar ±1,5, calor z > 1,5), em local, local_oni e local_mei; frutas mantêm o
+    #     CWI da banana (o clima local delas não é o cinturão).
+    # Classificação de cada caso grupo × h × modelo nas duas primeiras variações, com a regra
+    # da 8a e "significativo" = Clark-West com p < 0,10: vence na principal e nas duas →
+    # robusto; vence na principal e não em alguma → frágil; não vence na principal e em
+    # nenhuma → nulo estável; não vence na principal e vence em alguma → nulo instável. Mudança
+    # relevante: perda ou ganho de vitória, ou troca de sinal do R² fora da amostra.
+    # Diebold-Mariano: a classe (ENSO superior, local superior, sem diferença) mantém-se ou
+    # muda. Frações: vitórias sobre o benchmark nos 8 casos (2 grupos × 4 h; acaso: 0,8) e as
+    # classes Diebold-Mariano ENSO × local com frações, contra as da 6c.
+    # Consolidação da Parte 8: as classificações da 8a, da 8b e da 8c numa tabela só.
+    previsao_8c:
+      variacoes: [janela_movel, sem_2020_2022, fracoes_hortifruti]
+      grupos_fracoes: [hortalicas_verduras, tuberculos_raizes_legumes]
+      motor_fracoes: { motor: cinturao, spi: spi_3 }
+    # Parte 8a, registrada em 2026-10-08 antes de rodar: estabilidade das Local Projections
+    # nacionais (Partes 5 e 6a). Coeficientes-chave da especificação principal, lidos no
+    # horizonte de teste do grupo (o de nao_linear.modelos; 12 na alimentação no domicílio):
+    # lineares por 1 desvio-padrão do choque na janela principal (2000-09 a 2023-06; séries
+    # alternativas pelo próprio desvio na mesma janela) e não lineares por +10 p.p. de fração.
+    lp_nacional:
+      lineares: # [dependente, choque, h]
+        - [alimentacao_domicilio, cwi_milho_spi_6, 12]
+        - [alimentacao_domicilio, cwi_soja_spi_6, 12]
+        - [alimentacao_domicilio, cinturao_spi_3, 12]
+        - [hortalicas_verduras, cinturao_spi_3, 1]
+        - [tuberculos_raizes_legumes, cinturao_spi_3, 1]
+        - [frutas, cwi_banana_spi_3, 1]
+        - [cereais_leguminosas, cwi_feijao_spi_3, 12]
+        - [leite_derivados, cwi_milho_spi_6, 4]
+        - [aves_ovos, cwi_milho_spi_6, 12]
+        - [aves_ovos, cwi_milho_2a_safra_spi_6, 12]
+        - [carnes, cwi_milho_spi_6, 12]
+        - [carnes, cwi_milho_2a_safra_spi_6, 12]
+      # Não lineares: os 9 modelos de nao_linear.modelos (seca, excesso e calor juntos).
+      testes:
+        com_controles: true # câmbio, IC-Br e diesel (só defasagens), como nas Partes 5 e 6a
+        # Placebo: choque de t + 12 no lugar do de t (as 12 defasagens dele vão até o choque em
+        # t); origens até 2022-06, para que t + 12 fique na janela homogênea do clima; lido em
+        # h = 0 a 11 (a partir de h = 12 o choque futuro já ocorreu dentro do horizonte). Falha
+        # se 3 ou mais dos 12 horizontes tiverem banda de 90% fora de zero (acaso: 1,2).
+        placebo: { avanco_meses: 12, ultima_origem: "2022-06", horizontes: [0, 11], falha_min: 3 }
+        # Exclusão: sai a origem t cuja janela da dependente [t − 1, t + h] cruza o período
+        # (as defasagens dos regressores podem vir dele). Erros HAC sobre a série com o buraco.
+        sem_periodo: true # robustez.excluir_periodo
+        janelas: [{ nome: janela_2006, inicio: "2006-07" }, { nome: janela_2012, inicio: "2012-01" }]
+        janela_2012_so_lineares: true # não lineares: ~64 regressores para 120-138 observações (R8)
+        # SPI alternativo, só nos lineares: SPI-6 → SPI-3 no milho, milho 2ª safra e soja
+        # (registrado na Parte 5) e SPI-3 → SPI-6 no cinturão, banana e feijão (acrescentado
+        # agora, antes de rodar, para cobrir o "SPI-3 vs. SPI-6" do plano).
+        spi_alternativo: { cwi_milho_spi_6: cwi_milho_spi_3, cwi_soja_spi_6: cwi_soja_spi_3,
+                           cwi_milho_2a_safra_spi_6: cwi_milho_2a_safra_spi_3,
+                           cinturao_spi_3: cinturao_spi_6, cwi_banana_spi_3: cwi_banana_spi_6,
+                           cwi_feijao_spi_3: cwi_feijao_spi_6 }
+        pesos_fixos: true # CWI e frações do CWI com os pesos fixos de 2003-2007 (não no cinturão)
+        # Limiares, só nos não lineares: SPI < −L (seca) e > L (excesso) por microrregião ou
+        # célula, L = 1,0 e 2,0 no lugar de 1,5; o calor mantém o limiar de 1,5.
+        limiares_spi: [1.0, 2.0]
+      # Classificação (banda de 90% no horizonte do coeficiente). Mudança relevante num teste:
+      # sinal oposto com banda fora de zero, perda ou ganho de significância, ou magnitude que
+      # muda mais de 50% (|alternativa / principal − 1| > 0,5); toda mudança relevante é
+      # explicada na coluna `mudancas_relevantes`. Coeficiente significativo na principal: "robusto" se mantém o sinal
+      # em todos os testes e a significância em ao menos 3/4 deles; "frágil" se mantém o sinal
+      # mas perde a significância em mais de 1/4; "instável" se algum teste dá sinal oposto com
+      # banda fora de zero. Não significativo na principal: "nulo estável" se nenhum teste tem
+      # banda fora de zero; senão, "nulo instável". O placebo é lido à parte (falsificação).
+      classificacao: { fracao_significancia_robusto: 0.75, mudanca_magnitude: 0.5 }
+      # Diagnósticos pós-teste, registrados em 2026-10-08 depois de ver que o placebo falha no
+      # canal da ração (não mudam a classificação nem o veredito do placebo): o placebo (a) sem
+      # as origens cuja janela cruza 2020-2022 e (b) com as secas passadas (t − 1 a t − 13) no
+      # mesmo modelo, para separar o episódio de 2020-2022 e a persistência do SPI de uma
+      # co-movimentação lenta (R16).
+      diagnostico_placebo: [sem_periodo, com_secas_passadas]
+    # Parte 8b, registrada em 2026-10-08 antes de rodar: robustez da 6b (pergunta 2) e
+    # validação regional da soja. Coeficientes dos painéis lidos no h_teste de cada grupo
+    # (areas.h_teste) e classificados pela regra da 8a; por área, a contagem de áreas com banda
+    # de 90% fora de zero em h_teste é comparada à da 6b (especificação principal).
+    areas_8b:
+      # Cinturão de 300 km no lugar de 150 km (SPI-3 e frações do cinturão): por área (11 áreas
+      # × 4 grupos, principal) e nos painéis com e sem efeito fixo de mês.
+      raio_300: true
+      # Painéis com efeito fixo de mês (linear e não linear) com as 16 áreas: as 5 que entram
+      # em 2014-01 e 2018-05 entram a partir do 1º mês com todas as defasagens (painel
+      # desbalanceado); desvio-padrão do SPI local de cada área na sua própria janela.
+      painel_16_areas: true
+      # Placebo nos painéis com efeito fixo de mês (11 áreas, 150 km): choque local de t + 12,
+      # origens até 2022-06, h = 0 a 11, falha com 3 ou mais horizontes (regra da 8a). Inclui a
+      # falsificação aves × calor local (4 de 19 horizontes fora de zero na 6b).
+      placebo_paineis: true
+      # Validação do CWI da soja (critério da Parte 3: CWI negativo em 2005, 2012 e 2022 e
+      # correlação positiva com p < 0,05 com a anomalia do rendimento nacional, safras
+      # 1999-2023) com janela crítica por região: SPI-3 de março (jan-mar) nas microrregiões do
+      # Sul e de fevereiro (dez-fev) nas demais, pesos defasados. Antes, o caminho novo precisa
+      # reproduzir a validação nacional da Parte 3 (r = 0,36; p = 0,077). Só validação: as
+      # Local Projections não são reestimadas (o canal da ração linear falhou no placebo, R38).
+      soja_janela_regional: { ufs_sul: [PR, SC, RS], mes_sul: 3, mes_demais: 2 }
+  # Parte 7b (VECM e ARDL), registrado em 2026-10-08 antes de estimar, com a fonte confirmada
+  # (`precos_atacado.uso`). Hipóteses do projeto (não são achados): o milho é custo
+  # da ração, então os preços reais do milho e das carnes no varejo têm relação de longo prazo,
+  # com elasticidade positiva e menor que 1 (o milho é só parte do custo); o varejo corrige os
+  # desvios (velocidade de ajuste negativa) e o milho não reage ao varejo (exogeneidade fraca);
+  # o repasse se acumula ao longo de 3 a 12 meses (lag biológico).
+  dinamicos:
+    janela: { inicio: "2000-09", fim: "2023-06" } # amostra efetiva; as defasagens vêm de antes
+    # Preço real = log(preço) − log(IPCA geral); a versão nominal entra na robustez.
+    deflator: log_indice_geral
+    cadeias:
+      aves_ovos: { varejo: log_aves_ovos, grao: milho_atacado_pr }
+      carnes: { varejo: log_carnes, grao: milho_atacado_pr }
+    dummies_mes: true # centradas e irrestritas (fora da relação de longo prazo)
+    # Ordem de integração das séries reais dessazonalizadas (STL), com a regra da Parte 4. Na
+    # Parte 4, o log nominal das carnes saiu I(0) em torno de tendência.
+    ordem_integracao: { tendencia_nivel: ct, alfa: 0.05 }
+    johansen:
+      # Teste do traço; dummies de mês centradas e defasagens das diferenças saem na 1ª etapa.
+      # Defasagens: AIC do VECM com até 12 defasagens das diferenças.
+      # Alterado em 2026-10-08, antes de estimar com os dados reais: o registro original usava
+      # só a constante irrestrita (caso 3), que supõe deriva nas séries; nos testes com dados
+      # simulados sem deriva ele rejeitou "sem cointegração" em 13% das vezes (nominal: 5%) e
+      # estimou posto 2 num sistema com uma relação verdadeira. Agora o posto e o caso são
+      # escolhidos juntos pelo princípio de Pantula (Johansen, 1992): em sequência, (r = 0,
+      # caso 2), (r = 0, caso 3), (r = 1, caso 2)...; fica a 1ª combinação não rejeitada.
+      # Caso 2 = constante restrita à relação de longo prazo (sem deriva); caso 3 = constante
+      # irrestrita (deriva). Valores críticos: caso 3 de Osterwald-Lenum (statsmodels); caso 2
+      # simulados (passeios aleatórios de T = 1000, 20.000 réplicas, semente do projeto), com o
+      # simulador validado contra a tabela do caso sem termos determinísticos.
+      nivel: 0.05
+      max_k_ar_diff: 12
+      criterio_lags: aic
+      simulacao_valores_criticos: { t: 1000, replicas: 20000 }
+    # VECM de posto 1 com o caso escolhido (caso 2 → constante na relação, "ci"; caso 3 → "co").
+    # O bounds test do ARDL usa o mesmo caso (PSS caso 2 ou 3).
+    vecm: { deterministico_por_caso: { 2: ci, 3: co } }
+    ardl:
+      max_lags: 12 # do varejo e de cada regressor
+      ordem_minima: 1 # a forma de correção de erros precisa do nível defasado de cada variável
+      criterio_lags: aic
+      bounds: { nivel: 0.05 } # caso do Johansen (2 ou 3), sem tendência; erros clássicos
+      erros: { tipo: HAC, lags: 12 } # para os intervalos dos multiplicadores
+    multiplicadores: { horizonte_max: 24, simulacoes: 5000 } # sorteios dos parâmetros (semente)
+    nivel_confianca: 0.90
+    # Leitura registrada: há relação de longo prazo com posto 1 no Johansen ou com F acima do
+    # limite I(1) no bounds test (entre os limites: inconclusivo). Se o intervalo da
+    # elasticidade inclui 0, a "cointegração" pode vir só da estacionariedade do varejo.
+    robustez:
+      - { nome: milho_sp, grao: milho_atacado_sp, janela: { inicio: "2000-09", fim: "2016-02" } }
+      - { nome: icbr_agro, grao: log_icbr_agro }
+      - { nome: nominal, deflator: null }
+      # Deriva do PR contra o Brasil (R32): tendência restrita à relação de longo prazo (ARDL
+      # caso 4; VECM "coli" com o posto do Johansen principal, porque não há valores críticos
+      # validados do traço com tendência restrita e dummies de mês).
+      - { nome: tendencia, ardl_caso: 4, vecm_deterministico: coli }
+      - { nome: com_diesel, insumos: [log_oleo_diesel] } # insumo de transporte e energia
+
+# Defasagens esperadas (hipóteses do projeto, não achados), em meses:
+# [mínima, máxima]. Hortaliças, leite e carnes vêm do critério da Parte 4; tubérculos e frutas
+# seguem o canal direto (t a t-1) e aves e ovos o canal da proteína animal (3 a 12 meses).
+# Cereais não têm hipótese de defasagem (exploratório).
+hipoteses_defasagens_meses:
+  hortalicas_verduras: [0, 1]
+  tuberculos_raizes_legumes: [0, 1]
+  frutas: [0, 1]
+  leite_derivados: [2, 4]
+  aves_ovos: [3, 12]
+  carnes: [6, 12]
+
+# ---------------------------------------------------------------------------------------------
+# EDA e decomposição (Parte 4), na janela de estimação
+# ---------------------------------------------------------------------------------------------
+eda:
+  defasagem_max_meses: 18
+  stl: { periodo: 12, robusto: true }
+  alfa: 0.05
+  # Cinturão verde médio: média simples, entre as 11 áreas com IPCA desde antes de 1999, do SPI
+  # das células a até `raio_cinturao_km` da sede.
+  raio_cinturao_km: 150
+  # Pares preço x clima (motor climático de cada grupo), definidos a partir dos canais da seção
+  # 1 antes do cálculo: canal direto (hortifrúti) com o cinturão verde e o CWI das culturas;
+  # canal indireto (proteína animal) com o CWI nacional das culturas de ração. Leite: só o
+  # canal da ração (a pastagem não é medida). Clima: cwi_<cultura>_<spi> (Brasil, pesos
+  # defasados) ou cinturao_<spi>.
+  pares:
+    - { grupo: hortalicas_verduras, clima: cinturao_spi_3 }
+    - { grupo: tuberculos_raizes_legumes, clima: cinturao_spi_3 }
+    - { grupo: tuberculos_raizes_legumes, clima: cwi_batata_inglesa_spi_3 }
+    - { grupo: frutas, clima: cwi_banana_spi_3 }
+    - { grupo: frutas, clima: cwi_laranja_spi_6 }
+    - { grupo: cereais_leguminosas, clima: cwi_feijao_spi_3 }
+    - { grupo: cereais_leguminosas, clima: cwi_arroz_spi_3 }
+    - { grupo: leite_derivados, clima: cwi_milho_spi_6 }
+    - { grupo: aves_ovos, clima: cwi_milho_spi_6 }
+    - { grupo: carnes, clima: cwi_milho_spi_6 }
+    - { grupo: carnes, clima: cwi_soja_spi_6 }
+    - { grupo: alimentacao_domicilio, clima: cwi_soja_spi_6 }
+  # Coerência wavelet (significância por Monte Carlo, semente do projeto).
+  wavelet:
+    mc_simulacoes: 300
+    pares:
+      - { grupo: hortalicas_verduras, clima: cinturao_spi_3 }
+      - { grupo: leite_derivados, clima: cwi_milho_spi_6 }
+      - { grupo: carnes, clima: cwi_milho_spi_6 }
+      - { grupo: alimentacao_domicilio, clima: oni }

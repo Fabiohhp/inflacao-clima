@@ -1,0 +1,33 @@
+serie,tendencia_nivel,ordem_integracao,adf_p_nivel,kpss_p_nivel,conclusao_nivel,n,leitura_final,za_p,za_quebra,adf_ct_p,kpss_ct_p
+log_sa_indice_geral,ct,I(1),0.0749,0.01,não estacionária,287,I(1),0.6904376148646031,2018-06-01,0.07487151278386928,0.01
+log_sa_alimentacao_bebidas,ct,I(1),0.0959,0.1,ambíguo,287,I(1),0.6152656539051656,2012-03-01,0.09589974225561593,0.1
+log_sa_alimentacao_domicilio,ct,I(1),0.2712,0.1,ambíguo,287,I(1),0.7542430604755478,2005-05-01,0.27123565976845826,0.1
+log_sa_cereais_leguminosas,ct,I(0),0.005,0.1,estacionária,287,I(0),,,,
+log_sa_tuberculos_raizes_legumes,ct,I(1),0.4399,0.01,não estacionária,287,I(1),0.6497728711322077,2004-08-01,0.4398936963439387,0.01
+log_sa_hortalicas_verduras,ct,I(1),0.1221,0.01,não estacionária,287,I(1),0.1979533622934193,2003-03-01,0.1221251282045962,0.01
+log_sa_frutas,ct,I(2),0.7337,0.01,não estacionária,287,I(1) (inflação I(0) em torno de tendência),0.4224417314440293,2003-04-01,0.733731075810968,0.01
+log_sa_carnes,ct,I(0),0.0051,0.1,estacionária,287,I(0),,,,
+log_sa_aves_ovos,ct,I(1),0.2461,0.091,ambíguo,287,I(1),0.8951553837144082,2019-11-01,0.24613619921985125,0.09143375664987553
+log_sa_leite_derivados,ct,I(1),0.3602,0.1,ambíguo,287,I(1),0.9366474921329957,2009-07-01,0.36015256064655576,0.1
+log_sa_oleo_diesel,ct,I(1),0.12,0.01,não estacionária,287,I(1),0.5699801771352179,2009-04-01,0.12004145437063951,0.01
+infl_sa_indice_geral,c,I(0),0.0063,0.1,estacionária,286,I(0),,,,
+infl_sa_alimentacao_bebidas,c,I(0),0.0002,0.1,estacionária,286,I(0),,,,
+infl_sa_alimentacao_domicilio,c,I(0),0.0,0.1,estacionária,286,I(0),,,,
+infl_sa_cereais_leguminosas,c,I(0),0.0,0.1,estacionária,286,I(0),,,,
+infl_sa_tuberculos_raizes_legumes,c,I(0),0.0,0.1,estacionária,286,I(0),,,,
+infl_sa_hortalicas_verduras,c,I(0),0.0,0.1,estacionária,286,I(0),,,,
+infl_sa_frutas,c,I(1),0.0,0.01,ambíguo,286,I(0) em torno de tendência,1e-05,2016-05-01,3.305801140377023e-14,0.1
+infl_sa_carnes,c,I(0),0.0025,0.1,estacionária,286,I(0),,,,
+infl_sa_aves_ovos,c,I(0),0.0,0.1,estacionária,286,I(0),,,,
+infl_sa_leite_derivados,c,I(0),0.0,0.1,estacionária,286,I(0),,,,
+infl_sa_oleo_diesel,c,I(0),0.0007,0.1,estacionária,286,I(0),,,,
+log_ptax,ct,I(1),0.7544,0.01,não estacionária,287,I(1),0.6152918317574793,2005-03-01,0.7543652448141371,0.01
+log_icbr_agro,ct,I(1),0.3602,0.01,não estacionária,287,I(1),0.3872774990143122,2019-08-01,0.360226506108997,0.01
+oni,c,I(0),0.004,0.1,estacionária,287,I(0),,,,
+mei_v2,c,I(0),0.0011,0.1,estacionária,287,I(0),,,,
+cwi_soja_spi_3,c,I(1),0.1764,0.01,não estacionária,287,I(0) em torno de tendência,1e-05,2009-04-01,7.38363735379976e-08,0.1
+cwi_soja_spi_6,c,I(1),0.291,0.01,não estacionária,287,I(0) em torno de tendência,0.01773833518235648,2011-11-01,0.00043660098061509047,0.1
+cwi_milho_spi_6,c,I(1),0.2608,0.01,não estacionária,287,I(1),0.5707043019257848,2009-04-01,0.0764651898376679,0.1
+cwi_milho_2a_safra_spi_6,c,I(1),0.2165,0.01,não estacionária,287,I(0) em torno de tendência,0.019146651900930293,2018-11-01,0.0004829078825621143,0.1
+cinturao_spi_3,c,I(1),0.0,0.01,ambíguo,287,I(0) em torno de tendência,1e-05,2011-10-01,2.9402667088357367e-08,0.1
+cinturao_spi_6,c,I(1),0.0739,0.01,não estacionária,287,I(0) em torno de tendência,0.001490035795329677,2011-12-01,0.0010096699548032462,0.1

@@ -1,0 +1,21 @@
+dependente,choque,acima_300km,abaixo_300km,acima_150km,abaixo_150km
+alimentacao_domicilio,seca_centro_oeste,0,0,0,0
+alimentacao_domicilio,seca_local,0,0,0,1
+alimentacao_domicilio,seca_local − seca_centro_oeste,0,0,0,0
+alimentacao_domicilio,seca_local − seca_matopiba,0,0,0,0
+alimentacao_domicilio,seca_matopiba,0,0,0,0
+aves_ovos,seca_centro_oeste,0,0,0,0
+aves_ovos,seca_local,1,0,1,1
+aves_ovos,seca_local − seca_centro_oeste,0,0,0,0
+aves_ovos,seca_local − seca_matopiba,0,0,0,0
+aves_ovos,seca_matopiba,0,0,0,0
+hortalicas_verduras,seca_centro_oeste,0,0,0,0
+hortalicas_verduras,seca_local,0,9,0,9
+hortalicas_verduras,seca_local − seca_centro_oeste,0,3,0,5
+hortalicas_verduras,seca_local − seca_matopiba,0,5,0,5
+hortalicas_verduras,seca_matopiba,0,0,0,0
+tuberculos_raizes_legumes,seca_centro_oeste,0,1,0,2
+tuberculos_raizes_legumes,seca_local,0,5,0,6
+tuberculos_raizes_legumes,seca_local − seca_centro_oeste,0,2,0,0
+tuberculos_raizes_legumes,seca_local − seca_matopiba,0,3,0,4
+tuberculos_raizes_legumes,seca_matopiba,0,0,0,0

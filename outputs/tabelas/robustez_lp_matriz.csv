@@ -1,0 +1,361 @@
+linha,coluna,estado,texto,familia
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,principal,referência,"2,16",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,com_controles,perde significância,"1,62",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,sem_2020_2022,mantém,"1,56",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,janela_2006,mantém,"3,03",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,janela_2012,mantém,"3,33",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,spi_alternativo,mantém,"1,13",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,pesos_fixos,mantém,"2,30",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,principal,referência,"2,06",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,com_controles,perde significância,"1,43",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,sem_2020_2022,perde significância,"1,43",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,janela_2006,mantém,"3,10",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,janela_2012,mantém,"3,40",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,spi_alternativo,perde significância,"1,05",linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,pesos_fixos,mantém,"2,23",linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,principal,referência,"0,32",linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,com_controles,mantém,"0,09",linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,sem_2020_2022,mantém,"0,59",linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,janela_2006,mantém,"0,54",linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,janela_2012,mantém,"0,48",linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,spi_alternativo,mantém,"0,96",linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,principal,referência,"-0,69",linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,com_controles,mantém,"-0,71",linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,sem_2020_2022,mantém,"-0,87",linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,janela_2006,perde significância,"-0,40",linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,janela_2012,perde significância,"-0,09",linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,spi_alternativo,perde significância,"0,11",linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,principal,referência,"-3,48",linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,com_controles,mantém,"-3,50",linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,sem_2020_2022,mantém,"-3,14",linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,janela_2006,mantém,"-3,04",linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,janela_2012,mantém,"-4,22",linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,spi_alternativo,mantém,"-2,77",linear
+linear|frutas|cwi_banana_spi_3|seca,principal,referência,"0,64",linear
+linear|frutas|cwi_banana_spi_3|seca,com_controles,mantém,"0,42",linear
+linear|frutas|cwi_banana_spi_3|seca,sem_2020_2022,ganha significância,"0,77",linear
+linear|frutas|cwi_banana_spi_3|seca,janela_2006,mantém,"0,58",linear
+linear|frutas|cwi_banana_spi_3|seca,janela_2012,mantém,"0,10",linear
+linear|frutas|cwi_banana_spi_3|seca,spi_alternativo,mantém,"0,49",linear
+linear|frutas|cwi_banana_spi_3|seca,pesos_fixos,mantém,"0,65",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,principal,referência,"2,66",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,com_controles,mantém,"2,04",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,sem_2020_2022,mantém,"1,90",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,janela_2006,ganha significância,"6,10",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,janela_2012,ganha significância,"5,23",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,spi_alternativo,mantém,"2,76",linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,pesos_fixos,mantém,"1,98",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,principal,referência,"-0,09",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,com_controles,mantém,"-0,14",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,sem_2020_2022,mantém,"0,32",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,janela_2006,mantém,"0,21",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,janela_2012,mantém,"-0,66",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,spi_alternativo,mantém,"0,61",linear
+linear|leite_derivados|cwi_milho_spi_6|seca,pesos_fixos,mantém,"-0,08",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,principal,referência,"4,14",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,com_controles,mantém,"4,30",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,sem_2020_2022,mantém,"2,69",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,janela_2006,mantém,"4,52",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,janela_2012,mantém,"5,40",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,spi_alternativo,mantém,"2,64",linear
+linear|aves_ovos|cwi_milho_spi_6|seca,pesos_fixos,mantém,"4,24",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,principal,referência,"3,69",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,com_controles,mantém,"3,47",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,sem_2020_2022,perde significância,"1,90",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,janela_2006,mantém,"4,41",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,janela_2012,mantém,"4,73",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,spi_alternativo,mantém,"2,34",linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,pesos_fixos,mantém,"3,85",linear
+linear|carnes|cwi_milho_spi_6|seca,principal,referência,"2,71",linear
+linear|carnes|cwi_milho_spi_6|seca,com_controles,mantém,"2,06",linear
+linear|carnes|cwi_milho_spi_6|seca,sem_2020_2022,mantém,"0,27",linear
+linear|carnes|cwi_milho_spi_6|seca,janela_2006,ganha significância,"4,69",linear
+linear|carnes|cwi_milho_spi_6|seca,janela_2012,mantém,"4,03",linear
+linear|carnes|cwi_milho_spi_6|seca,spi_alternativo,mantém,"1,32",linear
+linear|carnes|cwi_milho_spi_6|seca,pesos_fixos,mantém,"2,23",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,principal,referência,"2,46",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,com_controles,mantém,"1,83",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,sem_2020_2022,mantém,"-0,47",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,janela_2006,ganha significância,"4,54",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,janela_2012,mantém,"4,52",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,spi_alternativo,mantém,"1,33",linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,pesos_fixos,mantém,"2,65",linear
+linear|alimentacao_domicilio|cwi_milho_spi_6|seca,placebo,placebo falha,10/12,linear
+linear|alimentacao_domicilio|cwi_soja_spi_6|seca,placebo,placebo falha,9/12,linear
+linear|alimentacao_domicilio|cinturao_spi_3|seca,placebo,placebo passa,0/12,linear
+linear|hortalicas_verduras|cinturao_spi_3|seca,placebo,placebo passa,1/12,linear
+linear|tuberculos_raizes_legumes|cinturao_spi_3|seca,placebo,placebo passa,0/12,linear
+linear|frutas|cwi_banana_spi_3|seca,placebo,placebo passa,0/12,linear
+linear|cereais_leguminosas|cwi_feijao_spi_3|seca,placebo,placebo falha,6/12,linear
+linear|leite_derivados|cwi_milho_spi_6|seca,placebo,placebo passa,0/12,linear
+linear|aves_ovos|cwi_milho_spi_6|seca,placebo,placebo falha,6/12,linear
+linear|aves_ovos|cwi_milho_2a_safra_spi_6|seca,placebo,placebo falha,5/12,linear
+linear|carnes|cwi_milho_spi_6|seca,placebo,placebo falha,8/12,linear
+linear|carnes|cwi_milho_2a_safra_spi_6|seca,placebo,placebo falha,11/12,linear
+nao_linear|hortalicas_verduras|cinturao|seca,principal,referência,"-0,17",nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,principal,referência,"0,57",nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,principal,referência,"0,60",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca − excesso,principal,referência,"-0,74",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca,com_controles,mantém,"-0,06",nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,com_controles,mantém,"0,63",nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,com_controles,perde significância,"0,49",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca − excesso,com_controles,mantém,"-0,69",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca,sem_2020_2022,mantém,"-0,27",nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,sem_2020_2022,mantém,"0,68",nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,sem_2020_2022,mantém,"0,83",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca − excesso,sem_2020_2022,ganha significância,"-0,95",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca,janela_2006,mantém,"0,10",nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,janela_2006,mantém,"0,87",nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,janela_2006,perde significância,"0,47",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca − excesso,janela_2006,mantém,"-0,77",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca,limiar_1.0,mantém,"-0,05",nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,limiar_1.0,ganha significância,"0,87",nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,limiar_1.0,mantém,"0,66",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca − excesso,limiar_1.0,ganha significância,"-0,92",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca,limiar_2.0,mantém,"-0,13",nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,limiar_2.0,mantém,"0,66",nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,limiar_2.0,mantém,"0,50",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca − excesso,limiar_2.0,mantém,"-0,80",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,principal,referência,"-1,51",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,principal,referência,"2,74",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,principal,referência,"1,02",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca − excesso,principal,referência,"-4,25",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,com_controles,ganha significância,"-1,70",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,com_controles,mantém,"2,85",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,com_controles,mantém,"0,90",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca − excesso,com_controles,mantém,"-4,55",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,sem_2020_2022,mantém,"-1,30",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,sem_2020_2022,mantém,"2,22",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,sem_2020_2022,ganha significância,"1,60",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca − excesso,sem_2020_2022,mantém,"-3,52",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,janela_2006,mantém,"-1,05",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,janela_2006,mantém,"4,73",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,janela_2006,mantém,"1,34",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca − excesso,janela_2006,mantém,"-5,77",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,limiar_1.0,mantém,"-0,71",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,limiar_1.0,mantém,"1,94",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,limiar_1.0,mantém,"1,12",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca − excesso,limiar_1.0,mantém,"-2,66",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,limiar_2.0,mantém,"-1,31",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,limiar_2.0,mantém,"4,22",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,limiar_2.0,mantém,"0,66",nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca − excesso,limiar_2.0,mantém,"-5,53",nao_linear
+nao_linear|frutas|banana|seca,principal,referência,"0,57",nao_linear
+nao_linear|frutas|banana|excesso,principal,referência,"-0,02",nao_linear
+nao_linear|frutas|banana|calor,principal,referência,"0,19",nao_linear
+nao_linear|frutas|banana|seca − excesso,principal,referência,"0,59",nao_linear
+nao_linear|frutas|banana|seca,com_controles,mantém,"0,49",nao_linear
+nao_linear|frutas|banana|excesso,com_controles,mantém,"0,13",nao_linear
+nao_linear|frutas|banana|calor,com_controles,mantém,"0,12",nao_linear
+nao_linear|frutas|banana|seca − excesso,com_controles,mantém,"0,36",nao_linear
+nao_linear|frutas|banana|seca,sem_2020_2022,ganha significância,"0,62",nao_linear
+nao_linear|frutas|banana|excesso,sem_2020_2022,mantém,"-0,29",nao_linear
+nao_linear|frutas|banana|calor,sem_2020_2022,mantém,"0,13",nao_linear
+nao_linear|frutas|banana|seca − excesso,sem_2020_2022,ganha significância,"0,92",nao_linear
+nao_linear|frutas|banana|seca,janela_2006,ganha significância,"0,86",nao_linear
+nao_linear|frutas|banana|excesso,janela_2006,mantém,"0,60",nao_linear
+nao_linear|frutas|banana|calor,janela_2006,mantém,"0,21",nao_linear
+nao_linear|frutas|banana|seca − excesso,janela_2006,mantém,"0,26",nao_linear
+nao_linear|frutas|banana|seca,pesos_fixos,ganha significância,"0,67",nao_linear
+nao_linear|frutas|banana|excesso,pesos_fixos,mantém,"-0,11",nao_linear
+nao_linear|frutas|banana|calor,pesos_fixos,mantém,"0,23",nao_linear
+nao_linear|frutas|banana|seca − excesso,pesos_fixos,mantém,"0,78",nao_linear
+nao_linear|frutas|banana|seca,limiar_1.0,mantém,"0,28",nao_linear
+nao_linear|frutas|banana|excesso,limiar_1.0,mantém,"0,05",nao_linear
+nao_linear|frutas|banana|calor,limiar_1.0,mantém,"0,18",nao_linear
+nao_linear|frutas|banana|seca − excesso,limiar_1.0,mantém,"0,23",nao_linear
+nao_linear|frutas|banana|seca,limiar_2.0,mantém,"0,86",nao_linear
+nao_linear|frutas|banana|excesso,limiar_2.0,mantém,"0,29",nao_linear
+nao_linear|frutas|banana|calor,limiar_2.0,mantém,"0,23",nao_linear
+nao_linear|frutas|banana|seca − excesso,limiar_2.0,mantém,"0,57",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,principal,referência,"0,88",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,principal,referência,"-2,35",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,principal,referência,"2,36",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,principal,referência,"3,23",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,com_controles,mantém,"1,56",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,com_controles,mantém,"-0,97",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,com_controles,mantém,"1,50",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,com_controles,mantém,"2,53",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,sem_2020_2022,mantém,"0,76",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,sem_2020_2022,mantém,"-1,97",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,sem_2020_2022,mantém,"1,42",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,sem_2020_2022,mantém,"2,73",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,janela_2006,mantém,"3,16",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,janela_2006,mantém,"-3,27",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,janela_2006,mantém,"2,26",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,janela_2006,mantém,"6,43",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,pesos_fixos,mantém,"0,57",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,pesos_fixos,mantém,"-2,68",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,pesos_fixos,ganha significância,"2,71",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,pesos_fixos,mantém,"3,25",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,limiar_1.0,mantém,"0,30",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,limiar_1.0,mantém,"-0,62",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,limiar_1.0,ganha significância,"2,74",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,limiar_1.0,mantém,"0,93",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,limiar_2.0,mantém,"0,29",nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,limiar_2.0,mantém,"-4,64",nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,limiar_2.0,ganha significância,"2,89",nao_linear
+nao_linear|cereais_leguminosas|feijao|seca − excesso,limiar_2.0,mantém,"4,93",nao_linear
+nao_linear|leite_derivados|milho|seca,principal,referência,"-0,72",nao_linear
+nao_linear|leite_derivados|milho|excesso,principal,referência,"-0,36",nao_linear
+nao_linear|leite_derivados|milho|calor,principal,referência,"0,24",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,principal,referência,"-0,36",nao_linear
+nao_linear|leite_derivados|milho|seca,com_controles,mantém,"-0,66",nao_linear
+nao_linear|leite_derivados|milho|excesso,com_controles,mantém,"-0,29",nao_linear
+nao_linear|leite_derivados|milho|calor,com_controles,mantém,"0,14",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,com_controles,mantém,"-0,37",nao_linear
+nao_linear|leite_derivados|milho|seca,sem_2020_2022,mantém,"-0,33",nao_linear
+nao_linear|leite_derivados|milho|excesso,sem_2020_2022,mantém,"-0,53",nao_linear
+nao_linear|leite_derivados|milho|calor,sem_2020_2022,mantém,"0,02",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,sem_2020_2022,mantém,"0,20",nao_linear
+nao_linear|leite_derivados|milho|seca,janela_2006,mantém,"-0,70",nao_linear
+nao_linear|leite_derivados|milho|excesso,janela_2006,mantém,"-1,16",nao_linear
+nao_linear|leite_derivados|milho|calor,janela_2006,mantém,"0,27",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,janela_2006,mantém,"0,46",nao_linear
+nao_linear|leite_derivados|milho|seca,pesos_fixos,mantém,"-0,59",nao_linear
+nao_linear|leite_derivados|milho|excesso,pesos_fixos,mantém,"-0,64",nao_linear
+nao_linear|leite_derivados|milho|calor,pesos_fixos,mantém,"0,21",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,pesos_fixos,mantém,"0,05",nao_linear
+nao_linear|leite_derivados|milho|seca,limiar_1.0,mantém,"-0,36",nao_linear
+nao_linear|leite_derivados|milho|excesso,limiar_1.0,mantém,"0,05",nao_linear
+nao_linear|leite_derivados|milho|calor,limiar_1.0,mantém,"0,16",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,limiar_1.0,mantém,"-0,41",nao_linear
+nao_linear|leite_derivados|milho|seca,limiar_2.0,mantém,"-0,93",nao_linear
+nao_linear|leite_derivados|milho|excesso,limiar_2.0,mantém,"-0,51",nao_linear
+nao_linear|leite_derivados|milho|calor,limiar_2.0,mantém,"0,16",nao_linear
+nao_linear|leite_derivados|milho|seca − excesso,limiar_2.0,mantém,"-0,42",nao_linear
+nao_linear|aves_ovos|milho|seca,principal,referência,"2,29",nao_linear
+nao_linear|aves_ovos|milho|excesso,principal,referência,"-0,44",nao_linear
+nao_linear|aves_ovos|milho|calor,principal,referência,"0,32",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,principal,referência,"2,73",nao_linear
+nao_linear|aves_ovos|milho|seca,com_controles,mantém,"2,02",nao_linear
+nao_linear|aves_ovos|milho|excesso,com_controles,mantém,"-0,10",nao_linear
+nao_linear|aves_ovos|milho|calor,com_controles,mantém,"0,24",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,com_controles,perde significância,"2,12",nao_linear
+nao_linear|aves_ovos|milho|seca,sem_2020_2022,mantém,"2,49",nao_linear
+nao_linear|aves_ovos|milho|excesso,sem_2020_2022,mantém,"-0,35",nao_linear
+nao_linear|aves_ovos|milho|calor,sem_2020_2022,mantém,"-0,52",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,sem_2020_2022,perde significância,"2,84",nao_linear
+nao_linear|aves_ovos|milho|seca,janela_2006,mantém,"2,15",nao_linear
+nao_linear|aves_ovos|milho|excesso,janela_2006,mantém,"-0,73",nao_linear
+nao_linear|aves_ovos|milho|calor,janela_2006,mantém,"0,44",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,janela_2006,mantém,"2,88",nao_linear
+nao_linear|aves_ovos|milho|seca,pesos_fixos,mantém,"1,94",nao_linear
+nao_linear|aves_ovos|milho|excesso,pesos_fixos,mantém,"-0,75",nao_linear
+nao_linear|aves_ovos|milho|calor,pesos_fixos,mantém,"0,44",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,pesos_fixos,mantém,"2,69",nao_linear
+nao_linear|aves_ovos|milho|seca,limiar_1.0,mantém,"1,75",nao_linear
+nao_linear|aves_ovos|milho|excesso,limiar_1.0,mantém,"0,29",nao_linear
+nao_linear|aves_ovos|milho|calor,limiar_1.0,mantém,"0,55",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,limiar_1.0,mantém,"1,46",nao_linear
+nao_linear|aves_ovos|milho|seca,limiar_2.0,perde significância,"3,14",nao_linear
+nao_linear|aves_ovos|milho|excesso,limiar_2.0,mantém,"-1,39",nao_linear
+nao_linear|aves_ovos|milho|calor,limiar_2.0,mantém,"0,54",nao_linear
+nao_linear|aves_ovos|milho|seca − excesso,limiar_2.0,perde significância,"4,54",nao_linear
+nao_linear|carnes|milho|seca,principal,referência,"2,16",nao_linear
+nao_linear|carnes|milho|excesso,principal,referência,"0,37",nao_linear
+nao_linear|carnes|milho|calor,principal,referência,"0,10",nao_linear
+nao_linear|carnes|milho|seca − excesso,principal,referência,"1,79",nao_linear
+nao_linear|carnes|milho|seca,com_controles,mantém,"1,80",nao_linear
+nao_linear|carnes|milho|excesso,com_controles,mantém,"0,70",nao_linear
+nao_linear|carnes|milho|calor,com_controles,mantém,"-0,38",nao_linear
+nao_linear|carnes|milho|seca − excesso,com_controles,mantém,"1,09",nao_linear
+nao_linear|carnes|milho|seca,sem_2020_2022,mantém,"1,99",nao_linear
+nao_linear|carnes|milho|excesso,sem_2020_2022,mantém,"1,21",nao_linear
+nao_linear|carnes|milho|calor,sem_2020_2022,inverte,"-1,29",nao_linear
+nao_linear|carnes|milho|seca − excesso,sem_2020_2022,mantém,"0,78",nao_linear
+nao_linear|carnes|milho|seca,janela_2006,mantém,"2,61",nao_linear
+nao_linear|carnes|milho|excesso,janela_2006,mantém,"-1,17",nao_linear
+nao_linear|carnes|milho|calor,janela_2006,mantém,"0,43",nao_linear
+nao_linear|carnes|milho|seca − excesso,janela_2006,mantém,"3,79",nao_linear
+nao_linear|carnes|milho|seca,pesos_fixos,mantém,"1,55",nao_linear
+nao_linear|carnes|milho|excesso,pesos_fixos,mantém,"0,28",nao_linear
+nao_linear|carnes|milho|calor,pesos_fixos,mantém,"0,21",nao_linear
+nao_linear|carnes|milho|seca − excesso,pesos_fixos,mantém,"1,26",nao_linear
+nao_linear|carnes|milho|seca,limiar_1.0,mantém,"2,19",nao_linear
+nao_linear|carnes|milho|excesso,limiar_1.0,mantém,"0,76",nao_linear
+nao_linear|carnes|milho|calor,limiar_1.0,mantém,"0,04",nao_linear
+nao_linear|carnes|milho|seca − excesso,limiar_1.0,mantém,"1,44",nao_linear
+nao_linear|carnes|milho|seca,limiar_2.0,perde significância,"2,07",nao_linear
+nao_linear|carnes|milho|excesso,limiar_2.0,mantém,"1,37",nao_linear
+nao_linear|carnes|milho|calor,limiar_2.0,mantém,"0,30",nao_linear
+nao_linear|carnes|milho|seca − excesso,limiar_2.0,mantém,"0,70",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,principal,referência,"0,11",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,principal,referência,"-0,44",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,principal,referência,"0,75",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca − excesso,principal,referência,"0,55",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,com_controles,mantém,"0,35",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,com_controles,mantém,"0,37",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,com_controles,mantém,"0,43",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca − excesso,com_controles,mantém,"-0,02",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,sem_2020_2022,mantém,"0,41",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,sem_2020_2022,mantém,"-0,85",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,sem_2020_2022,mantém,"0,53",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca − excesso,sem_2020_2022,mantém,"1,26",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,janela_2006,mantém,"0,58",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,janela_2006,mantém,"0,38",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,janela_2006,mantém,"0,52",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca − excesso,janela_2006,mantém,"0,20",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,limiar_1.0,mantém,"-0,04",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,limiar_1.0,mantém,"-0,09",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,limiar_1.0,mantém,"0,75",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca − excesso,limiar_1.0,mantém,"0,05",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,limiar_2.0,mantém,"0,43",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,limiar_2.0,mantém,"-0,05",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,limiar_2.0,mantém,"0,68",nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca − excesso,limiar_2.0,mantém,"0,48",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,principal,referência,"1,18",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,principal,referência,"-0,05",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,principal,referência,"0,26",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,principal,referência,"1,23",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,com_controles,ganha significância,"1,18",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,com_controles,mantém,"0,79",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,com_controles,mantém,"0,10",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,com_controles,mantém,"0,39",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,sem_2020_2022,mantém,"1,33",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,sem_2020_2022,mantém,"0,06",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,sem_2020_2022,mantém,"-0,35",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,sem_2020_2022,mantém,"1,27",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,janela_2006,ganha significância,"1,83",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,janela_2006,mantém,"-1,02",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,janela_2006,mantém,"0,17",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,janela_2006,ganha significância,"2,85",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,pesos_fixos,ganha significância,"1,08",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,pesos_fixos,mantém,"-0,37",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,pesos_fixos,mantém,"0,41",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,pesos_fixos,ganha significância,"1,45",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,limiar_1.0,mantém,"0,94",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,limiar_1.0,mantém,"0,09",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,limiar_1.0,mantém,"0,44",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,limiar_1.0,mantém,"0,85",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,limiar_2.0,mantém,"1,65",nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,limiar_2.0,mantém,"-0,16",nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,limiar_2.0,mantém,"0,37",nao_linear
+nao_linear|alimentacao_domicilio|milho|seca − excesso,limiar_2.0,mantém,"1,81",nao_linear
+nao_linear|hortalicas_verduras|cinturao|seca,placebo,placebo passa,2/12,nao_linear
+nao_linear|hortalicas_verduras|cinturao|excesso,placebo,placebo passa,0/12,nao_linear
+nao_linear|hortalicas_verduras|cinturao|calor,placebo,placebo passa,0/12,nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|excesso,placebo,placebo falha,3/12,nao_linear
+nao_linear|tuberculos_raizes_legumes|cinturao|calor,placebo,placebo passa,2/12,nao_linear
+nao_linear|frutas|banana|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|frutas|banana|excesso,placebo,placebo falha,4/12,nao_linear
+nao_linear|frutas|banana|calor,placebo,placebo passa,0/12,nao_linear
+nao_linear|cereais_leguminosas|feijao|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|cereais_leguminosas|feijao|excesso,placebo,placebo falha,4/12,nao_linear
+nao_linear|cereais_leguminosas|feijao|calor,placebo,placebo passa,0/12,nao_linear
+nao_linear|leite_derivados|milho|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|leite_derivados|milho|excesso,placebo,placebo passa,0/12,nao_linear
+nao_linear|leite_derivados|milho|calor,placebo,placebo falha,5/12,nao_linear
+nao_linear|aves_ovos|milho|seca,placebo,placebo falha,3/12,nao_linear
+nao_linear|aves_ovos|milho|excesso,placebo,placebo falha,9/12,nao_linear
+nao_linear|aves_ovos|milho|calor,placebo,placebo passa,0/12,nao_linear
+nao_linear|carnes|milho|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|carnes|milho|excesso,placebo,placebo passa,0/12,nao_linear
+nao_linear|carnes|milho|calor,placebo,placebo passa,1/12,nao_linear
+nao_linear|alimentacao_domicilio|cinturao|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|alimentacao_domicilio|cinturao|excesso,placebo,placebo passa,0/12,nao_linear
+nao_linear|alimentacao_domicilio|cinturao|calor,placebo,placebo passa,1/12,nao_linear
+nao_linear|alimentacao_domicilio|milho|seca,placebo,placebo passa,0/12,nao_linear
+nao_linear|alimentacao_domicilio|milho|excesso,placebo,placebo falha,5/12,nao_linear
+nao_linear|alimentacao_domicilio|milho|calor,placebo,placebo passa,1/12,nao_linear

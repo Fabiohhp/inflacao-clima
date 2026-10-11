@@ -1,0 +1,6 @@
+modelo,comparado_com,casos,vence_10pct,r2_oos_mediano_pct,r2_oos_positivo,esperado_acaso
+local,benchmark,32,2,-1.3807557132200388,9,3.2
+local_mei,local,32,4,-4.668386666185864,4,3.2
+local_oni,local,32,8,-2.5860368726109195,9,3.2
+mei,benchmark,32,5,-1.911141087975754,8,3.2
+oni,benchmark,32,7,-0.7458484184417191,12,3.2

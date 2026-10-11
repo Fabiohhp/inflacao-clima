@@ -1,0 +1,262 @@
+parte,bloco,dependente,choque_ou_modelo,tipo,horizonte,medida,valor_principal,signif_principal,n_testes,classe,placebo_horizontes_signif,placebo_falha,mudancas_relevantes
+8a,linear,alimentacao_domicilio,cwi_milho_spi_6,seca,12,p.p. por 1 desvio-padrão de seca,2.1609530025006887,True,6,robusto,10.0,True,"com_controles: perde significância; janela_2012: magnitude ×1,54"
+8a,linear,alimentacao_domicilio,cwi_soja_spi_6,seca,12,p.p. por 1 desvio-padrão de seca,2.0607903087444885,True,6,frágil,9.0,True,"com_controles: perde significância; sem_2020_2022: perde significância; spi_alternativo: perde significância; janela_2006: magnitude ×1,50; janela_2012: magnitude ×1,65"
+8a,linear,alimentacao_domicilio,cinturao_spi_3,seca,12,p.p. por 1 desvio-padrão de seca,0.3177872731672077,False,5,nulo estável,0.0,False,"com_controles: magnitude ×0,28; sem_2020_2022: magnitude ×1,86; janela_2006: magnitude ×1,71; spi_alternativo: magnitude ×3,03"
+8a,linear,hortalicas_verduras,cinturao_spi_3,seca,1,p.p. por 1 desvio-padrão de seca,-0.6903852971588175,True,5,frágil,1.0,False,"janela_2006: perde significância; janela_2012: perde significância; spi_alternativo: perde significância; janela_2012: magnitude ×0,13; spi_alternativo: magnitude ×-0,16"
+8a,linear,tuberculos_raizes_legumes,cinturao_spi_3,seca,1,p.p. por 1 desvio-padrão de seca,-3.479474234294265,True,5,robusto,0.0,False,
+8a,linear,frutas,cwi_banana_spi_3,seca,1,p.p. por 1 desvio-padrão de seca,0.6421926559450334,False,6,nulo instável,0.0,False,"sem_2020_2022: ganha significância; janela_2012: magnitude ×0,15"
+8a,linear,cereais_leguminosas,cwi_feijao_spi_3,seca,12,p.p. por 1 desvio-padrão de seca,2.6645742642043566,False,6,nulo instável,6.0,True,"janela_2006: ganha significância; janela_2012: ganha significância; janela_2006: magnitude ×2,29; janela_2012: magnitude ×1,96"
+8a,linear,leite_derivados,cwi_milho_spi_6,seca,4,p.p. por 1 desvio-padrão de seca,-0.08731890816420664,False,6,nulo estável,0.0,False,"com_controles: magnitude ×1,61; sem_2020_2022: magnitude ×-3,66; janela_2006: magnitude ×-2,41; janela_2012: magnitude ×7,57; spi_alternativo: magnitude ×-6,96"
+8a,linear,aves_ovos,cwi_milho_spi_6,seca,12,p.p. por 1 desvio-padrão de seca,4.138492302078359,True,6,robusto,6.0,True,
+8a,linear,aves_ovos,cwi_milho_2a_safra_spi_6,seca,12,p.p. por 1 desvio-padrão de seca,3.689543494724518,True,6,robusto,5.0,True,sem_2020_2022: perde significância
+8a,linear,carnes,cwi_milho_spi_6,seca,12,p.p. por 1 desvio-padrão de seca,2.7079069563403677,False,6,nulo instável,8.0,True,"janela_2006: ganha significância; sem_2020_2022: magnitude ×0,10; janela_2006: magnitude ×1,73; spi_alternativo: magnitude ×0,49"
+8a,linear,carnes,cwi_milho_2a_safra_spi_6,seca,12,p.p. por 1 desvio-padrão de seca,2.4582327887347906,False,6,nulo instável,11.0,True,"janela_2006: ganha significância; sem_2020_2022: magnitude ×-0,19; janela_2006: magnitude ×1,85; janela_2012: magnitude ×1,84"
+8a,nao_linear,hortalicas_verduras,cinturao,seca,1,p.p. por +10 p.p. de fração,-0.17358282295728836,False,5,nulo estável,2.0,False,"com_controles: magnitude ×0,36; sem_2020_2022: magnitude ×1,56; janela_2006: magnitude ×-0,58; limiar_1.0: magnitude ×0,31"
+8a,nao_linear,hortalicas_verduras,cinturao,excesso,1,p.p. por +10 p.p. de fração,0.5653929678852784,False,5,nulo instável,0.0,False,"limiar_1.0: ganha significância; janela_2006: magnitude ×1,53; limiar_1.0: magnitude ×1,53"
+8a,nao_linear,hortalicas_verduras,cinturao,calor,1,p.p. por +10 p.p. de fração,0.5967549579228505,True,5,frágil,0.0,False,com_controles: perde significância; janela_2006: perde significância
+8a,nao_linear,hortalicas_verduras,cinturao,seca − excesso,1,p.p. por +10 p.p. de fração,-0.7389757908425667,False,5,nulo instável,,,sem_2020_2022: ganha significância; limiar_1.0: ganha significância
+8a,nao_linear,hortalicas_verduras,cinturao,calor − excesso,1,p.p. por +10 p.p. de fração,0.03136199003757208,False,5,nulo estável,,,"com_controles: magnitude ×-4,31; sem_2020_2022: magnitude ×4,67; janela_2006: magnitude ×-12,71; limiar_1.0: magnitude ×-6,72; limiar_2.0: magnitude ×-5,10"
+8a,nao_linear,tuberculos_raizes_legumes,cinturao,seca,1,p.p. por +10 p.p. de fração,-1.5061362332742254,False,5,nulo instável,0.0,False,"com_controles: ganha significância; limiar_1.0: magnitude ×0,47"
+8a,nao_linear,tuberculos_raizes_legumes,cinturao,excesso,1,p.p. por +10 p.p. de fração,2.743571901160497,True,5,robusto,3.0,True,"janela_2006: magnitude ×1,72; limiar_2.0: magnitude ×1,54"
+8a,nao_linear,tuberculos_raizes_legumes,cinturao,calor,1,p.p. por +10 p.p. de fração,1.0169488762760082,False,5,nulo instável,2.0,False,"sem_2020_2022: ganha significância; sem_2020_2022: magnitude ×1,58"
+8a,nao_linear,tuberculos_raizes_legumes,cinturao,seca − excesso,1,p.p. por +10 p.p. de fração,-4.249708134434722,True,5,robusto,,,
+8a,nao_linear,tuberculos_raizes_legumes,cinturao,calor − excesso,1,p.p. por +10 p.p. de fração,-1.7266230248844892,False,5,nulo instável,,,"janela_2006: ganha significância; limiar_2.0: ganha significância; sem_2020_2022: magnitude ×0,36; janela_2006: magnitude ×1,96; limiar_1.0: magnitude ×0,48; limiar_2.0: magnitude ×2,06"
+8a,nao_linear,frutas,banana,seca,1,p.p. por +10 p.p. de fração,0.5719825003917637,False,6,nulo instável,0.0,False,"sem_2020_2022: ganha significância; janela_2006: ganha significância; pesos_fixos: ganha significância; limiar_1.0: magnitude ×0,49"
+8a,nao_linear,frutas,banana,excesso,1,p.p. por +10 p.p. de fração,-0.018121278156518535,False,6,nulo estável,4.0,True,"com_controles: magnitude ×-7,23; sem_2020_2022: magnitude ×16,22; janela_2006: magnitude ×-32,85; pesos_fixos: magnitude ×6,15; limiar_1.0: magnitude ×-2,67; limiar_2.0: magnitude ×-15,77"
+8a,nao_linear,frutas,banana,calor,1,p.p. por +10 p.p. de fração,0.1907058959254068,False,6,nulo estável,0.0,False,
+8a,nao_linear,frutas,banana,seca − excesso,1,p.p. por +10 p.p. de fração,0.5901037785482822,False,6,nulo instável,,,"sem_2020_2022: ganha significância; sem_2020_2022: magnitude ×1,55; janela_2006: magnitude ×0,44; limiar_1.0: magnitude ×0,39"
+8a,nao_linear,frutas,banana,calor − excesso,1,p.p. por +10 p.p. de fração,0.20882717408192533,False,6,nulo estável,,,"com_controles: magnitude ×-0,06; sem_2020_2022: magnitude ×2,05; janela_2006: magnitude ×-1,85; pesos_fixos: magnitude ×1,62; limiar_2.0: magnitude ×-0,28"
+8a,nao_linear,cereais_leguminosas,feijao,seca,12,p.p. por +10 p.p. de fração,0.8796268947708102,False,6,nulo estável,0.0,False,"com_controles: magnitude ×1,78; janela_2006: magnitude ×3,59; limiar_1.0: magnitude ×0,35; limiar_2.0: magnitude ×0,33"
+8a,nao_linear,cereais_leguminosas,feijao,excesso,12,p.p. por +10 p.p. de fração,-2.346049330578792,False,6,nulo estável,4.0,True,"com_controles: magnitude ×0,41; limiar_1.0: magnitude ×0,26; limiar_2.0: magnitude ×1,98"
+8a,nao_linear,cereais_leguminosas,feijao,calor,12,p.p. por +10 p.p. de fração,2.361369301861132,False,6,nulo instável,0.0,False,pesos_fixos: ganha significância; limiar_1.0: ganha significância; limiar_2.0: ganha significância
+8a,nao_linear,cereais_leguminosas,feijao,seca − excesso,12,p.p. por +10 p.p. de fração,3.225676225349602,False,6,nulo estável,,,"janela_2006: magnitude ×1,99; limiar_1.0: magnitude ×0,29; limiar_2.0: magnitude ×1,53"
+8a,nao_linear,cereais_leguminosas,feijao,calor − excesso,12,p.p. por +10 p.p. de fração,4.707418632439924,False,6,nulo instável,,,"pesos_fixos: ganha significância; limiar_2.0: magnitude ×1,60"
+8a,nao_linear,leite_derivados,milho,seca,4,p.p. por +10 p.p. de fração,-0.7208218080066927,False,6,nulo estável,0.0,False,"sem_2020_2022: magnitude ×0,45"
+8a,nao_linear,leite_derivados,milho,excesso,4,p.p. por +10 p.p. de fração,-0.3580233990457953,False,6,nulo estável,0.0,False,"janela_2006: magnitude ×3,24; pesos_fixos: magnitude ×1,80; limiar_1.0: magnitude ×-0,14"
+8a,nao_linear,leite_derivados,milho,calor,4,p.p. por +10 p.p. de fração,0.24063064370297413,False,6,nulo estável,5.0,True,"sem_2020_2022: magnitude ×0,08"
+8a,nao_linear,leite_derivados,milho,seca − excesso,4,p.p. por +10 p.p. de fração,-0.36279840896089743,False,6,nulo estável,,,"sem_2020_2022: magnitude ×-0,55; janela_2006: magnitude ×-1,28; pesos_fixos: magnitude ×-0,15"
+8a,nao_linear,leite_derivados,milho,calor − excesso,4,p.p. por +10 p.p. de fração,0.5986540427487694,False,6,nulo instável,,,"janela_2006: ganha significância; janela_2006: magnitude ×2,39; limiar_1.0: magnitude ×0,18"
+8a,nao_linear,aves_ovos,milho,seca,12,p.p. por +10 p.p. de fração,2.2911482774383627,True,6,robusto,3.0,True,limiar_2.0: perde significância
+8a,nao_linear,aves_ovos,milho,excesso,12,p.p. por +10 p.p. de fração,-0.44063532953229556,False,6,nulo estável,9.0,True,"com_controles: magnitude ×0,22; janela_2006: magnitude ×1,67; pesos_fixos: magnitude ×1,70; limiar_1.0: magnitude ×-0,66; limiar_2.0: magnitude ×3,16"
+8a,nao_linear,aves_ovos,milho,calor,12,p.p. por +10 p.p. de fração,0.31534276509910825,False,6,nulo estável,0.0,False,"sem_2020_2022: magnitude ×-1,65; limiar_1.0: magnitude ×1,74; limiar_2.0: magnitude ×1,72"
+8a,nao_linear,aves_ovos,milho,seca − excesso,12,p.p. por +10 p.p. de fração,2.7317836069706583,True,6,frágil,,,"com_controles: perde significância; sem_2020_2022: perde significância; limiar_2.0: perde significância; limiar_2.0: magnitude ×1,66"
+8a,nao_linear,aves_ovos,milho,calor − excesso,12,p.p. por +10 p.p. de fração,0.7559780946314039,False,6,nulo estável,,,"com_controles: magnitude ×0,45; sem_2020_2022: magnitude ×-0,23; janela_2006: magnitude ×1,55; pesos_fixos: magnitude ×1,57; limiar_1.0: magnitude ×0,34; limiar_2.0: magnitude ×2,56"
+8a,nao_linear,carnes,milho,seca,12,p.p. por +10 p.p. de fração,2.164531621327668,True,6,robusto,0.0,False,limiar_2.0: perde significância
+8a,nao_linear,carnes,milho,excesso,12,p.p. por +10 p.p. de fração,0.3732397350468492,False,6,nulo estável,0.0,False,"com_controles: magnitude ×1,88; sem_2020_2022: magnitude ×3,23; janela_2006: magnitude ×-3,14; limiar_1.0: magnitude ×2,03; limiar_2.0: magnitude ×3,68"
+8a,nao_linear,carnes,milho,calor,12,p.p. por +10 p.p. de fração,0.10067818032654274,False,6,nulo instável,1.0,False,"sem_2020_2022: inverte; com_controles: magnitude ×-3,81; sem_2020_2022: magnitude ×-12,84; janela_2006: magnitude ×4,31; pesos_fixos: magnitude ×2,04; limiar_1.0: magnitude ×0,38; limiar_2.0: magnitude ×3,03"
+8a,nao_linear,carnes,milho,seca − excesso,12,p.p. por +10 p.p. de fração,1.7912918862808187,False,6,nulo estável,,,"sem_2020_2022: magnitude ×0,44; janela_2006: magnitude ×2,11; limiar_2.0: magnitude ×0,39"
+8a,nao_linear,carnes,milho,calor − excesso,12,p.p. por +10 p.p. de fração,-0.27256155472030646,False,6,nulo instável,,,"sem_2020_2022: ganha significância; com_controles: magnitude ×3,99; sem_2020_2022: magnitude ×9,17; janela_2006: magnitude ×-5,90; pesos_fixos: magnitude ×0,28; limiar_1.0: magnitude ×2,63; limiar_2.0: magnitude ×3,92"
+8a,nao_linear,alimentacao_domicilio,cinturao,seca,12,p.p. por +10 p.p. de fração,0.1142702283542534,False,5,nulo estável,0.0,False,"com_controles: magnitude ×3,06; sem_2020_2022: magnitude ×3,54; janela_2006: magnitude ×5,10; limiar_1.0: magnitude ×-0,35; limiar_2.0: magnitude ×3,75"
+8a,nao_linear,alimentacao_domicilio,cinturao,excesso,12,p.p. por +10 p.p. de fração,-0.43704876871818804,False,5,nulo estável,0.0,False,"com_controles: magnitude ×-0,85; sem_2020_2022: magnitude ×1,94; janela_2006: magnitude ×-0,87; limiar_1.0: magnitude ×0,22; limiar_2.0: magnitude ×0,12"
+8a,nao_linear,alimentacao_domicilio,cinturao,calor,12,p.p. por +10 p.p. de fração,0.750535954382984,False,5,nulo estável,1.0,False,
+8a,nao_linear,alimentacao_domicilio,cinturao,seca − excesso,12,p.p. por +10 p.p. de fração,0.5513189970724415,False,5,nulo estável,,,"com_controles: magnitude ×-0,04; sem_2020_2022: magnitude ×2,28; janela_2006: magnitude ×0,37; limiar_1.0: magnitude ×0,10"
+8a,nao_linear,alimentacao_domicilio,cinturao,calor − excesso,12,p.p. por +10 p.p. de fração,1.187584723101172,False,5,nulo estável,,,"com_controles: magnitude ×0,05; janela_2006: magnitude ×0,12"
+8a,nao_linear,alimentacao_domicilio,milho,seca,12,p.p. por +10 p.p. de fração,1.1810608261902864,False,6,nulo instável,0.0,False,"com_controles: ganha significância; janela_2006: ganha significância; pesos_fixos: ganha significância; janela_2006: magnitude ×1,55"
+8a,nao_linear,alimentacao_domicilio,milho,excesso,12,p.p. por +10 p.p. de fração,-0.04596626273434179,False,6,nulo estável,5.0,True,"com_controles: magnitude ×-17,13; sem_2020_2022: magnitude ×-1,23; janela_2006: magnitude ×22,12; pesos_fixos: magnitude ×8,04; limiar_1.0: magnitude ×-1,87; limiar_2.0: magnitude ×3,48"
+8a,nao_linear,alimentacao_domicilio,milho,calor,12,p.p. por +10 p.p. de fração,0.2591970650414347,False,6,nulo estável,1.0,False,"com_controles: magnitude ×0,39; sem_2020_2022: magnitude ×-1,34; pesos_fixos: magnitude ×1,59; limiar_1.0: magnitude ×1,71"
+8a,nao_linear,alimentacao_domicilio,milho,seca − excesso,12,p.p. por +10 p.p. de fração,1.2270270889246282,False,6,nulo instável,,,"janela_2006: ganha significância; pesos_fixos: ganha significância; com_controles: magnitude ×0,32; janela_2006: magnitude ×2,32"
+8a,nao_linear,alimentacao_domicilio,milho,calor − excesso,12,p.p. por +10 p.p. de fração,0.3051633277757765,False,6,nulo estável,,,"com_controles: magnitude ×-2,25; sem_2020_2022: magnitude ×-1,32; janela_2006: magnitude ×3,89; pesos_fixos: magnitude ×2,56; limiar_2.0: magnitude ×1,72"
+8b,painel: efeito_tempo_linear,alimentacao_domicilio,seca_local,,12,p.p. por 1 desvio-padrão,0.0852776693717272,False,2,nulo estável,0.0,False,
+8b,painel: efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local,,12,p.p. por +10 p.p. de fração,-0.0068219012513949,False,2,nulo estável,0.0,False,"painel_16_areas: magnitude ×0,48"
+8b,painel: efeito_tempo_nao_linear,alimentacao_domicilio,fracao_excesso_local,,12,p.p. por +10 p.p. de fração,-0.0334715637839562,False,2,nulo estável,0.0,False,"raio_300: magnitude ×1,75"
+8b,painel: efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local,,12,p.p. por +10 p.p. de fração,0.0308939217791527,True,2,robusto,1.0,False,
+8b,painel: efeito_tempo_nao_linear,alimentacao_domicilio,fracao_seca_local − fracao_excesso_local,,12,p.p. por +10 p.p. de fração,0.0266496625325612,False,2,nulo estável,0.0,False,"raio_300: magnitude ×2,05"
+8b,painel: efeito_tempo_nao_linear,alimentacao_domicilio,fracao_calor_local − fracao_excesso_local,,12,p.p. por +10 p.p. de fração,0.0643654855631089,True,2,robusto,0.0,False,
+8b,painel: sem_efeito_tempo,alimentacao_domicilio,seca_local,,12,p.p. por 1 desvio-padrão,-0.0492744527788302,False,1,nulo estável,,,"raio_300: magnitude ×-0,35"
+8b,painel: sem_efeito_tempo,alimentacao_domicilio,seca_centro_oeste,,12,p.p. por 1 desvio-padrão,0.7611479522335974,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,alimentacao_domicilio,seca_matopiba,,12,p.p. por 1 desvio-padrão,0.5191315378304107,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,alimentacao_domicilio,seca_local − seca_centro_oeste,,12,p.p. por 1 desvio-padrão,-0.8104224050124277,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,alimentacao_domicilio,seca_local − seca_matopiba,,12,p.p. por 1 desvio-padrão,-0.5684059906092409,False,1,nulo estável,,,
+8b,painel: efeito_tempo_linear,hortalicas_verduras,seca_local,,1,p.p. por 1 desvio-padrão,-1.9759133966213445,True,2,robusto,3.0,True,
+8b,painel: efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local,,1,p.p. por +10 p.p. de fração,-0.2660854686856635,True,2,robusto,0.0,False,
+8b,painel: efeito_tempo_nao_linear,hortalicas_verduras,fracao_excesso_local,,1,p.p. por +10 p.p. de fração,0.6161457687222416,True,2,robusto,0.0,False,
+8b,painel: efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local,,1,p.p. por +10 p.p. de fração,0.0524089569207029,False,2,nulo estável,0.0,False,"raio_300: magnitude ×2,66"
+8b,painel: efeito_tempo_nao_linear,hortalicas_verduras,fracao_seca_local − fracao_excesso_local,,1,p.p. por +10 p.p. de fração,-0.8822312374079051,True,2,robusto,1.0,False,
+8b,painel: efeito_tempo_nao_linear,hortalicas_verduras,fracao_calor_local − fracao_excesso_local,,1,p.p. por +10 p.p. de fração,-0.5637368118015387,True,2,robusto,0.0,False,
+8b,painel: sem_efeito_tempo,hortalicas_verduras,seca_local,,1,p.p. por 1 desvio-padrão,-1.9968564802529043,True,1,robusto,,,
+8b,painel: sem_efeito_tempo,hortalicas_verduras,seca_centro_oeste,,1,p.p. por 1 desvio-padrão,0.0838929554188982,False,1,nulo estável,,,"raio_300: magnitude ×1,96"
+8b,painel: sem_efeito_tempo,hortalicas_verduras,seca_matopiba,,1,p.p. por 1 desvio-padrão,0.2236438564676158,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,hortalicas_verduras,seca_local − seca_centro_oeste,,1,p.p. por 1 desvio-padrão,-2.0807494356718026,True,1,robusto,,,
+8b,painel: sem_efeito_tempo,hortalicas_verduras,seca_local − seca_matopiba,,1,p.p. por 1 desvio-padrão,-2.2205003367205203,True,1,robusto,,,
+8b,painel: efeito_tempo_linear,tuberculos_raizes_legumes,seca_local,,1,p.p. por 1 desvio-padrão,-0.806571083987356,True,2,robusto,0.0,False,
+8b,painel: efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local,,1,p.p. por +10 p.p. de fração,-0.1085622681046909,False,2,nulo instável,0.0,False,"raio_300: ganha significância; painel_16_areas: ganha significância; raio_300: magnitude ×1,67"
+8b,painel: efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_excesso_local,,1,p.p. por +10 p.p. de fração,0.2992716045141131,True,2,robusto,0.0,False,
+8b,painel: efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local,,1,p.p. por +10 p.p. de fração,0.0374208555293772,False,2,nulo estável,1.0,False,"raio_300: magnitude ×2,73"
+8b,painel: efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_seca_local − fracao_excesso_local,,1,p.p. por +10 p.p. de fração,-0.407833872618804,True,2,robusto,0.0,False,"raio_300: magnitude ×1,51"
+8b,painel: efeito_tempo_nao_linear,tuberculos_raizes_legumes,fracao_calor_local − fracao_excesso_local,,1,p.p. por +10 p.p. de fração,-0.2618507489847359,True,2,robusto,0.0,False,
+8b,painel: sem_efeito_tempo,tuberculos_raizes_legumes,seca_local,,1,p.p. por 1 desvio-padrão,-2.140441729112033,True,1,robusto,,,
+8b,painel: sem_efeito_tempo,tuberculos_raizes_legumes,seca_centro_oeste,,1,p.p. por 1 desvio-padrão,-2.2807510226007635,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,tuberculos_raizes_legumes,seca_matopiba,,1,p.p. por 1 desvio-padrão,0.3811492860013906,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,tuberculos_raizes_legumes,seca_local − seca_centro_oeste,,1,p.p. por 1 desvio-padrão,0.1403092934887304,False,1,nulo estável,,,"raio_300: magnitude ×-1,44"
+8b,painel: sem_efeito_tempo,tuberculos_raizes_legumes,seca_local − seca_matopiba,,1,p.p. por 1 desvio-padrão,-2.521591015113424,False,1,nulo estável,,,
+8b,painel: efeito_tempo_linear,aves_ovos,seca_local,,12,p.p. por 1 desvio-padrão,0.0718627693357662,False,2,nulo estável,0.0,False,"raio_300: magnitude ×2,24; painel_16_areas: magnitude ×0,50"
+8b,painel: efeito_tempo_nao_linear,aves_ovos,fracao_seca_local,,12,p.p. por +10 p.p. de fração,-0.0545966001979186,False,2,nulo estável,0.0,False,
+8b,painel: efeito_tempo_nao_linear,aves_ovos,fracao_excesso_local,,12,p.p. por +10 p.p. de fração,0.0177235966631814,False,2,nulo estável,0.0,False,"raio_300: magnitude ×-0,63"
+8b,painel: efeito_tempo_nao_linear,aves_ovos,fracao_calor_local,,12,p.p. por +10 p.p. de fração,0.0549364760601922,True,2,robusto,2.0,False,"raio_300: magnitude ×1,58"
+8b,painel: efeito_tempo_nao_linear,aves_ovos,fracao_seca_local − fracao_excesso_local,,12,p.p. por +10 p.p. de fração,-0.0723201968611,False,2,nulo estável,0.0,False,
+8b,painel: efeito_tempo_nao_linear,aves_ovos,fracao_calor_local − fracao_excesso_local,,12,p.p. por +10 p.p. de fração,0.0372128793970108,False,2,nulo estável,2.0,False,"raio_300: magnitude ×2,63"
+8b,painel: sem_efeito_tempo,aves_ovos,seca_local,,12,p.p. por 1 desvio-padrão,0.1989946555698008,False,1,nulo estável,,,"raio_300: magnitude ×1,52"
+8b,painel: sem_efeito_tempo,aves_ovos,seca_centro_oeste,,12,p.p. por 1 desvio-padrão,1.3798299755553247,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,aves_ovos,seca_matopiba,,12,p.p. por 1 desvio-padrão,0.1974877600640515,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,aves_ovos,seca_local − seca_centro_oeste,,12,p.p. por 1 desvio-padrão,-1.180835319985524,False,1,nulo estável,,,
+8b,painel: sem_efeito_tempo,aves_ovos,seca_local − seca_matopiba,,12,p.p. por 1 desvio-padrão,0.0015068955057493,False,1,nulo estável,,,"raio_300: magnitude ×88,38"
+8c,previsão,alimentacao_domicilio,oni × benchmark,,1,R² fora da amostra (%),-2.1755622214312487,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,mei × benchmark,,1,R² fora da amostra (%),-1.6391156410461516,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local × benchmark,,1,R² fora da amostra (%),-8.925411340918753,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_oni × local,,1,R² fora da amostra (%),-11.009882463988774,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_mei × local,,1,R² fora da amostra (%),-11.068517419008517,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,oni × benchmark,,3,R² fora da amostra (%),-4.247073755890418,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,mei × benchmark,,3,R² fora da amostra (%),-3.0517887458870074,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local × benchmark,,3,R² fora da amostra (%),-7.505218172796879,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_oni × local,,3,R² fora da amostra (%),-12.26540354945882,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_mei × local,,3,R² fora da amostra (%),-11.356533451754824,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,oni × benchmark,,6,R² fora da amostra (%),-2.1157937297361373,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -2,1 → 1,2%"
+8c,previsão,alimentacao_domicilio,mei × benchmark,,6,R² fora da amostra (%),-3.9924249452783833,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local × benchmark,,6,R² fora da amostra (%),-6.141359074623631,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_oni × local,,6,R² fora da amostra (%),-8.814861081585047,False,2,nulo instável,,,sem_2020_2022: ganha vitória
+8c,previsão,alimentacao_domicilio,local_mei × local,,6,R² fora da amostra (%),-10.099340550018887,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,oni × benchmark,,12,R² fora da amostra (%),0.44290047516388764,False,2,nulo instável,,,"janela_movel: R² fora da amostra 0,4 → -11,2%; sem_2020_2022: ganha vitória"
+8c,previsão,alimentacao_domicilio,mei × benchmark,,12,R² fora da amostra (%),-3.202782426087336,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local × benchmark,,12,R² fora da amostra (%),-10.262078384288586,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_oni × local,,12,R² fora da amostra (%),-17.61689896427918,False,2,nulo estável,,,
+8c,previsão,alimentacao_domicilio,local_mei × local,,12,R² fora da amostra (%),-16.294277002142454,False,2,nulo estável,,,
+8c,previsão,aves_ovos,oni × benchmark,,1,R² fora da amostra (%),-1.2321445271829878,False,2,nulo estável,,,
+8c,previsão,aves_ovos,mei × benchmark,,1,R² fora da amostra (%),-1.326364138483549,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local × benchmark,,1,R² fora da amostra (%),-1.7617580581996473,False,2,nulo instável,,,"janela_movel: ganha vitória; janela_movel: R² fora da amostra -1,8 → 0,0%"
+8c,previsão,aves_ovos,local_oni × local,,1,R² fora da amostra (%),-4.0128197025593115,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local_mei × local,,1,R² fora da amostra (%),-4.032524188763276,False,2,nulo estável,,,
+8c,previsão,aves_ovos,oni × benchmark,,3,R² fora da amostra (%),-3.967962562032734,False,2,nulo estável,,,
+8c,previsão,aves_ovos,mei × benchmark,,3,R² fora da amostra (%),-3.2271448349801,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local × benchmark,,3,R² fora da amostra (%),-0.6150705616590368,False,2,nulo instável,,,"janela_movel: ganha vitória; janela_movel: R² fora da amostra -0,6 → 0,9%"
+8c,previsão,aves_ovos,local_oni × local,,3,R² fora da amostra (%),-7.6064840146420565,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local_mei × local,,3,R² fora da amostra (%),-6.514452347580502,False,2,nulo estável,,,
+8c,previsão,aves_ovos,oni × benchmark,,6,R² fora da amostra (%),0.6063778669668118,False,2,nulo instável,,,"janela_movel: R² fora da amostra 0,6 → -15,9%; sem_2020_2022: ganha vitória"
+8c,previsão,aves_ovos,mei × benchmark,,6,R² fora da amostra (%),-2.2421211151074205,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -2,2 → 0,6%"
+8c,previsão,aves_ovos,local × benchmark,,6,R² fora da amostra (%),-0.741224772907878,False,2,nulo instável,,,"janela_movel: ganha vitória; janela_movel: R² fora da amostra -0,7 → 0,3%"
+8c,previsão,aves_ovos,local_oni × local,,6,R² fora da amostra (%),-2.861973196073375,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local_mei × local,,6,R² fora da amostra (%),-6.2396951712247795,False,2,nulo estável,,,
+8c,previsão,aves_ovos,oni × benchmark,,12,R² fora da amostra (%),-0.6900470995378161,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -0,7 → 6,1%"
+8c,previsão,aves_ovos,mei × benchmark,,12,R² fora da amostra (%),-3.80885095266954,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local × benchmark,,12,R² fora da amostra (%),-22.561832307009656,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local_oni × local,,12,R² fora da amostra (%),-27.1901391777879,False,2,nulo estável,,,
+8c,previsão,aves_ovos,local_mei × local,,12,R² fora da amostra (%),-27.268810659139998,False,2,nulo instável,,,sem_2020_2022: ganha vitória
+8c,previsão,carnes,oni × benchmark,,1,R² fora da amostra (%),-0.4930528412100843,False,2,nulo estável,,,
+8c,previsão,carnes,mei × benchmark,,1,R² fora da amostra (%),-1.3767273172979433,False,2,nulo estável,,,
+8c,previsão,carnes,local × benchmark,,1,R² fora da amostra (%),-0.09238062777658929,False,2,nulo instável,,,"janela_movel: ganha vitória; janela_movel: R² fora da amostra -0,1 → 2,3%; sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -0,1 → 3,1%"
+8c,previsão,carnes,local_oni × local,,1,R² fora da amostra (%),-1.3244107207050604,False,2,nulo estável,,,"janela_movel: R² fora da amostra -1,3 → 1,1%; sem_2020_2022: R² fora da amostra -1,3 → 1,1%"
+8c,previsão,carnes,local_mei × local,,1,R² fora da amostra (%),-1.814412495172446,False,2,nulo estável,,,"janela_movel: R² fora da amostra -1,8 → 1,6%; sem_2020_2022: R² fora da amostra -1,8 → 1,0%"
+8c,previsão,carnes,oni × benchmark,,3,R² fora da amostra (%),-1.2234704107449534,False,2,nulo estável,,,
+8c,previsão,carnes,mei × benchmark,,3,R² fora da amostra (%),-3.1185975217144835,False,2,nulo estável,,,
+8c,previsão,carnes,local × benchmark,,3,R² fora da amostra (%),-0.48174395322979624,False,2,nulo instável,,,"janela_movel: ganha vitória; janela_movel: R² fora da amostra -0,5 → 3,8%; sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -0,5 → 2,9%"
+8c,previsão,carnes,local_oni × local,,3,R² fora da amostra (%),-3.377981716580214,False,2,nulo estável,,,
+8c,previsão,carnes,local_mei × local,,3,R² fora da amostra (%),-4.092127976867377,False,2,nulo estável,,,"janela_movel: R² fora da amostra -4,1 → 2,2%"
+8c,previsão,carnes,oni × benchmark,,6,R² fora da amostra (%),-0.4571775345103113,False,2,nulo estável,,,
+8c,previsão,carnes,mei × benchmark,,6,R² fora da amostra (%),-0.9353237683809468,False,2,nulo estável,,,
+8c,previsão,carnes,local × benchmark,,6,R² fora da amostra (%),-4.424701140393861,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -4,4 → 3,4%"
+8c,previsão,carnes,local_oni × local,,6,R² fora da amostra (%),-7.42933686631384,False,2,nulo estável,,,
+8c,previsão,carnes,local_mei × local,,6,R² fora da amostra (%),-5.766280509014576,False,2,nulo estável,,,
+8c,previsão,carnes,oni × benchmark,,12,R² fora da amostra (%),-1.228539063814993,False,2,nulo estável,,,
+8c,previsão,carnes,mei × benchmark,,12,R² fora da amostra (%),0.8033429904381384,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,8 → -7,2%; sem_2020_2022: R² fora da amostra 0,8 → -5,6%"
+8c,previsão,carnes,local × benchmark,,12,R² fora da amostra (%),-15.53207542447177,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -15,5 → 7,9%"
+8c,previsão,carnes,local_oni × local,,12,R² fora da amostra (%),-21.929759596555122,False,2,nulo estável,,,
+8c,previsão,carnes,local_mei × local,,12,R² fora da amostra (%),-15.780411345722523,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -15,8 → 0,3%"
+8c,previsão,cereais_leguminosas,oni × benchmark,,1,R² fora da amostra (%),-1.167761528015454,False,2,nulo estável,,,
+8c,previsão,cereais_leguminosas,mei × benchmark,,1,R² fora da amostra (%),-1.2937362067534819,False,2,nulo estável,,,
+8c,previsão,cereais_leguminosas,local × benchmark,,1,R² fora da amostra (%),-0.06568945913680846,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -0,1 → 1,8%"
+8c,previsão,cereais_leguminosas,local_oni × local,,1,R² fora da amostra (%),-1.9843230907231169,False,2,nulo estável,,,
+8c,previsão,cereais_leguminosas,local_mei × local,,1,R² fora da amostra (%),-1.5503951762893875,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -1,6 → 1,1%"
+8c,previsão,cereais_leguminosas,oni × benchmark,,3,R² fora da amostra (%),-0.9518410253893883,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -1,0 → 0,2%"
+8c,previsão,cereais_leguminosas,mei × benchmark,,3,R² fora da amostra (%),0.6275575881643292,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,6 → -1,8%"
+8c,previsão,cereais_leguminosas,local × benchmark,,3,R² fora da amostra (%),0.1400387811519077,False,2,nulo instável,,,"janela_movel: R² fora da amostra 0,1 → -4,7%; sem_2020_2022: ganha vitória"
+8c,previsão,cereais_leguminosas,local_oni × local,,3,R² fora da amostra (%),-1.2583292087798625,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -1,3 → 3,2%"
+8c,previsão,cereais_leguminosas,local_mei × local,,3,R² fora da amostra (%),0.6375921747085012,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,6 → -6,2%"
+8c,previsão,cereais_leguminosas,oni × benchmark,,6,R² fora da amostra (%),0.957297796324641,False,2,nulo instável,,,"janela_movel: R² fora da amostra 1,0 → -7,9%; sem_2020_2022: ganha vitória"
+8c,previsão,cereais_leguminosas,mei × benchmark,,6,R² fora da amostra (%),3.0621969348903266,True,2,frágil,,,"janela_movel: perde vitória; janela_movel: R² fora da amostra 3,1 → -5,5%"
+8c,previsão,cereais_leguminosas,local × benchmark,,6,R² fora da amostra (%),-4.764391369033727,False,2,nulo estável,,,
+8c,previsão,cereais_leguminosas,local_oni × local,,6,R² fora da amostra (%),-3.9848187844810923,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -4,0 → 1,8%"
+8c,previsão,cereais_leguminosas,local_mei × local,,6,R² fora da amostra (%),-1.5385865856205827,True,2,frágil,,,"janela_movel: perde vitória; sem_2020_2022: R² fora da amostra -1,5 → 5,8%"
+8c,previsão,cereais_leguminosas,oni × benchmark,,12,R² fora da amostra (%),0.788442319646987,False,2,nulo instável,,,"janela_movel: R² fora da amostra 0,8 → -22,8%; sem_2020_2022: ganha vitória"
+8c,previsão,cereais_leguminosas,mei × benchmark,,12,R² fora da amostra (%),2.086052109228076,True,2,frágil,,,"janela_movel: perde vitória; janela_movel: R² fora da amostra 2,1 → -14,9%; sem_2020_2022: perde vitória"
+8c,previsão,cereais_leguminosas,local × benchmark,,12,R² fora da amostra (%),-12.208632906086425,False,2,nulo estável,,,
+8c,previsão,cereais_leguminosas,local_oni × local,,12,R² fora da amostra (%),-14.95479942091169,False,2,nulo estável,,,
+8c,previsão,cereais_leguminosas,local_mei × local,,12,R² fora da amostra (%),-11.329712266089453,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -11,3 → 1,1%"
+8c,previsão,frutas,oni × benchmark,,1,R² fora da amostra (%),-2.389802115265982,False,2,nulo estável,,,
+8c,previsão,frutas,mei × benchmark,,1,R² fora da amostra (%),-2.252042597816728,False,2,nulo estável,,,
+8c,previsão,frutas,local × benchmark,,1,R² fora da amostra (%),3.2593995449637925,True,2,frágil,,,"janela_movel: perde vitória; janela_movel: R² fora da amostra 3,3 → -0,9%; sem_2020_2022: perde vitória"
+8c,previsão,frutas,local_oni × local,,1,R² fora da amostra (%),0.9194006165672786,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,9 → -3,5%; sem_2020_2022: R² fora da amostra 0,9 → -0,8%"
+8c,previsão,frutas,local_mei × local,,1,R² fora da amostra (%),1.0343815229156728,False,2,nulo estável,,,"janela_movel: R² fora da amostra 1,0 → -2,4%; sem_2020_2022: R² fora da amostra 1,0 → -1,7%"
+8c,previsão,frutas,oni × benchmark,,3,R² fora da amostra (%),-4.117959305225649,False,2,nulo estável,,,
+8c,previsão,frutas,mei × benchmark,,3,R² fora da amostra (%),-4.027528288573312,False,2,nulo estável,,,
+8c,previsão,frutas,local × benchmark,,3,R² fora da amostra (%),0.9147693566707193,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,9 → -5,3%; sem_2020_2022: R² fora da amostra 0,9 → -0,8%"
+8c,previsão,frutas,local_oni × local,,3,R² fora da amostra (%),-3.580315678060564,False,2,nulo estável,,,
+8c,previsão,frutas,local_mei × local,,3,R² fora da amostra (%),-3.132817961019718,False,2,nulo estável,,,
+8c,previsão,frutas,oni × benchmark,,6,R² fora da amostra (%),-4.969106199585882,False,2,nulo estável,,,
+8c,previsão,frutas,mei × benchmark,,6,R² fora da amostra (%),-7.4484686091385255,False,2,nulo estável,,,
+8c,previsão,frutas,local × benchmark,,6,R² fora da amostra (%),1.8343418266493217,False,2,nulo estável,,,"janela_movel: R² fora da amostra 1,8 → -3,5%"
+8c,previsão,frutas,local_oni × local,,6,R² fora da amostra (%),-2.694424620877034,False,2,nulo estável,,,
+8c,previsão,frutas,local_mei × local,,6,R² fora da amostra (%),-5.334916622391961,False,2,nulo estável,,,
+8c,previsão,frutas,oni × benchmark,,12,R² fora da amostra (%),-4.585321314420976,False,2,nulo estável,,,
+8c,previsão,frutas,mei × benchmark,,12,R² fora da amostra (%),-5.344448911156974,False,2,nulo estável,,,
+8c,previsão,frutas,local × benchmark,,12,R² fora da amostra (%),-0.7086330178096567,False,2,nulo estável,,,
+8c,previsão,frutas,local_oni × local,,12,R² fora da amostra (%),-2.477649124344805,False,2,nulo estável,,,
+8c,previsão,frutas,local_mei × local,,12,R² fora da amostra (%),-4.896774860643438,False,2,nulo estável,,,
+8c,previsão,hortalicas_verduras,oni × benchmark,,1,R² fora da amostra (%),0.1548220940021161,True,2,robusto,,,"janela_movel: R² fora da amostra 0,2 → -0,6%"
+8c,previsão,hortalicas_verduras,mei × benchmark,,1,R² fora da amostra (%),-2.1831665349053564,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -2,2 → 1,9%"
+8c,previsão,hortalicas_verduras,local × benchmark,,1,R² fora da amostra (%),-2.098727436388992,False,2,nulo estável,,,
+8c,previsão,hortalicas_verduras,local_oni × local,,1,R² fora da amostra (%),-0.7005995797122244,True,2,robusto,,,"sem_2020_2022: R² fora da amostra -0,7 → 5,5%"
+8c,previsão,hortalicas_verduras,local_mei × local,,1,R² fora da amostra (%),-4.420283790388413,False,2,nulo instável,,,sem_2020_2022: ganha vitória
+8c,previsão,hortalicas_verduras,oni × benchmark,,3,R² fora da amostra (%),5.5655096327619,True,2,robusto,,,
+8c,previsão,hortalicas_verduras,mei × benchmark,,3,R² fora da amostra (%),-0.27211435306953025,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -0,3 → 8,9%"
+8c,previsão,hortalicas_verduras,local × benchmark,,3,R² fora da amostra (%),-8.61498260636786,False,2,nulo estável,,,
+8c,previsão,hortalicas_verduras,local_oni × local,,3,R² fora da amostra (%),0.19090337724561035,True,2,robusto,,,"janela_movel: R² fora da amostra 0,2 → -10,9%"
+8c,previsão,hortalicas_verduras,local_mei × local,,3,R² fora da amostra (%),-8.318035645763588,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -8,3 → 0,0%"
+8c,previsão,hortalicas_verduras,oni × benchmark,,6,R² fora da amostra (%),12.009949767556261,True,2,robusto,,,
+8c,previsão,hortalicas_verduras,mei × benchmark,,6,R² fora da amostra (%),3.9894603437797382,True,2,frágil,,,"janela_movel: perde vitória; janela_movel: R² fora da amostra 4,0 → -0,4%"
+8c,previsão,hortalicas_verduras,local × benchmark,,6,R² fora da amostra (%),-8.159723030789445,False,2,nulo estável,,,
+8c,previsão,hortalicas_verduras,local_oni × local,,6,R² fora da amostra (%),6.071756477321777,True,2,robusto,,,"janela_movel: R² fora da amostra 6,1 → -5,2%"
+8c,previsão,hortalicas_verduras,local_mei × local,,6,R² fora da amostra (%),-4.162433732532733,True,2,frágil,,,janela_movel: perde vitória
+8c,previsão,hortalicas_verduras,oni × benchmark,,12,R² fora da amostra (%),16.629227996290297,True,2,robusto,,,
+8c,previsão,hortalicas_verduras,mei × benchmark,,12,R² fora da amostra (%),13.57416510886582,True,2,robusto,,,
+8c,previsão,hortalicas_verduras,local × benchmark,,12,R² fora da amostra (%),1.1172553168089405,False,2,nulo estável,,,"janela_movel: R² fora da amostra 1,1 → -5,2%; sem_2020_2022: R² fora da amostra 1,1 → -6,5%"
+8c,previsão,hortalicas_verduras,local_oni × local,,12,R² fora da amostra (%),23.60919333584691,True,2,robusto,,,
+8c,previsão,hortalicas_verduras,local_mei × local,,12,R² fora da amostra (%),16.232354758376523,True,2,robusto,,,
+8c,previsão,leite_derivados,oni × benchmark,,1,R² fora da amostra (%),-0.003318745822533664,False,2,nulo estável,,,"janela_movel: R² fora da amostra -0,0 → 1,0%"
+8c,previsão,leite_derivados,mei × benchmark,,1,R² fora da amostra (%),-1.1958149829575992,False,2,nulo estável,,,
+8c,previsão,leite_derivados,local × benchmark,,1,R² fora da amostra (%),0.36263105881938484,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,4 → -0,7%"
+8c,previsão,leite_derivados,local_oni × local,,1,R² fora da amostra (%),0.03522018587472919,False,2,nulo estável,,,"janela_movel: R² fora da amostra 0,0 → -0,7%; sem_2020_2022: R² fora da amostra 0,0 → -1,4%"
+8c,previsão,leite_derivados,local_mei × local,,1,R² fora da amostra (%),-1.181717130825466,False,2,nulo estável,,,
+8c,previsão,leite_derivados,oni × benchmark,,3,R² fora da amostra (%),-2.5986584215268893,False,2,nulo estável,,,
+8c,previsão,leite_derivados,mei × benchmark,,3,R² fora da amostra (%),-0.2733879617492496,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -0,3 → 2,9%"
+8c,previsão,leite_derivados,local × benchmark,,3,R² fora da amostra (%),-0.9997533682404303,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -1,0 → 0,7%"
+8c,previsão,leite_derivados,local_oni × local,,3,R² fora da amostra (%),-2.9127185854028292,False,2,nulo estável,,,
+8c,previsão,leite_derivados,local_mei × local,,3,R² fora da amostra (%),-2.075919372361179,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -2,1 → 2,1%"
+8c,previsão,leite_derivados,oni × benchmark,,6,R² fora da amostra (%),-0.8016497373456222,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra -0,8 → 10,3%"
+8c,previsão,leite_derivados,mei × benchmark,,6,R² fora da amostra (%),-3.0687770194997688,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -3,1 → 11,1%"
+8c,previsão,leite_derivados,local × benchmark,,6,R² fora da amostra (%),0.6970079851336575,True,2,frágil,,,"sem_2020_2022: perde vitória; sem_2020_2022: R² fora da amostra 0,7 → -0,1%"
+8c,previsão,leite_derivados,local_oni × local,,6,R² fora da amostra (%),3.5615930896129355,False,2,nulo instável,,,"janela_movel: R² fora da amostra 3,6 → -1,3%; sem_2020_2022: ganha vitória"
+8c,previsão,leite_derivados,local_mei × local,,6,R² fora da amostra (%),-1.366075222907015,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -1,4 → 10,6%"
+8c,previsão,leite_derivados,oni × benchmark,,12,R² fora da amostra (%),-3.683557474959742,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -3,7 → 14,4%"
+8c,previsão,leite_derivados,mei × benchmark,,12,R² fora da amostra (%),-9.55559221618496,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -9,6 → 17,6%"
+8c,previsão,leite_derivados,local × benchmark,,12,R² fora da amostra (%),4.3875587686750155,False,2,nulo estável,,,"sem_2020_2022: R² fora da amostra 4,4 → -4,7%"
+8c,previsão,leite_derivados,local_oni × local,,12,R² fora da amostra (%),1.383606022006778,False,2,nulo instável,,,sem_2020_2022: ganha vitória
+8c,previsão,leite_derivados,local_mei × local,,12,R² fora da amostra (%),-4.623130036819623,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -4,6 → 13,4%"
+8c,previsão,tuberculos_raizes_legumes,oni × benchmark,,1,R² fora da amostra (%),0.37185929511128757,False,2,nulo instável,,,janela_movel: ganha vitória; sem_2020_2022: ganha vitória
+8c,previsão,tuberculos_raizes_legumes,mei × benchmark,,1,R² fora da amostra (%),-2.435673690748974,False,2,nulo estável,,,
+8c,previsão,tuberculos_raizes_legumes,local × benchmark,,1,R² fora da amostra (%),-2.299331639041813,False,2,nulo estável,,,
+8c,previsão,tuberculos_raizes_legumes,local_oni × local,,1,R² fora da amostra (%),-0.3971399557775257,True,2,robusto,,,"sem_2020_2022: R² fora da amostra -0,4 → 1,2%"
+8c,previsão,tuberculos_raizes_legumes,local_mei × local,,1,R² fora da amostra (%),-4.713643295552106,False,2,nulo estável,,,
+8c,previsão,tuberculos_raizes_legumes,oni × benchmark,,3,R² fora da amostra (%),4.645248509077138,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,mei × benchmark,,3,R² fora da amostra (%),-2.2759937958473087,False,2,nulo instável,,,"sem_2020_2022: ganha vitória; sem_2020_2022: R² fora da amostra -2,3 → 2,7%"
+8c,previsão,tuberculos_raizes_legumes,local × benchmark,,3,R² fora da amostra (%),-9.684130967603078,False,2,nulo estável,,,
+8c,previsão,tuberculos_raizes_legumes,local_oni × local,,3,R² fora da amostra (%),-1.9029707401305496,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,local_mei × local,,3,R² fora da amostra (%),-12.180161225418896,False,2,nulo instável,,,sem_2020_2022: ganha vitória
+8c,previsão,tuberculos_raizes_legumes,oni × benchmark,,6,R² fora da amostra (%),15.873216379759757,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,mei × benchmark,,6,R² fora da amostra (%),2.342014552227678,False,2,nulo instável,,,janela_movel: ganha vitória; sem_2020_2022: ganha vitória
+8c,previsão,tuberculos_raizes_legumes,local × benchmark,,6,R² fora da amostra (%),-11.46388800480478,False,2,nulo estável,,,
+8c,previsão,tuberculos_raizes_legumes,local_oni × local,,6,R² fora da amostra (%),8.122751273325356,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,local_mei × local,,6,R² fora da amostra (%),-9.02105613727089,False,2,nulo instável,,,janela_movel: ganha vitória; sem_2020_2022: ganha vitória
+8c,previsão,tuberculos_raizes_legumes,oni × benchmark,,12,R² fora da amostra (%),22.99270789285366,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,mei × benchmark,,12,R² fora da amostra (%),17.296203975730005,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,local × benchmark,,12,R² fora da amostra (%),4.115690408904127,False,2,nulo estável,,,"janela_movel: R² fora da amostra 4,1 → -1,7%"
+8c,previsão,tuberculos_raizes_legumes,local_oni × local,,12,R² fora da amostra (%),31.816847564143668,True,2,robusto,,,
+8c,previsão,tuberculos_raizes_legumes,local_mei × local,,12,R² fora da amostra (%),20.936263397977072,True,2,robusto,,,
