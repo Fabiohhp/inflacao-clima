@@ -10,8 +10,13 @@ __pycache__/
 # Segredos: só o .env.example é versionado
 .env
 
-# Dados (brutos, processados e lakehouse) nunca são versionados
-data/
+# Dados (brutos, processados e lakehouse) não são versionados, com duas exceções: as cópias
+# congeladas do ONI/MEI (a NOAA revisa as séries) e do arquivo da Conab (janela móvel de 12 meses)
+data/*
+!data/raw/
+data/raw/*
+!data/raw/noaa/
+!data/raw/conab/
 
 # Notebooks: a fonte é o .py (percent); .ipynb gerados pelo jupytext são derivados
 notebooks/*.ipynb
