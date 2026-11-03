@@ -218,9 +218,10 @@ pytest -q                                                # 160 testes
 ruff check . && ruff format --check .
 ```
 
-- **Download e cache:** `data/` não é versionado. A primeira execução baixa tudo das fontes públicas, com retry e log de cada requisição, e grava as respostas brutas em `data/raw/`. As execuções seguintes usam o cache (0 requisições).
+- **Primeira execução:** cerca de 2 horas, quase tudo em downloads, com retry e log de cada requisição. As respostas brutas ficam em `data/raw/`, e as execuções seguintes usam esse cache: cerca de 11 minutos e 0 requisições.
+- **Arquivos congelados:** `data/` não é versionado, com duas exceções: `data/raw/noaa/` (ONI e MEI, baixados em 2026-10-05) e `data/raw/conab/` (2026-10-08). A NOAA revisa o ONI, o que muda os resultados da pergunta 4. O arquivo da Conab é uma janela móvel de 12 meses (R34), e em novembro de 2026 o portal respondia com o certificado de outro domínio. O `--refresh` do notebook 01 sobrescreve o ONI e o MEI.
 - **Token do INMET:** o `.env` é opcional; sem token, o INMET vem dos arquivos anuais do portal.
-- **Revisões das fontes:** como as fontes revisam séries (o ONI muda com a versão do ERSST, por exemplo), uma nova carga pode mudar levemente os números.
+- **Revisões das fontes:** com esses arquivos, uma carga completa feita em 2026-11-03 manteve os números de 110 das 118 saídas, incluindo todos os modelos. As outras 8 são descritivas e só mudam com o mês mais recente das fontes; até o fim da amostra (2023-06), nada se move. Sem congelar, com o ONI de novembro de 2026, ele continua vencendo em 7 de 32 casos, mas em 12 meses o erro cai 20,8% nos tubérculos (não 23,0%) e 15,9% nas hortaliças (não 16,6%).
 - **Determinismo:** os notebooks de modelagem (05 e 07) foram rodados duas vezes com o mesmo cache, com saídas idênticas.
 
 ## Estrutura
@@ -232,5 +233,9 @@ notebooks/             pipeline 01 a 07 (jupytext, formato percent)
 tests/                 testes unitários (pytest)
 outputs/               figuras/ e as tabelas/ que as geraram
 docs/RESSALVAS.md      registro de ressalvas de dados e de método
-data/                  dados brutos, processados e lakehouse DuckDB (não versionado)
+data/                  dados brutos, processados e lakehouse DuckDB (só raw/noaa/ e raw/conab/ são versionados)
 ```
+
+## Licença
+
+O código está sob a [licença MIT](LICENSE). Os dados pertencem às fontes e seguem os termos delas.
